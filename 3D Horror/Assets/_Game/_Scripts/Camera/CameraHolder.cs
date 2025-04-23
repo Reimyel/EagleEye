@@ -6,7 +6,11 @@ public class CameraHolder : MonoBehaviour
 
     void Awake() => _transfCameraPosition = GameObject.FindGameObjectWithTag("CameraPosition").transform;
 
-    void Update() => UpdatePosition();
+    void Update() => UpdateTransform();
 
-    void UpdatePosition() => transform.position = _transfCameraPosition.position;
+    void UpdateTransform()
+    {
+        transform.position = _transfCameraPosition.position;
+        transform.rotation = _transfCameraPosition.rotation;
+    }
 }
