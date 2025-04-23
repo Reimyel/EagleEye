@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class CameraHolder : MonoBehaviour
 {
-    Transform _transfCameraPosition;
+    Transform _cameraPosition;
 
-    void Awake() => _transfCameraPosition = GameObject.FindGameObjectWithTag("CameraPosition").transform;
+    void Awake() => _cameraPosition = GameObject.FindGameObjectWithTag("CameraPosition").transform;
 
     void Update() => UpdateTransform();
 
     void UpdateTransform()
     {
-        transform.position = _transfCameraPosition.position;
-        transform.rotation = _transfCameraPosition.rotation;
+        transform.position = _cameraPosition.position;
+        transform.rotation = _cameraPosition.rotation;
     }
 }
