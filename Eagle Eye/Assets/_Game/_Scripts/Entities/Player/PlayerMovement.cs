@@ -35,12 +35,7 @@ namespace FourZeroFourStudios
         void Update()
         {
             GroundCheck();
-
             MoveInput();
-        }
-
-        void FixedUpdate()
-        {
             CheckGravityForce();
             ApplyMove();
             ApplyGravityForce();
@@ -59,7 +54,7 @@ namespace FourZeroFourStudios
         void ApplyMove()
         {
             Vector3 moveLocal = transform.right * _moveInput.x + transform.forward * _moveInput.y;
-            _controller.Move(moveLocal * _speed);
+            _controller.Move(moveLocal * _speed * Time.deltaTime);
         }
         #endregion
 
