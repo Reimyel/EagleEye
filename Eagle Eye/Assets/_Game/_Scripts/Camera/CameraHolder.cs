@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public class CameraHolder : MonoBehaviour
+namespace FourZeroFourStudios 
 {
-    Transform _cameraPosition;
-
-    void Awake() => _cameraPosition = GameObject.FindGameObjectWithTag("CameraPosition").transform;
-
-    void Update() => UpdateTransform();
-
-    void UpdateTransform()
+    public class CameraHolder : MonoBehaviour
     {
-        transform.position = _cameraPosition.position;
-        transform.rotation = _cameraPosition.rotation;
+        Transform _cameraPosition;
+
+        void Awake() => _cameraPosition = GameObject.FindGameObjectWithTag("CameraPosition").transform;
+
+        void Update() => UpdateTransform();
+
+        void UpdateTransform()
+        {
+            transform.position = _cameraPosition.position;
+            transform.rotation = _cameraPosition.rotation;
+        }
     }
 }
+
