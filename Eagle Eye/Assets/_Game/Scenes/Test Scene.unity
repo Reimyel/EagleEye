@@ -460,7 +460,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832575517}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -543,11 +543,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM
-    TESTEISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTE"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5ed8d04ef7478864b94cdc7213a08082, type: 2}
-  m_sharedMaterial: {fileID: -5700730895617617344, guid: 5ed8d04ef7478864b94cdc7213a08082, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 781a575ff469224499f827b3ba50e5fc, type: 2}
+  m_sharedMaterial: {fileID: 6470365734529896791, guid: 781a575ff469224499f827b3ba50e5fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -880,11 +879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tmp_dialogue: {fileID: 1068096714}
   lines:
-  - "ISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTEISSO
-    \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTE"
-  - "ISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTEISSO
-    \xC9 APENAS UM TESTEISSO \xC9 APENAS UM TESTE"
-  textSpeed: 0.3
+  - "est\xE1 andando, e ap\xF3s ver uma figura passando, pensa pra si mesmo"
+  - (O que foi aquilo?)
+  textSpeed: 0.2
 --- !u!1001 &4618562969382131553
 PrefabInstance:
   m_ObjectHideFlags: 0
