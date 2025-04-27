@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.febucci.custom-hierarchy": {
+      "version": "file:unitypackage-custom-hierarchy-main",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.hauntedpsx.render-pipelines.psx": {
       "version": "file:com.hauntedpsx.render-pipelines.psx",
       "depth": 0,
