@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 800159457}
   - component: {fileID: 800159456}
   - component: {fileID: 800159455}
+  - component: {fileID: 800159460}
   m_Layer: 6
   m_Name: Go_Cube
   m_TagString: Untagged
@@ -429,13 +430,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800159454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0758781, y: 0.87, z: 1.7544069}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.5, y: 2.5, z: -1.5}
+  m_LocalScale: {x: 1, y: 2.7506, z: 3.4927}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800159460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800159454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18edd60c8e174a74db97c1cda9d96e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: 1152efb2158e3e44c8d032e4716234d7, type: 2}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,8 +850,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2125781034}
-  - component: {fileID: 2125781035}
   - component: {fileID: 2125781036}
+  - component: {fileID: 2125781037}
   m_Layer: 5
   m_Name: Cg_Dialogues
   m_TagString: Untagged
@@ -866,7 +880,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2125781035
+--- !u!225 &2125781036
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125781033}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2125781037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -882,18 +908,6 @@ MonoBehaviour:
   _tmp_dialogue: {fileID: 1068096714}
   _curSequence: {fileID: 0}
   _testDialogue: {fileID: 11400000, guid: 1152efb2158e3e44c8d032e4716234d7, type: 2}
---- !u!225 &2125781036
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125781033}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1001 &4618562969382131553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,10 +964,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4618562969628820140, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 767414169}
+    - target: {fileID: 4618562969628820145, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: amount
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618562969628820145, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: smooth
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

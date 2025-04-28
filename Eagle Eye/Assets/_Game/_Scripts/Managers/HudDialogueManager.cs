@@ -5,9 +5,12 @@ using UnityEngine;
 
 namespace FourZeroFourStudios
 {
-    public class HudDialogueHandler : MonoBehaviour
+    public class HudDialogueManager : MonoBehaviour
     {
         #region Members
+        // Singleton
+        public static HudDialogueManager Instance;
+
         #region Inspector
         [Header("Settings:")]
         [Space]
@@ -15,6 +18,7 @@ namespace FourZeroFourStudios
         [Header("References:")]
         [SerializeField] CanvasGroup _cg;
         [SerializeField] TextMeshProUGUI _tmp_dialogue;
+        [SerializeField] PlayerMovement _playerMove;
         [Space]
 
         [Header("Debug:")]
@@ -26,11 +30,11 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Mono
-        void Start() => StartDialogue(_testDialogue);
+        void Awake() => Instance = this;
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (_curSequence != null && Input.GetMouseButtonDown(0))
             {
                 if (_tmp_dialogue.text == _curSequence.Lines[_curIndex])
                 {
@@ -46,7 +50,7 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Custom
-        void StartDialogue(ScriptableDialogueSequence sequenceValue)
+        public void StartDialogue(ScriptableDialogueSequence sequenceValue)
         {
             _curSequence = sequenceValue;
             _curIndex = 0;
@@ -55,6 +59,9 @@ namespace FourZeroFourStudios
             _tmp_dialogue.text = string.Empty;
             _tmp_dialogue.color = _curSequence.Color;
             
+            if (_curSequence.StopMove)
+                _playerMove.enabled = false;
+
             StartCoroutine(TypeLine());
         }
 
@@ -77,8 +84,17 @@ namespace FourZeroFourStudios
             }
             else
             {
+                if (_curSequence.StopMove)
+                    _playerMove.enabled = true;
+
+                _curSequence = null;
                 _cg.alpha = 0;
             }
+        }
+
+        public bool IsCurrentSequence(ScriptableDialogueSequence checkValue) 
+        {
+            return _curSequence == checkValue;
         }
         #endregion
     }
