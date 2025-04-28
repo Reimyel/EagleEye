@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 namespace FourZeroFourStudios 
@@ -15,8 +16,9 @@ namespace FourZeroFourStudios
 
         [Header("References")]
         [SerializeField] Transform _rayPoint;
+        [SerializeField] TextMeshProUGUI _tmp_action;
 
-        public static event System.Action<GameObject> OnRaycast;
+        public static event System.Action<GameObject, TextMeshProUGUI> OnRaycast;
         #endregion
 
         #region Mono
@@ -34,11 +36,12 @@ namespace FourZeroFourStudios
                 Debug.DrawLine(ray.origin, hit.point, Color.green);
                 Debug.Log("Ray collided: " + hit.collider.gameObject.name);
 
-                OnRaycast?.Invoke(hit.collider.gameObject);
+                OnRaycast?.Invoke(hit.collider.gameObject, _tmp_action);
             }
             else
             {
                 Debug.DrawLine(ray.origin, ray.origin + ray.direction * _distance, Color.green);
+                _tmp_action.text = string.Empty;
             }
         }
         #endregion

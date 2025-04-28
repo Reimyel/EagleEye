@@ -18,3 +18,4 @@ MonoBehaviour:
   - Tranquilo pivete!
   _typeSpeed: 0.3
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _stopMove: 0
