@@ -11,57 +11,65 @@ namespace FourZeroFourStudios
         #region Inspector
         [Header("Settings:")]
         [Space]
-
+        
         [Header("References:")]
+        [SerializeField] CanvasGroup _cg;
         [SerializeField] TextMeshProUGUI _tmp_dialogue;
-        #endregion
+        [Space]
 
-        public string[] lines;
-        public float textSpeed;
+        [Header("Debug:")]
+        [SerializeField] ScriptableDialogueSequence _curSequence;
+        [SerializeField] ScriptableDialogueSequence _testDialogue;
+        #endregion
 
         int _curIndex;
         #endregion
 
         #region Mono
-        void Start() => StartDialogue();
+        void Start() => StartDialogue(_testDialogue);
 
         void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (_tmp_dialogue.text == lines[_curIndex])
+                if (_tmp_dialogue.text == _curSequence.Lines[_curIndex])
                 {
                     NextLine();
                 }
                 else
                 {
                     StopAllCoroutines();
-                    _tmp_dialogue.text = lines[_curIndex];
+                    _tmp_dialogue.text = _curSequence.Lines[_curIndex];
                 }
             }
         }
         #endregion
 
         #region Custom
-        void StartDialogue()
+        void StartDialogue(ScriptableDialogueSequence sequenceValue)
         {
-            _tmp_dialogue.text = string.Empty;
+            _curSequence = sequenceValue;
             _curIndex = 0;
+
+            _cg.alpha = 1;
+            _tmp_dialogue.text = string.Empty;
+            _tmp_dialogue.color = _curSequence.Color;
+            
             StartCoroutine(TypeLine());
         }
 
         IEnumerator TypeLine()
         {
-            foreach (char c in lines[_curIndex].ToCharArray())
+            foreach (char c in _curSequence.Lines[_curIndex].ToCharArray())
             {
                 _tmp_dialogue.text += c;
-                yield return new WaitForSeconds(textSpeed);
+                yield return new WaitForSeconds(_curSequence.TypeSpeed);
             }
         }
 
         void NextLine()
         {
-            if (_curIndex < lines.Length - 1)
+            if (_curIndex < _curSequence.Lines.Length - 1)
             {
                 _curIndex++;
                 _tmp_dialogue.text = string.Empty;
@@ -69,7 +77,7 @@ namespace FourZeroFourStudios
             }
             else
             {
-                gameObject.SetActive(false);
+                _cg.alpha = 0;
             }
         }
         #endregion

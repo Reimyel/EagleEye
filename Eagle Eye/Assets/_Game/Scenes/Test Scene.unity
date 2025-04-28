@@ -837,6 +837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125781034}
   - component: {fileID: 2125781035}
+  - component: {fileID: 2125781036}
   m_Layer: 5
   m_Name: Cg_Dialogues
   m_TagString: Untagged
@@ -877,11 +878,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cebb307ade23b489842fb6455d3ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cg: {fileID: 2125781036}
   _tmp_dialogue: {fileID: 1068096714}
-  lines:
-  - "est\xE1 andando, e ap\xF3s ver uma figura passando, pensa pra si mesmo"
-  - (O que foi aquilo?)
-  textSpeed: 0.2
+  _curSequence: {fileID: 0}
+  _testDialogue: {fileID: 11400000, guid: 1152efb2158e3e44c8d032e4716234d7, type: 2}
+--- !u!225 &2125781036
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125781033}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &4618562969382131553
 PrefabInstance:
   m_ObjectHideFlags: 0
