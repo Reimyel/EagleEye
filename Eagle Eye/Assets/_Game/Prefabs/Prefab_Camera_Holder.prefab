@@ -198,9 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a3d6923a48e0141b32e520bb398b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0.01
-  frequency: 0
-  smooth: 100
+  amount: 0.005
+  frequency: 15
+  smooth: 60
 --- !u!114 &4618562969628820140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,5 +216,6 @@ MonoBehaviour:
   _distance: 8
   _layerMask:
     serializedVersion: 2
-    m_Bits: 59
+    m_Bits: 64
   _rayPoint: {fileID: 4618562967951360243}
+  _tmp_action: {fileID: 0}
