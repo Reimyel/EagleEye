@@ -17,6 +17,11 @@ namespace FourZeroFourStudios
             if (gameObjectValue != gameObject) return;
 
             tmpValue.text = _actionText;
+
+            if (Input.GetKeyDown(KeyCode.E))
+                Interact();
         }
+
+        public virtual void Interact() { }
     }
 }

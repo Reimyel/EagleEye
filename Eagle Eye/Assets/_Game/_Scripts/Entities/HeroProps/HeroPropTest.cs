@@ -6,6 +6,10 @@ namespace FourZeroFourStudios
 {
     public class HeroPropTest : BaseHeroProp
     {
-       
+        public override void Interact()
+        {
+            base.Interact();
+            Destroy(gameObject);
+        }
     }
 }
