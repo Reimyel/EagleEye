@@ -1204,6 +1204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Posts:
   - {fileID: 11400000, guid: 9251d8b7cfab9814fbf5d325d03186dc, type: 2}
+  - {fileID: 11400000, guid: 30dc41ebed630b444907a6abf6b5e4d2, type: 2}
   CurrentPostIndex: 0
   UserImageUI: {fileID: 241048745}
   UserInfoUI: {fileID: 349089944}
@@ -1445,8 +1446,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1457,7 +1458,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 80
+  m_lineSpacing: 90
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
