@@ -52,6 +52,7 @@ namespace FourZeroFourStudios
         #region Custom
         public void StartDialogue(ScriptableDialogueSequence sequenceValue)
         {
+            StopAllCoroutines();
             _curSequence = sequenceValue;
             _curIndex = 0;
 
@@ -63,6 +64,12 @@ namespace FourZeroFourStudios
                 _playerMove.enabled = false;
 
             StartCoroutine(TypeLine());
+        }
+
+        public void StopDialogue() 
+        {
+            StopAllCoroutines();
+            _cg.alpha = 0;
         }
 
         IEnumerator TypeLine()
@@ -94,6 +101,8 @@ namespace FourZeroFourStudios
 
         public bool IsCurrentSequence(ScriptableDialogueSequence checkValue) 
         {
+            if (_cg.alpha == 0) return false;
+
             return _curSequence == checkValue;
         }
         #endregion
