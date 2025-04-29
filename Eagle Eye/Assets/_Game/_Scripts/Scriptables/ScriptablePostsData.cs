@@ -9,7 +9,7 @@ namespace FourZeroFourStudios
     public class ScriptablePostsData : ScriptableObject
     {
         public Sprite UserImage;
-        [TextArea(2,2)] public string UserInfo;
+        [TextArea(5,5)] public string UserInfo;
         [TextArea(10,10)] public string Content;
     }
 }
