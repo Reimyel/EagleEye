@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace FourZeroFourStudios
 {
@@ -11,10 +12,8 @@ namespace FourZeroFourStudios
         public int CurrentPostIndex = 0;
 
         public Image UserImageUI;
-        public Text UsernameUI;
-        public Text UsertagUI;
-        public Text DateUI;
-        public Text ContentUI;
+        public TextMeshProUGUI UserInfoUI;
+        public TextMeshProUGUI ContentUI;
 
         private void Start()
         {
@@ -33,9 +32,7 @@ namespace FourZeroFourStudios
             ScriptablePostsData _post = Posts[CurrentPostIndex];
 
             UserImageUI.sprite = _post.UserImage;
-            UsernameUI.text = _post.Username;
-            UsertagUI.text = _post.Usertag;
-            DateUI.text = _post.Date;
+            UserInfoUI.text = _post.UserInfo;
             ContentUI.text = _post.Content;
     }
     }

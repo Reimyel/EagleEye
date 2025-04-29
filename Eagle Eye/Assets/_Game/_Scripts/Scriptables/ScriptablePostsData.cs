@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 namespace FourZeroFourStudios
 {
-    [CreateAssetMenu(fileName = "New Post", menuName = "Post System/Post Data")]
-    public class ScriptablePostsData : MonoBehaviour
+    [CreateAssetMenu(fileName = "NewPost_", menuName = "Scriptables/NewPost")]
+    public class ScriptablePostsData : ScriptableObject
     {
         public Sprite UserImage;
-        public string Username;
-        public string Usertag;
-        public string Date;
+        [TextArea(2,2)] public string UserInfo;
         [TextArea(3,10)] public string Content;
     }
 }
