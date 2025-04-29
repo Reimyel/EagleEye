@@ -10,6 +10,6 @@ namespace FourZeroFourStudios
     {
         public Sprite UserImage;
         [TextArea(2,2)] public string UserInfo;
-        [TextArea(3,10)] public string Content;
+        [TextArea(10,10)] public string Content;
     }
 }
