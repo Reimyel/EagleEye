@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogueSequence_HeroProp_BlockOffice
   m_EditorClassIdentifier: 
   _lines:
-  - "(Oops, can\u2019t enter with my things. Better put them in my locker.)"
+  - "(Oops, can\u2019t enter with my things. Better put them in my locker.) \u2192"
   - "(Mine is the 6\xB0 locker.)"
   _typeSpeed: 0.06
   _color: {r: 1, g: 1, b: 1, a: 0.5882353}

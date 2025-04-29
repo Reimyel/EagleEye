@@ -12600,6 +12600,7 @@ GameObject:
   - component: {fileID: 6955733608285944786}
   - component: {fileID: 8136686322532711926}
   - component: {fileID: 7767700493028122985}
+  - component: {fileID: 5693581395258747734}
   m_Layer: 6
   m_Name: Prefab_HeroProp_CoffeeMachine
   m_TagString: Untagged
@@ -12621,7 +12622,7 @@ Transform:
   m_Children:
   - {fileID: 8492691665634860912}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8136686322532711926
 BoxCollider:
@@ -12651,13 +12652,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7767700493028122984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18edd60c8e174a74db97c1cda9d96e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue: {fileID: 11400000, guid: f9ee19924a4b9d64ca9481df820c4d86, type: 2}
-  _destroyAfterShow: 0
+  _destroyAfterShow: 2
+--- !u!114 &5693581395258747734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767700493028122984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afc670a3ad01884fa14a8fabcaee316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionText: Interact
+  _triggerDialogue: {fileID: 7767700493028122985}
 --- !u!1 &7826447154218233199
 GameObject:
   m_ObjectHideFlags: 0

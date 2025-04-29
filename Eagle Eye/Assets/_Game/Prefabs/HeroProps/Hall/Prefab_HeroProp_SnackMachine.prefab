@@ -9821,6 +9821,7 @@ GameObject:
   - component: {fileID: 6893411489435156018}
   - component: {fileID: 5748487577608304662}
   - component: {fileID: 6116312252687623305}
+  - component: {fileID: 1876551123}
   m_Layer: 6
   m_Name: Prefab_HeroProp_SnackMachine
   m_TagString: Untagged
@@ -9842,7 +9843,7 @@ Transform:
   m_Children:
   - {fileID: 5400363466141194896}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5748487577608304662
 BoxCollider:
@@ -9872,13 +9873,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6116312252687623304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18edd60c8e174a74db97c1cda9d96e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue: {fileID: 11400000, guid: 96ba2795caa655d4c8f905ad7ce60029, type: 2}
-  _destroyAfterShow: 0
+  _destroyAfterShow: 2
+--- !u!114 &1876551123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116312252687623304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afc670a3ad01884fa14a8fabcaee316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionText: Interact
+  _triggerDialogue: {fileID: 6116312252687623305}
 --- !u!1 &6184735364700906522
 GameObject:
   m_ObjectHideFlags: 0
