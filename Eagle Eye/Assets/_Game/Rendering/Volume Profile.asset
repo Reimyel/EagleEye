@@ -18,13 +18,13 @@ MonoBehaviour:
     m_Value: 1
   bakedLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   vertexColorLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   dynamicLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 8
   dynamicLightsMaxCount:
     m_OverrideState: 1
     m_Value: 256
@@ -174,10 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96575ff06efbe184aa6c6f9f90b4aab9, type: 3}
   m_Name: FogVolume
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   isEnabled:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   fogFalloffMode:
     m_OverrideState: 1
     m_Value: 1
@@ -186,7 +186,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 0.79607844}
+    m_Value: {r: 0.09198114, g: 0.18024, b: 0.5, a: 0.42745098}
   precisionAlpha:
     m_OverrideState: 1
     m_Value: 1
