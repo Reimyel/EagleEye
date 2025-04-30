@@ -60,7 +60,7 @@ namespace FourZeroFourStudios
             _currentlySelectedButton = (_selection == Selection.NoViolation) ? NoViolationButton : TakeDownButton;
             SetButtonSelectedVisual(_currentlySelectedButton);
 
-            if (_selection == Selection.NoViolation)
+            if (_selection == Selection.NoViolation) //enables send analysis button if no violation is selected
             {
                 SendAnalysisButton.interactable = true;
                 SetTagButtonsInteractable(false);
@@ -68,7 +68,7 @@ namespace FourZeroFourStudios
             else if (_selection == Selection.TakeDown)
             {
                 SendAnalysisButton.interactable = false;
-                SetTagButtonsInteractable(true);
+                SetTagButtonsInteractable(true); //enables tag buttons as well ONLY if its take down
             }
 
             if (_currentlySelectedTagButton != null)
@@ -81,8 +81,9 @@ namespace FourZeroFourStudios
         void SelectTag(ScriptablePostsData.Tag _tag)
         {
             _takeDownTag = _tag;
-            Debug.Log("Selected Tag: " + _tag);
+            //Debug.Log("Selected Tag: " + _tag);
 
+            //only enables the Player to select the tags IF he selected take down before
             if (_currentSelection == Selection.TakeDown)
             {
                 SendAnalysisButton.interactable = true;
@@ -114,22 +115,23 @@ namespace FourZeroFourStudios
             if (_currentSelection == Selection.None) return;
             if (_currentSelection == Selection.TakeDown && _takeDownTag == null) return;
 
-            //ref post atual
+            //references the current post
             ScriptablePostsData _currentPost = _postBehaviours.Posts[_postBehaviours.CurrentPostIndex];
-            ScriptablePostsData.Tag _playerTag; //decisão do Jogador
+            //Player decision
+            ScriptablePostsData.Tag _playerTag;
 
             if (_currentSelection == Selection.NoViolation)
             {
                 _playerTag = ScriptablePostsData.Tag.NoViolation;
-                Debug.Log("Analysis: No Violation");
+                //Debug.Log("Analysis: No Violation");
             }
             else
             {
                 _playerTag = _takeDownTag.Value;
-                Debug.Log($"Analysis: Take Down/Tag: {_takeDownTag}");
+                //Debug.Log($"Analysis: Take Down/Tag: {_takeDownTag}");
             }
 
-            //verifica acerto ou erro
+            //verifies if the decision is correct or not
             if (_playerTag == _currentPost.CorrectTag)
             {
                 _postBehaviours.PlayerScore++;
@@ -140,9 +142,10 @@ namespace FourZeroFourStudios
                 Debug.Log($"Incorrect decision. Correct decision: {_currentPost.CorrectTag}");
             }
 
-            _postBehaviours.NextPost();
+            _postBehaviours.NextPost(); //advances to the next post in the index order
 
             #region UI Reset
+            //resets ALL buttons to their default state
             if (_currentlySelectedButton != null)
             {
                 ResetButtonVisual(_currentlySelectedButton);
@@ -165,13 +168,37 @@ namespace FourZeroFourStudios
 
         void SetTagButtonsInteractable(bool _interactable)
         {
+            //makes the tag buttons interactable
+            //(for when the Player makes his decision after choosing take down)
             CrimeButton.interactable = _interactable;
             HatredButton.interactable = _interactable;
             NSFWButton.interactable = _interactable;
         }
 
+        public void SwitchCanvas()
+        {
+            StartCoroutine(SwitchCanvasCoroutine(Delay));
+        }
+
+        IEnumerator SwitchCanvasCoroutine(float _delayInSeconds)
+        {
+            //adds a delay before changing from one canvas to another
+            yield return new WaitForSeconds(_delayInSeconds);
+            if (EagleEyeCanvas != null && InitialCanvas != null)
+            {
+                bool _isCanvasAActive = EagleEyeCanvas.gameObject.activeSelf;
+                bool _isCanvasBActive = InitialCanvas.gameObject.activeSelf;
+
+                EagleEyeCanvas.gameObject.SetActive(!_isCanvasAActive);
+                InitialCanvas.gameObject.SetActive(!_isCanvasBActive);
+            }
+        }
+
+        #region Button Visuals
         void SetButtonSelectedVisual(Button _button)
         {
+            //changes the normal button color to the selected button color
+            //(I couldn't find out how to maintain selected color through the inspector)
             var colors = _button.colors;
             var selectedColor = colors.selectedColor;
 
@@ -191,6 +218,7 @@ namespace FourZeroFourStudios
 
         void ResetButtonVisual(Button button)
         {
+            //resets button colors to normal
             var colors = button.colors;
             var defaultColor = Color.white;
 
@@ -207,23 +235,6 @@ namespace FourZeroFourStudios
 
             button.colors = cb;
         }
-
-        public void SwitchCanvas()
-        {
-            StartCoroutine(SwitchCanvasCoroutine(Delay));
-        }
-
-        IEnumerator SwitchCanvasCoroutine(float _delayInSeconds)
-        {
-            yield return new WaitForSeconds(_delayInSeconds);
-            if (EagleEyeCanvas != null && InitialCanvas != null)
-            {
-                bool _isCanvasAActive = EagleEyeCanvas.gameObject.activeSelf;
-                bool _isCanvasBActive = InitialCanvas.gameObject.activeSelf;
-
-                EagleEyeCanvas.gameObject.SetActive(!_isCanvasAActive);
-                InitialCanvas.gameObject.SetActive(!_isCanvasBActive);
-            }
-        }
+        #endregion
     }
 }
