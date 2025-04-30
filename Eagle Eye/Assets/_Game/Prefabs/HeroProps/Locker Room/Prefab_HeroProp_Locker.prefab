@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2709840347029918686}
   - component: {fileID: 2709840347029918683}
   - component: {fileID: 2709840347029918680}
+  - component: {fileID: 1998556367}
   m_Layer: 0
   m_Name: DOOR ORIGIN
   m_TagString: Untagged
@@ -104,7 +105,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2709840347029918687}
-  m_LocalRotation: {x: 0, y: -0.35836798, z: 0, w: 0.93358046}
+  m_LocalRotation: {x: 0, y: -0.358368, z: 0, w: 0.93358046}
   m_LocalPosition: {x: -0.333, y: 1.78, z: 0.2974}
   m_LocalScale: {x: 0.04988529, y: 0.10628427, z: -0.044179156}
   m_ConstrainProportionsScale: 0
@@ -163,6 +164,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1998556367
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709840347029918687}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c0e90f596c50b143a16a3e51b898eab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &8616366548841032605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,8 +1680,9 @@ GameObject:
   - component: {fileID: 8616366549792545851}
   - component: {fileID: 8616366549791416059}
   - component: {fileID: 8616366549787224121}
-  m_Layer: 0
-  m_Name: Go_Door
+  - component: {fileID: 302590262743986583}
+  m_Layer: 6
+  m_Name: Go_Player_Locker_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1752,6 +1774,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6223224, y: 1.7774656, z: 0.022210777}
   m_Center: {x: 0.30766246, y: 0.014849365, z: 0.0014266968}
+--- !u!114 &302590262743986583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616366549789474873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a185a4b90d3232244afe4dcd2566cd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionText: Store
+  _anim_doorOrigin: {fileID: 1998556367}
 --- !u!1 &8616366549789474875
 GameObject:
   m_ObjectHideFlags: 0
