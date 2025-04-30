@@ -8,9 +8,13 @@ namespace FourZeroFourStudios
 {
     public class PostBehaviours : MonoBehaviour
     {
+        public int PlayerScore; //ganha um ponto sempre que acerta uma decisão, não ganha quando erra
+
+        [Header("Posts")]
         public ScriptablePostsData[] Posts;
         public int CurrentPostIndex = 0;
 
+        [Header("UI References")]
         public Image UserImageUI;
         public TextMeshProUGUI UserInfoUI;
         public TextMeshProUGUI ContentUI;
@@ -34,6 +38,6 @@ namespace FourZeroFourStudios
             UserImageUI.sprite = _post.UserImage;
             UserInfoUI.text = _post.UserInfo;
             ContentUI.text = _post.Content;
-    }
+        }
     }
 }
