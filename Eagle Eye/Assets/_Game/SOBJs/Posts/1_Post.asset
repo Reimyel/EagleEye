@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: 1_Post
   m_EditorClassIdentifier: 
   UserImage: {fileID: 21300000, guid: ebbf9302f8bd9c04f9542516bf214c00, type: 3}
-  UserInfo: "<b>boog\u0295\u2022\u1D25\u2022\u0294</b> <i>#boogie</i> | 8h"
+  UserInfo: "<b>boog\u0295\u2022\u1D25\u2022\u0294</b> <i>@boogie</i> | 8h"
   Content: THERE ARE ANTS IN MY XBOX WTF GET OUT!!!
+  PostImage: {fileID: 0}
+  CorrectTag: 0
+  Layout: 1
