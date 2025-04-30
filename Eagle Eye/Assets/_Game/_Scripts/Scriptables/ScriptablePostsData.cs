@@ -11,5 +11,7 @@ namespace FourZeroFourStudios
         public Sprite UserImage;
         [TextArea(5,5)] public string UserInfo;
         [TextArea(10,10)] public string Content;
+        public Tag CorrectTag;
+        public enum Tag { NoViolation, Crime, Hatred, NSFW }
     }
 }

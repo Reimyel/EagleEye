@@ -34,6 +34,6 @@ namespace FourZeroFourStudios
             UserImageUI.sprite = _post.UserImage;
             UserInfoUI.text = _post.UserInfo;
             ContentUI.text = _post.Content;
-    }
+        }
     }
 }
