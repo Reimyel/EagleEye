@@ -1289,7 +1289,7 @@ MonoBehaviour:
   LayoutDefault:
     LayoutRoot: {fileID: 35790086}
     UserAvatar: {fileID: 241048745}
-    Userinfo: {fileID: 2099229018}
+    Userinfo: {fileID: 349089944}
     Content: {fileID: 324056414}
     PostImage: {fileID: 0}
   LayoutSmall:
@@ -3371,7 +3371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &589045910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4166,7 +4166,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.25379974}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.0024414062, y: -0.55999756}
-  m_SizeDelta: {x: -1376.9, y: -626.97894}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865085509
 MonoBehaviour:
@@ -5099,7 +5099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1107088219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5795,7 +5795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
