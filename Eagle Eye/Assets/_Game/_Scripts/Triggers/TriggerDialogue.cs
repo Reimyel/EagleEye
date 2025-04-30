@@ -25,9 +25,9 @@ namespace FourZeroFourStudios
             Component
         }
 
-        void Start() => Raycaster.OnRaycast += CheckTrigger;
+        void OnEnable() => Raycaster.OnRaycast += CheckTrigger;
 
-        void OnDestroy() => Raycaster.OnRaycast -= CheckTrigger;
+        void OnDisable() => Raycaster.OnRaycast -= CheckTrigger;
 
         void CheckTrigger(GameObject gameObjectValue, TextMeshProUGUI tmpValue) 
         {

@@ -15,7 +15,7 @@ namespace FourZeroFourStudios
             base.Interact();
 
             _anim_doorOrigin.enabled = true;
-            _heroPropDoorOffice.ActivateCanOpen();
+            _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.IN);
 
             this.enabled = false;
         }
