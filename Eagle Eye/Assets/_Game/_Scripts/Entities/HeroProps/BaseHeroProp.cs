@@ -8,7 +8,7 @@ namespace FourZeroFourStudios
         [Header("Parent Settings:")]
         [SerializeField, TextArea] protected string _actionText;
 
-        void Start() => Raycaster.OnRaycast += CheckInteraction;
+        void OnEnable() => Raycaster.OnRaycast += CheckInteraction;
 
         void OnDisable() => Raycaster.OnRaycast -= CheckInteraction;
 
