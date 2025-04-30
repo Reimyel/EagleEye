@@ -138,10 +138,12 @@ namespace FourZeroFourStudios
             if (_playerTag == _currentPost.CorrectTag)
             {
                 //anotar acerto
+                Debug.Log("Correct decision");
             }
             else
             {
                 //anotar erro
+                Debug.Log($"Incorrect decision. Correct decision: {_currentPost.CorrectTag}");
             }
 
             _postBehaviours.NextPost();
