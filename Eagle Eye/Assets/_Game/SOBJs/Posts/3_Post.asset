@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UserImage: {fileID: 21300000, guid: 031b4b4a9188a9747906f9e12386da3f, type: 3}
   UserInfo: <b>thomas left nut</b> <i>@jimblokes</i> | 2h
-  Content: "yo @jaychlong I just stole this stop sign in your name\n#thugmoment #bigman\r"
+  Content: "yo @jaychlong I just stole this stop sign in your name #thugmoment #bigman\r"
   PostImage: {fileID: 21300000, guid: eaf94a3170a04f0408bc274216677a25, type: 3}
   CorrectTag: 1
   Layout: 3

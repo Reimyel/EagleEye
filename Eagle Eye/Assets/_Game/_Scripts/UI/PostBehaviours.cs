@@ -85,6 +85,12 @@ namespace FourZeroFourStudios
             _activeLayout.UserAvatar.sprite = _post.UserImage;
             _activeLayout.Userinfo.text = _post.UserInfo;
             _activeLayout.Content.text = _post.Content;
+
+            //go to loading screen after a certain amount of posts
+            if (CurrentPostIndex == 0)
+            {
+
+            }
         }
     }
 }
