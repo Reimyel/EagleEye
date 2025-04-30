@@ -9,24 +9,22 @@ namespace FourZeroFourStudios
 {
     public class ButtonBehaviours : MonoBehaviour
     {
-        [Header("Canvases")]
+        [Header("Canvas References")]
         public Canvas EagleEyeCanvas;
         public Canvas InitialCanvas;
         public float Delay = 0.2f;
 
-        [Header("Moderation Buttons")]
+        [Header("Button References")]
         public Button NoViolationButton;
         public Button TakeDownButton;
         public Button SendAnalysisButton;
-
-        [Header("Tag Buttons")]
         public Button CrimeButton;
         public Button HatredButton;
         public Button NSFWButton;
 
         public enum Selection { None, NoViolation, TakeDown, Crime, Hatred, NSFW }
         Selection _currentSelection = Selection.None;
-        string _takeDownTag = null;
+        ScriptablePostsData.Tag? _takeDownTag = null;
         Button _currentlySelectedButton;
         Button _currentlySelectedTagButton = null;
         PostBehaviours _postBehaviours;
@@ -35,14 +33,16 @@ namespace FourZeroFourStudios
         {
             _postBehaviours = FindObjectOfType<PostBehaviours>();
 
+            //listeners "hear" the Player button clicks
             NoViolationButton.onClick.AddListener(() => SelectOption(Selection.NoViolation));
             TakeDownButton.onClick.AddListener(() => SelectOption(Selection.TakeDown));
             SendAnalysisButton.onClick.AddListener(SendAnalysis);
 
-            CrimeButton.onClick.AddListener(() => SelectTag("Crime"));
-            HatredButton.onClick.AddListener(() => SelectTag("Hatred"));
-            NSFWButton.onClick.AddListener(() => SelectTag("NSFW"));
+            CrimeButton.onClick.AddListener(() => SelectTag(ScriptablePostsData.Tag.Crime));
+            HatredButton.onClick.AddListener(() => SelectTag(ScriptablePostsData.Tag.Hatred));
+            NSFWButton.onClick.AddListener(() => SelectTag(ScriptablePostsData.Tag.NSFW));
 
+            //send analysis and tags cannot be interactable before the Player makes his decision
             SendAnalysisButton.interactable = false;
             SetTagButtonsInteractable(false);
         }
@@ -78,7 +78,7 @@ namespace FourZeroFourStudios
             }
         }
 
-        void SelectTag(string _tag)
+        void SelectTag(ScriptablePostsData.Tag _tag)
         {
             _takeDownTag = _tag;
             Debug.Log("Selected Tag: " + _tag);
@@ -94,13 +94,13 @@ namespace FourZeroFourStudios
 
                 switch (_tag)
                 {
-                    case "Crime":
+                    case ScriptablePostsData.Tag.Crime:
                         _currentlySelectedTagButton = CrimeButton;
                         break;
-                    case "Hatred":
+                    case ScriptablePostsData.Tag.Hatred:
                         _currentlySelectedTagButton = HatredButton;
                         break;
-                    case "NSFW":
+                    case ScriptablePostsData.Tag.NSFW:
                         _currentlySelectedTagButton = NSFWButton;
                         break;
                 }
@@ -125,24 +125,18 @@ namespace FourZeroFourStudios
             }
             else
             {
-                if (!System.Enum.TryParse(_takeDownTag, out _playerTag))
-                {
-                    Debug.LogError($"Invalid tag: {_takeDownTag}");
-                    return;
-                }
-
+                _playerTag = _takeDownTag.Value;
                 Debug.Log($"Analysis: Take Down/Tag: {_takeDownTag}");
             }
 
             //verifica acerto ou erro
             if (_playerTag == _currentPost.CorrectTag)
             {
-                //anotar acerto
+                _postBehaviours.PlayerScore++;
                 Debug.Log("Correct decision");
             }
             else
             {
-                //anotar erro
                 Debug.Log($"Incorrect decision. Correct decision: {_currentPost.CorrectTag}");
             }
 
