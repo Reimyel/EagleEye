@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 0.01
-  frequency: 0
+  frequency: 8
   smooth: 100
 --- !u!114 &4618562969628820140
 MonoBehaviour:
@@ -216,5 +216,6 @@ MonoBehaviour:
   _distance: 8
   _layerMask:
     serializedVersion: 2
-    m_Bits: 59
+    m_Bits: 64
   _rayPoint: {fileID: 4618562967951360243}
+  _tmp_action: {fileID: 0}

@@ -17,6 +17,7 @@ namespace FourZeroFourStudios
         [Header("References")]
         [SerializeField] Transform _rayPoint;
         [SerializeField] TextMeshProUGUI _tmp_action;
+        [SerializeField] HudDialogueManager _hudDialogueManager;
 
         public static event System.Action<GameObject, TextMeshProUGUI> OnRaycast;
         #endregion
@@ -42,6 +43,7 @@ namespace FourZeroFourStudios
             {
                 Debug.DrawLine(ray.origin, ray.origin + ray.direction * _distance, Color.green);
                 _tmp_action.text = string.Empty;
+                _hudDialogueManager.StopDialogue();
             }
         }
         #endregion
