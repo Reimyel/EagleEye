@@ -16,11 +16,18 @@ namespace FourZeroFourStudios
         [Space]
 
         [Header("Parameters:")]
-        [SerializeField] bool _destroyAfterShow;
+        [SerializeField] DestroyMode _destroyAfterShow = DestroyMode.No;
 
-        void Start() => Raycaster.OnRaycast += CheckTrigger;
+        enum DestroyMode 
+        {
+            No,
+            GameObject,
+            Component
+        }
 
-        void OnDestroy() => Raycaster.OnRaycast -= CheckTrigger;
+        void OnEnable() => Raycaster.OnRaycast += CheckTrigger;
+
+        void OnDisable() => Raycaster.OnRaycast -= CheckTrigger;
 
         void CheckTrigger(GameObject gameObjectValue, TextMeshProUGUI tmpValue) 
         {
@@ -28,8 +35,10 @@ namespace FourZeroFourStudios
 
             HudDialogueManager.Instance.StartDialogue(_dialogue);
 
-            if (_destroyAfterShow)
+            if (_destroyAfterShow == DestroyMode.GameObject)
                 Destroy(gameObjectValue);
+            else if (_destroyAfterShow == DestroyMode.Component)
+                this.enabled = false;
         }
     }
 }
