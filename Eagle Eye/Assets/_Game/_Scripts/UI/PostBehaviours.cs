@@ -18,17 +18,29 @@ namespace FourZeroFourStudios
 
     public class PostBehaviours : MonoBehaviour
     {
-        public int PlayerScore; //making correct decisions earns the Player points
-
         [Header("Posts")]
-        public ScriptablePostsData[] Posts;
         public int CurrentPostIndex = 0;
+        public int PlayerScore; //making correct decisions earns the Player points
+        public ScriptablePostsData[] Posts;
 
         [Header("Layouts")]
         public PostLayout LayoutDefault;
         public PostLayout LayoutSmall;
         public PostLayout LayoutBig;
         public PostLayout LayoutImage;
+
+        [Header("Canvas")]
+        public GameObject LoadingScreen;
+        public GameObject PostPanel;
+        public float Delay = 1f;
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(SwitchBackToPostCoroutine(Delay));
+            }
+        }
 
         private void Start()
         {
@@ -87,10 +99,49 @@ namespace FourZeroFourStudios
             _activeLayout.Content.text = _post.Content;
 
             //go to loading screen after a certain amount of posts
-            if (CurrentPostIndex == 0)
+            switch (CurrentPostIndex)
             {
-
+                case 5:
+                    SwitchDisplay();
+                    break;
+                case 12:
+                    SwitchDisplay();
+                    break;
+                case 20:
+                    SwitchDisplay();
+                    break;
+                case 29:
+                    SwitchDisplay();
+                    break;
             }
+        }
+
+        public void SwitchDisplay()
+        {
+            if (Posts[CurrentPostIndex] != null && LoadingScreen != null)
+            {
+                bool _isPostPanelActive = PostPanel.activeSelf;
+                bool _isLoadingScreenActive = LoadingScreen.activeSelf;
+
+                PostPanel.SetActive(!_isPostPanelActive);
+                LoadingScreen.SetActive(!_isLoadingScreenActive);
+            }
+            StartCoroutine(SwitchToLoadingCoroutine(Delay));
+        }
+
+        IEnumerator SwitchToLoadingCoroutine(float _delayInSeconds)
+        {
+            //adds a delay so Player can see its loading, before being "ejected" from the laptop
+            yield return new WaitForSeconds(_delayInSeconds);
+            Debug.Log("nn tem lógica pra sair ainda");
+        }
+
+        IEnumerator SwitchBackToPostCoroutine(float _delayInSeconds)
+        {
+            yield return new WaitForSeconds(_delayInSeconds);
+            Debug.Log("nn tem lógica pra voltar ainda");
+            SwitchDisplay();
+            NextPost();
         }
     }
 }
