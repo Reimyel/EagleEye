@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5635b7cf3afea2743bf3477234e31c8f, type: 3}
+  m_Name: 10_Post
+  m_EditorClassIdentifier: 
+  UserImage: {fileID: 21300000, guid: c09bfcff25a4e3d4e8bea842cbca37c7, type: 3}
+  UserInfo: <b>DOO//Kie</b> <i>@hightempo</i> | 4h
+  Content: "Took some time off, but we\u2019re back with the reviews baby! Now, many
+    of you asked my thoughts on the new Sons of The Wasteland album, and I\u2019ll
+    just say this right now: it\u2019s NOT what you may be expecting from them. It\u2019s
+    very different from their other releases, and it makes sense because this album
+    is actually made for a game soundtrack! SODIUM is a 2D roguelike with fishing-based
+    mechanics releasing later this winter, and surprisingly they were able to enroll
+    a metal rock band into their sound design, just wow!!!"
+  PostImage: {fileID: 0}
+  CorrectTag: 0
+  Layout: 2
