@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5635b7cf3afea2743bf3477234e31c8f, type: 3}
+  m_Name: 7_Post
+  m_EditorClassIdentifier: 
+  UserImage: {fileID: 21300000, guid: bfa54fc5049732748816fc48991247e8, type: 3}
+  UserInfo: <b>Ryan Jonesy</b> <i>@ryanjones</i> | 6h
+  Content: "@astropunksfanboy looool I\u2019d kill her XD"
+  PostImage: {fileID: 0}
+  CorrectTag: 1
+  Layout: 1

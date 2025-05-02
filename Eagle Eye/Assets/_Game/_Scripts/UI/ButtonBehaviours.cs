@@ -9,12 +9,12 @@ namespace FourZeroFourStudios
 {
     public class ButtonBehaviours : MonoBehaviour
     {
-        [Header("Canvas References")]
+        [Header("Canvas")]
         public Canvas EagleEyeCanvas;
         public Canvas InitialCanvas;
         public float Delay = 0.2f;
 
-        [Header("Button References")]
+        [Header("Button")]
         public Button NoViolationButton;
         public Button TakeDownButton;
         public Button SendAnalysisButton;
