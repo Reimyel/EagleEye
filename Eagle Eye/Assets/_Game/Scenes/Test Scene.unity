@@ -2138,6 +2138,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647223606}
   m_CullTransparentMesh: 1
+--- !u!114 &672278064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2499916950857261190, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
+  m_PrefabInstance: {fileID: 2499916950028892312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705570907
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,18 +6902,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Volume_Global
       objectReference: {fileID: 0}
-    - target: {fileID: 2499916950857261189, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2499916950857261190, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
-      propertyPath: weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2499916950857261190, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2499916950857261191, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7073,6 +7072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_HeroProp_ChairOffice
       objectReference: {fileID: 0}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _volume
+      value: 
+      objectReference: {fileID: 672278064}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _go_player
       value: 
