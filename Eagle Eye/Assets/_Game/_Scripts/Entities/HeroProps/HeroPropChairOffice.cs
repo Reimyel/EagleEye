@@ -1,3 +1,4 @@
+using System.Collections;
 using HauntedPSX.RenderPipelines.PSX.Runtime;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace FourZeroFourStudios
         [Header("Rendering:")]
         [SerializeField] Volume _volume;
         [SerializeField] VolumeProfile _vprofile_crt;
+        [SerializeField] float _changeProfileDelay;
 
         Animator _anim_cameraHolder;
 
@@ -36,7 +38,14 @@ namespace FourZeroFourStudios
             _cameraHolder.gameObject.transform.rotation = _transf_cameraPosition.rotation;
 
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
-            
+
+            StartCoroutine(ApplyCrt());
+        }
+
+        IEnumerator ApplyCrt() 
+        {
+            yield return new WaitForSeconds(_changeProfileDelay);
+
             _volume.profile = _vprofile_crt;
 
             this.enabled = false;
