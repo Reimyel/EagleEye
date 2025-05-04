@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_Trigger_Pause2
+  m_Name: DialogueSequence_HeroProp_Symbol2
   m_EditorClassIdentifier: 
   _lines:
-  - "(I\u2019m getting kind of tired.)"
-  - "(It\u2019s not my break pause yet, but I need a coffee.)"
-  - "(There\u2019s a vending machine in the hall.)"
+  - (Another one of these. Is this a prank?)
   _typeSpeed: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0
