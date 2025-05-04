@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: "(Ain\u2019t going up 10 floors by foot.)"
-    color: {r: 1, g: 1, b: 1, a: 0.5882353}
-  _lines:
-  - "(Ain\u2019t going up 10 floors by foot.)"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 0.5882353}
   _stopMove: 0

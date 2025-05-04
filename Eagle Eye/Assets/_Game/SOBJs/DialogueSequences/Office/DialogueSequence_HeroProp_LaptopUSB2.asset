@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (It has the drawing of half a heart engraved on its casing.)
-    Color: {r: 1, g: 1, b: 1, a: 1}
-  _typeSpeed: 0.06
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+  _typeSpeed: 0
   _stopMove: 0

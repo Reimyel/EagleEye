@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_Trigger_Office
+  m_Name: DialogueSequence_Trigger_EnterOffice2
   m_EditorClassIdentifier: 
   _dialogueLines:
-  - Text: "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
-    color: {r: 1, g: 1, b: 1, a: 1}
-  _lines:
-  - "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
+  - Text: "(What the\u2026 where did you go?)"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+  - Text: (Dammit, is this a prank?)
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0

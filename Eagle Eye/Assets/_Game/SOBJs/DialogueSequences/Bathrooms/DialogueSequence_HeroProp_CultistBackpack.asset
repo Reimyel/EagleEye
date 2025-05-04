@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_Trigger_5_Post
+  m_Name: DialogueSequence_HeroProp_CultistBackpack
   m_EditorClassIdentifier: 
   _dialogueLines:
-  - Text: (Posts like these have two violations. When a post has two or more of them,
-      we just mark it as the higher one in the hierarchy.)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
-  _typeSpeed: 0
+  - Text: "(A backpack, someone must\u2019ve lost it.)"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+  _typeSpeed: 0.06
   _stopMove: 0

@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_Trigger_Pause1
+  m_Name: DialogueSequence_Trigger_EnterOffice
   m_EditorClassIdentifier: 
   _dialogueLines:
-  - Text: (I heard footsteps, but no one entered the office yet.)
-    Color: {r: 1, g: 1, b: 1, a: 1}
-  - Text: "(Strange\u2026 Better check.)"
-    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   _typeSpeed: 0.06
   _stopMove: 0
