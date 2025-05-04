@@ -155,7 +155,7 @@ MonoBehaviour:
     m_Value: 0.54
   barrelDistortionX:
     m_OverrideState: 1
-    m_Value: 0.29
+    m_Value: 0.12
   barrelDistortionY:
     m_OverrideState: 1
     m_Value: 0

@@ -4628,6 +4628,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451958819}
   m_CullTransparentMesh: 1
+--- !u!1 &1515843216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4946336895055534330, guid: 7b8f473ce7f43b34d9c9045770906da2, type: 3}
+  m_PrefabInstance: {fileID: 4946336896477544740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541229111
 GameObject:
   m_ObjectHideFlags: 0
@@ -6902,6 +6907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Volume_Global
       objectReference: {fileID: 0}
+    - target: {fileID: 2499916950857261190, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: c46586471f4a322459b4dbcfee0e6b25, type: 2}
     - target: {fileID: 2499916950857261191, guid: 4187fb94dbcaf034bb5608c3cbdfac0f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7084,6 +7093,26 @@ PrefabInstance:
       propertyPath: _cameraHolder
       value: 
       objectReference: {fileID: 166210127}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_canvas_hud
+      value: 
+      objectReference: {fileID: 1515843216}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _changeProfileDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_canvas_minigames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_canvas_minigames.Array.data[0]
+      value: 
+      objectReference: {fileID: 737101189}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_canvas_minigames.Array.data[1]
+      value: 
+      objectReference: {fileID: 42033158}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
