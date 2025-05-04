@@ -12513,6 +12513,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530868950}
   m_CullTransparentMesh: 1
+--- !u!1 &531202522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531202523}
+  m_Layer: 0
+  m_Name: --TRIGGERS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531202523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531202522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -82.49594, y: 4.239542, z: 40.996975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &542590627
 GameObject:
   m_ObjectHideFlags: 0
@@ -12554,8 +12585,6 @@ Transform:
   - {fileID: 1127128660}
   - {fileID: 1744385550}
   - {fileID: 911736978}
-  - {fileID: 559283005}
-  - {fileID: 510540705}
   - {fileID: 823022729}
   - {fileID: 2144059284}
   - {fileID: 862842998}
@@ -12568,6 +12597,8 @@ Transform:
   - {fileID: 918127190}
   - {fileID: 1354906582}
   - {fileID: 683163278}
+  - {fileID: 559283005}
+  - {fileID: 510540705}
   m_Father: {fileID: 1170495304}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12581,6 +12612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 559283005}
   - component: {fileID: 559283006}
+  - component: {fileID: 559283007}
   m_Layer: 0
   m_Name: Right_Elevator
   m_TagString: Untagged
@@ -12625,6 +12657,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &559283007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559283004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87442cf890c66f8439615797d8490a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doorAnimator: {fileID: 559283006}
 --- !u!43 &577647018
 Mesh:
   m_ObjectHideFlags: 0
@@ -42905,7 +42950,7 @@ RectTransform:
   - {fileID: 1369234706}
   - {fileID: 111934953}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
