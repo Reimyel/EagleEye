@@ -1,6 +1,4 @@
 using System.Collections;
-using HauntedPSX.RenderPipelines.PSX.Runtime;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -17,6 +15,9 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_player;
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] Transform _transf_cameraPosition;
+        [SerializeField] GameObject[] _go_canvas_minigames;
+        [SerializeField] GameObject _go_canvas_hud;
+        [SerializeField] PostBehaviours _postBehaviours;
 
         [Header("Rendering:")]
         [SerializeField] Volume _volume;
@@ -24,6 +25,8 @@ namespace FourZeroFourStudios
         [SerializeField] float _changeProfileDelay;
 
         Animator _anim_cameraHolder;
+
+        bool _isFirstTime = true;
 
         void Start() => _anim_cameraHolder = _cameraHolder.gameObject.GetComponent<Animator>();
 
@@ -39,6 +42,11 @@ namespace FourZeroFourStudios
 
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
 
+            _go_canvas_hud.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             StartCoroutine(ApplyCrt());
         }
 
@@ -47,6 +55,14 @@ namespace FourZeroFourStudios
             yield return new WaitForSeconds(_changeProfileDelay);
 
             _volume.profile = _vprofile_crt;
+
+            for (int i = 0; i < _go_canvas_minigames.Length; i++)
+                _go_canvas_minigames[i].SetActive(true);
+
+            if (_isFirstTime)
+                _isFirstTime = false;
+            else
+                _postBehaviours.ReturnToPosts();
 
             this.enabled = false;
         }

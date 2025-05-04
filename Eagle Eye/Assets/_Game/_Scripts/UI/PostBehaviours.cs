@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
 
 namespace FourZeroFourStudios
 {
@@ -34,6 +35,15 @@ namespace FourZeroFourStudios
         public GameObject PostPanel;
         public float Delay = 1f;
 
+        [Header("Disable / Active UI")]
+        [SerializeField] private GameObject _go_player;
+        [SerializeField] private CameraHolder _cameraHolder;
+        [SerializeField] private Volume _volume;
+        [SerializeField] private VolumeProfile _vprofile_default;
+        [SerializeField] private Animator _anim_cameraHolder;
+        [SerializeField] GameObject[] _go_canvas_minigames;
+        [SerializeField] GameObject _go_canvas_hud;
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -47,6 +57,8 @@ namespace FourZeroFourStudios
             DisplayCurrentPost();
         }
 
+        public void ReturnToPosts() => StartCoroutine(SwitchBackToPostCoroutine(Delay));
+
         public void NextPost()
         {
             if (Posts.Length == 0) return;
@@ -54,7 +66,7 @@ namespace FourZeroFourStudios
             DisplayCurrentPost();
         }
 
-        void DisplayCurrentPost()
+        private void DisplayCurrentPost()
         {
             ScriptablePostsData _post = Posts[CurrentPostIndex];
 
@@ -129,17 +141,35 @@ namespace FourZeroFourStudios
             StartCoroutine(SwitchToLoadingCoroutine(Delay));
         }
 
-        IEnumerator SwitchToLoadingCoroutine(float _delayInSeconds)
+        private IEnumerator SwitchToLoadingCoroutine(float _delayInSeconds)
         {
             //adds a delay so Player can see its loading, before being "ejected" from the laptop
             yield return new WaitForSeconds(_delayInSeconds);
-            Debug.Log("nn tem lógica pra sair ainda");
+
+            _go_canvas_hud.SetActive(true);
+
+            for (int i = 0;  i < _go_canvas_minigames.Length; i++)
+                _go_canvas_minigames[i].SetActive(false);
+
+            _anim_cameraHolder.Play("Anim_CameraHolder_ZoomOut");
+            _volume.profile = _vprofile_default;
+
+            StartCoroutine(EnablePlayer(1f));
         }
 
-        IEnumerator SwitchBackToPostCoroutine(float _delayInSeconds)
+        private IEnumerator EnablePlayer(float _delayInSeconds) 
         {
             yield return new WaitForSeconds(_delayInSeconds);
-            Debug.Log("nn tem lógica pra voltar ainda");
+            _go_player.SetActive(true);
+            _cameraHolder.enabled = true;
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        private IEnumerator SwitchBackToPostCoroutine(float _delayInSeconds)
+        {
+            yield return new WaitForSeconds(_delayInSeconds);
             SwitchDisplay();
             NextPost();
         }
