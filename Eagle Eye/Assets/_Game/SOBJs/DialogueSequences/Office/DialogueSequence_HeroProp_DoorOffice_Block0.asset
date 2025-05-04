@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_HeroProp_DoorOffice_Block0
   m_EditorClassIdentifier: 
-  _lines:
-  - "(Oops, can\u2019t enter with my things. Better put them in my locker.) >>"
-  - "(Mine is the 6\xB0 locker.)"
+  _dialogueLines:
+  - Text: "(Oops, can\u2019t enter with my things. Better put them in my locker.)
+      >>"
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: "(Mine is the 6\xB0 locker.)"
+    Color: {r: 0, g: 0, b: 0, a: 0}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 0.5882353}
   _stopMove: 0

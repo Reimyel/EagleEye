@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_HeroProp_LaptopUSB
   m_EditorClassIdentifier: 
-  _lines:
-  - "(I don\u2019t remember this USB being here. Did Max forget it before leaving?)"
-  - "(The laptop\u2019s firewall blocks my screen when unidentified software is connected
-    to it.)"
-  - "(I\u2019ll turn it over to the lost and found when my shift is over.)"
-  _typeSpeed: 0
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _dialogueLines:
+  - Text: "(I don\u2019t remember this USB being here. Did Max forget it before leaving?)"
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: "(The laptop\u2019s firewall blocks my screen when unidentified software
+      is connected to it.)"
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: "(I\u2019ll turn it over to the lost and found when my shift is over.)"
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  _typeSpeed: 0.06
   _stopMove: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Trigger_3_Post
   m_EditorClassIdentifier: 
-  _lines:
-  - (This one violates one of the policies, so it must be TAKEN DOWN. Sorry, not
-    sorry.)
-  _typeSpeed: 0
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _dialogueLines:
+  - Text: (This one violates one of the policies, so it must be TAKEN DOWN. Sorry,
+      not sorry.)
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.06
   _stopMove: 0

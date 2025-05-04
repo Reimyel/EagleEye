@@ -12,21 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Trigger_Max1
   m_EditorClassIdentifier: 
-  _lines:
-  - "Sup Connor.\r"
-  - Oh, hello Max. Leaving already?
-  - "Yeah, thank God. I don\u2019t like being here so late, gives me the creeps."
-  - "It\u2019s actually quite calm, very quiet. At least, until Rachel comes in.
-    I think she\u2019s late."
-  - Oh yeah about that. She sent me a text saying she would be late, problem with
-    traffic it seems.
-  - "So, you\u2019ll be working alone in the office until Rachel arrives. You ok
-    with that?"
-  - Sure, no problem. The rest of the team should be arriving soon.
-  - "Cool, man. I\u2019ll be leaving now, so behave yourself alright? Anything happens
-    you call me on your phone."
-  - Have a good night, and a good shift.
-  - Thanks, have a good rest man.
-  _typeSpeed: 0
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _dialogueLines:
+  - Text: Sup Connor.
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: Oh, hello Max. Leaving already?
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: "Yeah, thank God. I don\u2019t like being here so late, gives me the creeps."
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: "It\u2019s actually quite calm, very quiet. At least, until Rachel comes
+      in. I think she\u2019s late."
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: Oh yeah about that. She sent me a text saying she would be late, problem
+      with traffic it seems.
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: "So, you\u2019ll be working alone in the office until Rachel arrives. You
+      ok with that?"
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: Sure, no problem. The rest of the team should be arriving soon.
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: "Cool, man. I\u2019ll be leaving now, so behave yourself alright? Anything
+      happens you call me on your phone."
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: Have a good night, and a good shift.
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Text: Thanks, have a good rest man.
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  _typeSpeed: 0.06
   _stopMove: 0

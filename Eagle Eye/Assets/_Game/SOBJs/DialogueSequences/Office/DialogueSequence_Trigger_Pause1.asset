@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Trigger_Pause1
   m_EditorClassIdentifier: 
-  _lines:
-  - (I heard footsteps, but no one entered the office yet.)
-  - "(Strange\u2026 Better check.)"
-  _typeSpeed: 0
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _dialogueLines:
+  - Text: (I heard footsteps, but no one entered the office yet.)
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: "(Strange\u2026 Better check.)"
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  _typeSpeed: 0.06
   _stopMove: 0

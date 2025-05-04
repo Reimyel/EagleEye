@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Trigger_1_Post
   m_EditorClassIdentifier: 
-  _lines:
-  - "(Ok, first post of the day. Doesn\u2019t look like it hurts any of the policies.)"
-  - "(Posts like these are marked as NO VIOLATION, and aren\u2019t taken down. After
-    that, I just send it, and the next post starts loading.)"
-  _typeSpeed: 0
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _dialogueLines:
+  - Text: "(Ok, first post of the day. Doesn\u2019t look like it hurts any of the
+      policies.)"
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: "(Posts like these are marked as NO VIOLATION, and aren\u2019t taken down.
+      After that, I just send it, and the next post starts loading.)"
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  _typeSpeed: 0.06
   _stopMove: 0
