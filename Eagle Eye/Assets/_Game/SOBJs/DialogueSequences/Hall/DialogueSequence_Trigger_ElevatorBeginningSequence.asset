@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
+  m_Name: DialogueSequence_Trigger_ElevatorBeginningSequence
+  m_EditorClassIdentifier: 
+  _lines:
+  - (My name is Connor. I work at the graveyard shift for Earlybird.) >>
+  - "(Technically, I work for Eagle Eye, their security provider. I\u2019m a content
+    moderator, which means I remove posts that could pose legal harm for them.) >>"
+  - "(It\u2019s a relatively easy job, and the midnight bonus is VERY good. I\u2019m
+    used to being up late so that\u2019s a plus.) >>"
+  - (My shift is about to begin. I hope I'm not late.)
+  _typeSpeed: 0
+  _color: {r: 1, g: 1, b: 1, a: 1}
+  _stopMove: 0

@@ -8,7 +8,7 @@ namespace FourZeroFourStudios
     public class ScriptableDialogueSequence : ScriptableObject 
     {
         [Header("Parameters:")]
-        [SerializeField, TextArea()] string[] _lines;
+        [SerializeField, TextArea(2,10)] string[] _lines;
         [SerializeField, Range(0f, 5f)] float _typeSpeed;
         [SerializeField] Color _color = Color.white;
         [SerializeField] bool _stopMove = false;

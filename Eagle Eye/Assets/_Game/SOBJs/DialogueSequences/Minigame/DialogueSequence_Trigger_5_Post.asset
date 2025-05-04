@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_HeroProp_DoorOffice_Block0
+  m_Name: DialogueSequence_Trigger_5_Post
   m_EditorClassIdentifier: 
   _lines:
-  - "(Oops, can\u2019t enter with my things. Better put them in my locker.) >>"
-  - "(Mine is the 6\xB0 locker.)"
-  _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  - (Posts like these have two violations. When a post has two or more of them, we
+    just mark it as the higher one in the hierarchy.)
+  _typeSpeed: 0
+  _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0
