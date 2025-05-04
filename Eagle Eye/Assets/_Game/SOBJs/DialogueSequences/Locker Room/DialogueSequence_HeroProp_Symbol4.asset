@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_Trigger_5_Post
+  m_Name: DialogueSequence_HeroProp_Symbol4
   m_EditorClassIdentifier: 
   _dialogueLines:
-  - Text: (Posts like these have two violations. When a post has two or more of them,
-      we just mark it as the higher one in the hierarchy.)
+  - Text: (There it is, all four drawings.)
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+  - Text: "(Wonder if I\u2019ll get a reward voucher for finding all of them in one
+      shift\u2026)"
     Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
   _typeSpeed: 0
   _stopMove: 0

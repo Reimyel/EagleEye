@@ -10,27 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
-  m_Name: DialogueSequence_Trigger_ElevatorBeginningSequence
+  m_Name: DialogueSequence_Trigger_Elevator_Beginning
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (My name is Connor. I work at the graveyard shift for Earlybird.) >>
-    color: {r: 1, g: 1, b: 1, a: 1}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: "(Technically, I work for Eagle Eye, their security provider. I\u2019m
       a content moderator, which means I remove posts that could pose legal harm
       for them.) >>"
-    color: {r: 1, g: 1, b: 1, a: 1}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
   - Text: "(It\u2019s a relatively easy job, and the midnight bonus is VERY good.
       I\u2019m used to being up late so that\u2019s a plus.) >>"
-    color: {r: 1, g: 1, b: 1, a: 1}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
   - Text: (My shift is about to begin. I hope I'm not late.)
-    color: {r: 1, g: 1, b: 1, a: 1}
-  _lines:
-  - (My name is Connor. I work at the graveyard shift for Earlybird.) >>
-  - "(Technically, I work for Eagle Eye, their security provider. I\u2019m a content
-    moderator, which means I remove posts that could pose legal harm for them.) >>"
-  - "(It\u2019s a relatively easy job, and the midnight bonus is VERY good. I\u2019m
-    used to being up late so that\u2019s a plus.) >>"
-  - (My shift is about to begin. I hope I'm not late.)
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0

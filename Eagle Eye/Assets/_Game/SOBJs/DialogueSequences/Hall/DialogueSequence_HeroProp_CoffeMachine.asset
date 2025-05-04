@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: "(I\u2019m full of energy right now, maybe later.)"
-    color: {r: 1, g: 1, b: 1, a: 0.5882353}
-  _lines:
-  - "(I\u2019m full of energy right now, maybe later.)"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 0.5882353}
   _stopMove: 0

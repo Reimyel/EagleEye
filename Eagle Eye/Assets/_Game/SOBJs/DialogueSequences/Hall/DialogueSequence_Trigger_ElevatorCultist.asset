@@ -14,15 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (Who was that? They left so quickly.)
-    color: {r: 1, g: 1, b: 1, a: 1}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: (He must have gotten off on the wrong floor. Rookie mistake.)
-    color: {r: 1, g: 1, b: 1, a: 1}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
   - Text: (Better be going back.)
-    color: {r: 1, g: 1, b: 1, a: 1}
-  _lines:
-  - (Who was that? They left so quickly.)
-  - (He must have gotten off on the wrong floor. Rookie mistake.)
-  - (Better be going back.)
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0
