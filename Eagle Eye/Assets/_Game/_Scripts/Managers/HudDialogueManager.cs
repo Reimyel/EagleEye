@@ -36,14 +36,14 @@ namespace FourZeroFourStudios
         {
             if (_curSequence != null && Input.GetMouseButtonDown(0))
             {
-                if (_tmp_dialogue.text == _curSequence.Lines[_curIndex])
+                if (_tmp_dialogue.text == _curSequence.DialogueLines[_curIndex].Text)
                 {
                     NextLine();
                 }
                 else
                 {
                     StopAllCoroutines();
-                    _tmp_dialogue.text = _curSequence.Lines[_curIndex];
+                    _tmp_dialogue.text = _curSequence.DialogueLines[_curIndex].Text;
                 }
             }
         }
@@ -58,7 +58,6 @@ namespace FourZeroFourStudios
 
             _cg.alpha = 1;
             _tmp_dialogue.text = string.Empty;
-            _tmp_dialogue.color = _curSequence.Color;
             
             if (_curSequence.StopMove)
                 _playerMove.enabled = false;
@@ -74,7 +73,7 @@ namespace FourZeroFourStudios
 
         IEnumerator TypeLine()
         {
-            foreach (char c in _curSequence.Lines[_curIndex].ToCharArray())
+            foreach (char c in _curSequence.DialogueLines[_curIndex].Text.ToCharArray())
             {
                 _tmp_dialogue.text += c;
                 yield return new WaitForSeconds(_curSequence.TypeSpeed);
@@ -83,7 +82,9 @@ namespace FourZeroFourStudios
 
         void NextLine()
         {
-            if (_curIndex < _curSequence.Lines.Length - 1)
+            _tmp_dialogue.color = _curSequence.DialogueLines[_curIndex].Color;
+
+            if (_curIndex < _curSequence.DialogueLines.Length - 1)
             {
                 _curIndex++;
                 _tmp_dialogue.text = string.Empty;

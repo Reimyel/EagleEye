@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Trigger_Office
   m_EditorClassIdentifier: 
+  _dialogueLines:
+  - Text: "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
+    color: {r: 1, g: 1, b: 1, a: 1}
   _lines:
   - "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
-  _typeSpeed: 0
+  _typeSpeed: 0.06
   _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0

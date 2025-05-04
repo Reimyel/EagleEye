@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_HeroProp_ElevatorButton
   m_EditorClassIdentifier: 
+  _dialogueLines:
+  - Text: (My office is here on the 10th floor.)
+    color: {r: 1, g: 1, b: 1, a: 0.5882353}
   _lines:
   - (My office is here on the 10th floor.)
   _typeSpeed: 0.06

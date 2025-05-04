@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Trigger_ElevatorCultist
   m_EditorClassIdentifier: 
+  _dialogueLines:
+  - Text: (Who was that? They left so quickly.)
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: (He must have gotten off on the wrong floor. Rookie mistake.)
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: (Better be going back.)
+    color: {r: 1, g: 1, b: 1, a: 1}
   _lines:
   - (Who was that? They left so quickly.)
   - (He must have gotten off on the wrong floor. Rookie mistake.)
   - (Better be going back.)
-  _typeSpeed: 0
+  _typeSpeed: 0.06
   _color: {r: 1, g: 1, b: 1, a: 1}
   _stopMove: 0
