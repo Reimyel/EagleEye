@@ -19,6 +19,7 @@ namespace FourZeroFourStudios
         [SerializeField] CanvasGroup _cg;
         [SerializeField] TextMeshProUGUI _tmp_dialogue;
         [SerializeField] PlayerMovement _playerMove;
+        [SerializeField] CameraHeadBob _cameraHeadBob;
         [Space]
 
         [Header("Debug:")]
@@ -62,7 +63,10 @@ namespace FourZeroFourStudios
             _tmp_dialogue.color = Color.white;
 
             if (_curSequence.StopMove)
+            {
                 _playerMove.enabled = false;
+                _cameraHeadBob.enabled = false;
+            }
 
             StartCoroutine(TypeLine());
 
@@ -97,7 +101,10 @@ namespace FourZeroFourStudios
             else
             {
                 if (_curSequence.StopMove)
+                {
                     _playerMove.enabled = true;
+                    _cameraHeadBob.enabled = true;
+                }
 
                 _curSequence = null;
                 _cg.alpha = 0;
