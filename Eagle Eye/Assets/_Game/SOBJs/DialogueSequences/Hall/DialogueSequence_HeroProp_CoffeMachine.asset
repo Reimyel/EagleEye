@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_HeroProp_CoffeMachine
   m_EditorClassIdentifier: 
-  _lines:
-  - "(I\u2019m full of energy right now, maybe later.)"
+  _dialogueLines:
+  - Text: "(I\u2019m full of energy right now, maybe later.)"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 0.5882353}
   _stopMove: 0

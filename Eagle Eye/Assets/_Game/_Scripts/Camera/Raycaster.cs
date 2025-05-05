@@ -43,7 +43,9 @@ namespace FourZeroFourStudios
             {
                 Debug.DrawLine(ray.origin, ray.origin + ray.direction * _distance, Color.green);
                 _tmp_action.text = string.Empty;
-                _hudDialogueManager.StopDialogue();
+
+                if (_hudDialogueManager.IsTrigger == false)
+                     _hudDialogueManager.StopDialogue();
             }
         }
         #endregion

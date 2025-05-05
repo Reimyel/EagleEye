@@ -27,6 +27,7 @@ namespace FourZeroFourStudios
         #endregion
 
         int _curIndex;
+        [HideInInspector] public bool IsTrigger = false;
         #endregion
 
         #region Mono
@@ -36,21 +37,21 @@ namespace FourZeroFourStudios
         {
             if (_curSequence != null && Input.GetMouseButtonDown(0))
             {
-                if (_tmp_dialogue.text == _curSequence.Lines[_curIndex])
+                if (_tmp_dialogue.text == _curSequence.DialogueLines[_curIndex].Text)
                 {
                     NextLine();
                 }
                 else
                 {
                     StopAllCoroutines();
-                    _tmp_dialogue.text = _curSequence.Lines[_curIndex];
+                    _tmp_dialogue.text = _curSequence.DialogueLines[_curIndex].Text;
                 }
             }
         }
         #endregion
 
         #region Custom
-        public void StartDialogue(ScriptableDialogueSequence sequenceValue)
+        public void StartDialogue(ScriptableDialogueSequence sequenceValue, bool isTriggerValue=false)
         {
             StopAllCoroutines();
             _curSequence = sequenceValue;
@@ -58,12 +59,14 @@ namespace FourZeroFourStudios
 
             _cg.alpha = 1;
             _tmp_dialogue.text = string.Empty;
-            _tmp_dialogue.color = _curSequence.Color;
-            
+            _tmp_dialogue.color = Color.white;
+
             if (_curSequence.StopMove)
                 _playerMove.enabled = false;
 
             StartCoroutine(TypeLine());
+
+            IsTrigger = isTriggerValue;
         }
 
         public void StopDialogue() 
@@ -74,7 +77,7 @@ namespace FourZeroFourStudios
 
         IEnumerator TypeLine()
         {
-            foreach (char c in _curSequence.Lines[_curIndex].ToCharArray())
+            foreach (char c in _curSequence.DialogueLines[_curIndex].Text.ToCharArray())
             {
                 _tmp_dialogue.text += c;
                 yield return new WaitForSeconds(_curSequence.TypeSpeed);
@@ -83,7 +86,9 @@ namespace FourZeroFourStudios
 
         void NextLine()
         {
-            if (_curIndex < _curSequence.Lines.Length - 1)
+            _tmp_dialogue.color = _curSequence.DialogueLines[_curIndex].Color;
+
+            if (_curIndex < _curSequence.DialogueLines.Length - 1)
             {
                 _curIndex++;
                 _tmp_dialogue.text = string.Empty;

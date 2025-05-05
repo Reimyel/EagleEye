@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
+  m_Name: DialogueSequence_Trigger_Max2
+  m_EditorClassIdentifier: 
+  _dialogueLines:
+  - Text: Hey Connor, thank God you answered. Thought you would be in the office.
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
+  - Text: Nah, I was in the bathroom.
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+  - Text: "No problem. So, I noticed I forgot my water bottle before leaving. I must\u2019ve
+      left it by the snack machines while I was buying a chocolate bar."
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
+  - Text: "Can you take it for me and place it in my locker? It's the 86\xB0 locker."
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
+  - Text: "Sure, I\u2019ll leave it there."
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+  - Text: "Thanks man, you can leave it unlocked, don\u2019t think anyone will try
+      taking it."
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
+  _typeSpeed: 0.06
+  _stopMove: 0

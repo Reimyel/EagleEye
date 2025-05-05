@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
+  m_Name: DialogueSequence_Trigger_Max1
+  m_EditorClassIdentifier: 
+  _dialogueLines:
+  - Text: Sup Connor.
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+  - Text: "Oh, hello Max. Leaving already?\r"
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+  - Text: "Yeah, thank God. I don\u2019t like being here so late, gives me the creeps."
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+  - Text: "It\u2019s actually quite calm, very quiet. At least, until Rachel comes
+      in. I think she\u2019s late."
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+  - Text: Oh yeah about that. She sent me a text saying she would be late, problem
+      with traffic it seems.
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+  - Text: "So, you\u2019ll be working alone in the office until Rachel arrives. You
+      ok with that?"
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+  - Text: Sure, no problem. The rest of the team should be arriving soon.
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+  - Text: "Cool, man. I\u2019ll be leaving now, so behave yourself alright? Anything
+      happens you call me on your phone."
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+  - Text: Have a good night, and a good shift.
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+  - Text: Thanks, have a good rest man.
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+  _typeSpeed: 0.06
+  _stopMove: 0

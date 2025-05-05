@@ -33,10 +33,10 @@ namespace FourZeroFourStudios
         {
             if (gameObjectValue != gameObject || HudDialogueManager.Instance.IsCurrentSequence(_dialogue)) return;
 
-            HudDialogueManager.Instance.StartDialogue(_dialogue);
+            HudDialogueManager.Instance.StartDialogue(_dialogue, true);
 
             if (_destroyAfterShow == DestroyMode.GameObject)
-                Destroy(gameObjectValue);
+                Destroy(gameObject);
             else if (_destroyAfterShow == DestroyMode.Component)
                 this.enabled = false;
         }
