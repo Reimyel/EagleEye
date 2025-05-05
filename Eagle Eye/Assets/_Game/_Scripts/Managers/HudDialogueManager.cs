@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace FourZeroFourStudios
 {
@@ -23,6 +24,7 @@ namespace FourZeroFourStudios
 
         [Header("Debug:")]
         [SerializeField] ScriptableDialogueSequence _curSequence;
+        [SerializeField] UnityEvent _curEvent;
         [SerializeField] ScriptableDialogueSequence _testDialogue;
         #endregion
 
@@ -51,7 +53,7 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Custom
-        public void StartDialogue(ScriptableDialogueSequence sequenceValue, bool isTriggerValue=false)
+        public void StartDialogue(ScriptableDialogueSequence sequenceValue, UnityEvent eventValue=null, bool isTriggerValue=false)
         {
             StopAllCoroutines();
             _curSequence = sequenceValue;
@@ -63,6 +65,9 @@ namespace FourZeroFourStudios
 
             if (_curSequence.StopMove)
                 _playerMove.enabled = false;
+
+            if (eventValue != null)
+                _curEvent = eventValue;
 
             StartCoroutine(TypeLine());
 
@@ -98,6 +103,11 @@ namespace FourZeroFourStudios
             {
                 if (_curSequence.StopMove)
                     _playerMove.enabled = true;
+
+                if (_curEvent != null)
+                    _curEvent.Invoke();
+
+                _curEvent = null;
 
                 _curSequence = null;
                 _cg.alpha = 0;

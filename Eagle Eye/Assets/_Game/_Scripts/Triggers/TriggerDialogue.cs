@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace FourZeroFourStudios
 {
@@ -18,6 +17,9 @@ namespace FourZeroFourStudios
         [Header("Parameters:")]
         [SerializeField] DestroyMode _destroyAfterShow = DestroyMode.No;
 
+        [Header("Event:")]
+        public UnityEvent AfterDialogueEvent = new UnityEvent();
+
         enum DestroyMode 
         {
             No,
@@ -33,7 +35,7 @@ namespace FourZeroFourStudios
         {
             if (gameObjectValue != gameObject || HudDialogueManager.Instance.IsCurrentSequence(_dialogue)) return;
 
-            HudDialogueManager.Instance.StartDialogue(_dialogue, true);
+            HudDialogueManager.Instance.StartDialogue(_dialogue, AfterDialogueEvent, true);
 
             if (_destroyAfterShow == DestroyMode.GameObject)
                 Destroy(gameObject);
