@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (Strange, who painted this here?)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
-  _typeSpeed: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.06
   _stopMove: 0

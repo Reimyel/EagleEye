@@ -16,8 +16,8 @@ MonoBehaviour:
   - Text: (Who was that? They left so quickly.)
     Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: (He must have gotten off on the wrong floor. Rookie mistake.)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: (Better be going back.)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   _typeSpeed: 0.06
   _stopMove: 0

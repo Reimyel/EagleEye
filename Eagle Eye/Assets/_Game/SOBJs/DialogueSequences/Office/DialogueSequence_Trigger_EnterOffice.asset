@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.06
   _stopMove: 0

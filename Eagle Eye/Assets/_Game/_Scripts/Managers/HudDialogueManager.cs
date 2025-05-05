@@ -27,6 +27,7 @@ namespace FourZeroFourStudios
         #endregion
 
         int _curIndex;
+        [HideInInspector] public bool IsTrigger = false;
         #endregion
 
         #region Mono
@@ -50,7 +51,7 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Custom
-        public void StartDialogue(ScriptableDialogueSequence sequenceValue)
+        public void StartDialogue(ScriptableDialogueSequence sequenceValue, bool isTriggerValue=false)
         {
             StopAllCoroutines();
             _curSequence = sequenceValue;
@@ -58,11 +59,14 @@ namespace FourZeroFourStudios
 
             _cg.alpha = 1;
             _tmp_dialogue.text = string.Empty;
-            
+            _tmp_dialogue.color = Color.white;
+
             if (_curSequence.StopMove)
                 _playerMove.enabled = false;
 
             StartCoroutine(TypeLine());
+
+            IsTrigger = isTriggerValue;
         }
 
         public void StopDialogue() 

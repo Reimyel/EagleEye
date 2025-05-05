@@ -16,7 +16,9 @@ namespace FourZeroFourStudios
         [SerializeField] NarrativeTriggers[] _triggers;
 
         int _curIndex = 0;
-    
+
+        void Start() => ActivateTriggers();
+
         public void Progress() 
         {
             _curIndex++;

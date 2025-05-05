@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: "(Can\u2019t enter here.)"
-    color: {r: 1, g: 1, b: 1, a: 0.5882353}
-  _lines:
-  - "(Can\u2019t enter here.)"
+    Color: {r: 0, g: 0, b: 0, a: 0}
   _typeSpeed: 0.06
-  _color: {r: 1, g: 1, b: 1, a: 0.5882353}
   _stopMove: 0
