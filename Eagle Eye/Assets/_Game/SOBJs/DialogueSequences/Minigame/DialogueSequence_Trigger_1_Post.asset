@@ -15,9 +15,9 @@ MonoBehaviour:
   _dialogueLines:
   - Text: "(Ok, first post of the day. Doesn\u2019t look like it hurts any of the
       policies.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(Posts like these are marked as NO VIOLATION, and aren\u2019t taken down.
       After that, I just send it, and the next post starts loading.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
-  _typeSpeed: 0.06
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.05
   _stopMove: 0

@@ -14,28 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: Sup Connor.
-    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   - Text: "Oh, hello Max. Leaving already?\r"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: "Yeah, thank God. I don\u2019t like being here so late, gives me the creeps."
-    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   - Text: "It\u2019s actually quite calm, very quiet. At least, until Rachel comes
       in. I think she\u2019s late."
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: Oh yeah about that. She sent me a text saying she would be late, problem
       with traffic it seems.
-    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   - Text: "So, you\u2019ll be working alone in the office until Rachel arrives. You
       ok with that?"
-    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   - Text: Sure, no problem. The rest of the team should be arriving soon.
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
   - Text: "Cool, man. I\u2019ll be leaving now, so behave yourself alright? Anything
       happens you call me on your phone."
-    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   - Text: Have a good night, and a good shift.
-    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 0}
+    Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   - Text: Thanks, have a good rest man.
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 0}
-  _typeSpeed: 0.06
+    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+  _typeSpeed: 0.05
   _stopMove: 0

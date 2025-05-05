@@ -27,5 +27,5 @@ MonoBehaviour:
   - Text: "Thanks man, you can leave it unlocked, don\u2019t think anyone will try
       taking it."
     Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
-  _typeSpeed: 0.06
+  _typeSpeed: 0.05
   _stopMove: 0

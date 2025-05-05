@@ -15,5 +15,5 @@ MonoBehaviour:
   _dialogueLines:
   - Text: (I need to answer that first.)
     Color: {r: 1, g: 1, b: 1, a: 1}
-  _typeSpeed: 0.06
+  _typeSpeed: 0.05
   _stopMove: 0

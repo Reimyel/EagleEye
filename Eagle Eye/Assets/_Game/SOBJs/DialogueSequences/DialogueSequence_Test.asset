@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac04f7ad9d12e1469e728a6328e6171, type: 3}
   m_Name: DialogueSequence_Test
   m_EditorClassIdentifier: 
-  _lines:
-  - "Ol\xE1 meu nobre!\n"
-  - Eae mano suave!
-  - Tranquilo pivete!
-  _typeSpeed: 0.3
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _dialogueLines: []
+  _typeSpeed: 0.05
   _stopMove: 0

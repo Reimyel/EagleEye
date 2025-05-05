@@ -16,6 +16,6 @@ MonoBehaviour:
   - Text: "(Oops, can\u2019t enter with my things. Better put them in my locker.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(Mine is the 6\xB0 locker.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
-  _typeSpeed: 0.06
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.05
   _stopMove: 0

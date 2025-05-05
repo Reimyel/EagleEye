@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (Strange, a map of the floorplan.)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(And those symbols again. There are two of them I didn\u2019t see before.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
-  _typeSpeed: 0.06
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.05
   _stopMove: 0
