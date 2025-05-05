@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (There it is, all four drawings.)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(Wonder if I\u2019ll get a reward voucher for finding all of them in one
       shift\u2026)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
-  _typeSpeed: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.05
   _stopMove: 0

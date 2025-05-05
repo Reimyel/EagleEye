@@ -15,5 +15,5 @@ MonoBehaviour:
   _dialogueLines:
   - Text: (Not now, I need that coffee.)
     Color: {r: 1, g: 1, b: 1, a: 1}
-  _typeSpeed: 0.06
+  _typeSpeed: 0.05
   _stopMove: 0

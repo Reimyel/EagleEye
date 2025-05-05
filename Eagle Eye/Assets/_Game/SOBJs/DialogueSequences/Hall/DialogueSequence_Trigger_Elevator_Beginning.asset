@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueLines:
   - Text: (My name is Connor. I work at the graveyard shift for Earlybird.) >>
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(Technically, I work for Eagle Eye, their security provider. I\u2019m
       a content moderator, which means I remove posts that could pose legal harm
       for them.) >>"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(It\u2019s a relatively easy job, and the midnight bonus is VERY good.
       I\u2019m used to being up late so that\u2019s a plus.) >>"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: (My shift is about to begin. I hope I'm not late.)
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
-  _typeSpeed: 0.06
-  _stopMove: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.05
+  _stopMove: 1

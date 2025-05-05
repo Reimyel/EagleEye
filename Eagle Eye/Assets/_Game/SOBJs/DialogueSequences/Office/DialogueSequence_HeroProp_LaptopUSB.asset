@@ -17,8 +17,8 @@ MonoBehaviour:
     Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(The laptop\u2019s firewall blocks my screen when unidentified software
       is connected to it.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
   - Text: "(I\u2019ll turn it over to the lost and found when my shift is over.)"
-    Color: {r: 0.95686275, g: 0.6901961, b: 0.5137255, a: 1}
-  _typeSpeed: 0.06
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  _typeSpeed: 0.05
   _stopMove: 0

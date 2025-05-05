@@ -10,11 +10,11 @@ namespace FourZeroFourStudios
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 OpenElevatorDoors();
             }
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.T))
             {
                 CloseElevatorDoors();
             }
