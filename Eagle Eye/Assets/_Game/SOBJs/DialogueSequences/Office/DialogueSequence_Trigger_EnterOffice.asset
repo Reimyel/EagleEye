@@ -15,5 +15,7 @@ MonoBehaviour:
   _dialogueLines:
   - Text: "(Looks like my manager isn\u2019t here yet. Better get to work anyway.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
+  - Text: (My desk is the one closest to the door, by the left.)
+    Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
   _stopMove: 0
