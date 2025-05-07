@@ -15,6 +15,7 @@ namespace FourZeroFourStudios
         public void QuitGame()
         {
             Application.Quit();
+            Debug.Log("quit the game");
         }
     }
 }
