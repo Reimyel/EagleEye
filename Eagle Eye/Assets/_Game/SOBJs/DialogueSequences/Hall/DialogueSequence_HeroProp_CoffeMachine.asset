@@ -16,4 +16,4 @@ MonoBehaviour:
   - Text: "(I\u2019m full of energy right now, maybe later.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
-  _stopMove: 0
+  _stopMove: 1
