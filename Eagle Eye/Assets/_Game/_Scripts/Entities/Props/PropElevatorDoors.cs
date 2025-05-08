@@ -8,16 +8,10 @@ namespace FourZeroFourStudios
     {
         [SerializeField] Animator _doorAnimator = null;
 
-        private void Update()
+        private void OnTriggerEnter(Collider other)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                OpenElevatorDoors();
-            }
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                CloseElevatorDoors();
-            }
+            CloseElevatorDoors();
+            gameObject.SetActive(false);
         }
 
         public void OpenElevatorDoors()
