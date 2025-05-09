@@ -18,4 +18,4 @@ MonoBehaviour:
   - Text: "(Mine is the 6\xB0 locker.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
-  _stopMove: 0
+  _stopMove: 1
