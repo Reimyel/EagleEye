@@ -6,6 +6,7 @@ namespace FourZeroFourStudios
 {
     public class Elevator : MonoBehaviour
     {
+        [Header("References:")]
         [SerializeField] Animator _doorAnimator = null;
 
         private void OnTriggerEnter(Collider other)

@@ -9394,6 +9394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283030199}
+  - component: {fileID: 283030200}
   m_Layer: 0
   m_Name: Doorhinge
   m_TagString: Untagged
@@ -9408,15 +9409,35 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283030198}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.011100769, y: -1.0641904, z: 3.54}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.01110077, y: -1.06419, z: 3.54}
   m_LocalScale: {x: 0.12912075, y: 5.5320864, z: 3.5588377}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 929312120}
   m_Father: {fileID: 399726108}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!95 &283030200
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283030198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3860489d107818647b09f98f23c670fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &283865152
 GameObject:
   m_ObjectHideFlags: 0
@@ -28631,7 +28652,8 @@ GameObject:
   - component: {fileID: 929312123}
   - component: {fileID: 929312122}
   - component: {fileID: 929312121}
-  m_Layer: 0
+  - component: {fileID: 929312124}
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28724,6 +28746,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929312119}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &929312124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929312119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9972255585dbdf04d9b3ae56124c9f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionText: Interact
+  _bathroomDoorAnimator: {fileID: 283030200}
 --- !u!4 &932285950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 243831371895671803, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
