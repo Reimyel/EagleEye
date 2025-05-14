@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8211159790075188034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8211159790075188032}
+  - component: {fileID: 8211159790075188033}
+  m_Layer: 0
+  m_Name: Prefab_Post_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8211159790075188032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211159790075188034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1699005, y: 5.6971226, z: 1948.0039}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8211159790075188033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211159790075188034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6322f847afd4b4843a3502a15b52d94b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentPostIndex: 0
+  PlayerScore: 0
+  Posts:
+  - {fileID: 11400000, guid: 9251d8b7cfab9814fbf5d325d03186dc, type: 2}
+  - {fileID: 11400000, guid: 30dc41ebed630b444907a6abf6b5e4d2, type: 2}
+  - {fileID: 11400000, guid: 16fe060142ad2254ca34de519295abed, type: 2}
+  - {fileID: 11400000, guid: e6b386304a60f87469609cf83d00fa67, type: 2}
+  - {fileID: 11400000, guid: 1eac9919636c74943a1d1ab4979433fb, type: 2}
+  - {fileID: 11400000, guid: dc2714302b13af34ebc94d71b976039a, type: 2}
+  - {fileID: 11400000, guid: fc5053f37fd263648bc21fa67d25c4d5, type: 2}
+  - {fileID: 11400000, guid: 0c21c2be398a4f8479181309a1463caf, type: 2}
+  - {fileID: 11400000, guid: 29128e507bb4d3c49948afafbb637c2a, type: 2}
+  - {fileID: 11400000, guid: 7d38bbb32bd24fe42b327ae5671d031c, type: 2}
+  - {fileID: 11400000, guid: d4dca0b49427ecf4191e800523ba0cfa, type: 2}
+  - {fileID: 11400000, guid: 0be8e6229f952184a86f4000bc484eba, type: 2}
+  - {fileID: 11400000, guid: dc2714302b13af34ebc94d71b976039a, type: 2}
+  - {fileID: 11400000, guid: 2f8a20b387fe3ba48bc67e9db71d09ff, type: 2}
+  - {fileID: 11400000, guid: ac71170e9f2e1b4469edba06c35937d0, type: 2}
+  - {fileID: 11400000, guid: 1c4cedbb14c325746924bd17318bf191, type: 2}
+  - {fileID: 11400000, guid: ea25cc06422ff5a4b83ef1bd5b0a318f, type: 2}
+  - {fileID: 11400000, guid: dbec8413fdab0ac45a34f85461535a52, type: 2}
+  - {fileID: 11400000, guid: f7ae89cf61554ab4cb0ed814f927f3e1, type: 2}
+  - {fileID: 11400000, guid: e74e77a768ea5fe4bb890cd27cfb074e, type: 2}
+  - {fileID: 11400000, guid: dc2714302b13af34ebc94d71b976039a, type: 2}
+  - {fileID: 11400000, guid: 74c9edbbbcdd5d54c838ac869f8b4479, type: 2}
+  - {fileID: 11400000, guid: d04beb8d974276b4ca5c33562e34332f, type: 2}
+  - {fileID: 11400000, guid: c5fadb965e37f3444b35c5e0704ebd08, type: 2}
+  - {fileID: 11400000, guid: 62c1cd5755b149c43973d721125094df, type: 2}
+  - {fileID: 11400000, guid: eba1dcd06e351714eb892b2d3e206032, type: 2}
+  - {fileID: 11400000, guid: c64fc9adaa8e60a458cf1ab2fb6684a9, type: 2}
+  - {fileID: 11400000, guid: 691ab4ec6f0032440ad983a43c318377, type: 2}
+  - {fileID: 11400000, guid: 3d79438571e46c142b03feb959c6d7c0, type: 2}
+  - {fileID: 11400000, guid: dc2714302b13af34ebc94d71b976039a, type: 2}
+  LayoutDefault:
+    LayoutRoot: {fileID: 0}
+    UserAvatar: {fileID: 0}
+    Userinfo: {fileID: 0}
+    Content: {fileID: 0}
+    PostImage: {fileID: 0}
+  LayoutSmall:
+    LayoutRoot: {fileID: 0}
+    UserAvatar: {fileID: 0}
+    Userinfo: {fileID: 0}
+    Content: {fileID: 0}
+    PostImage: {fileID: 0}
+  LayoutBig:
+    LayoutRoot: {fileID: 0}
+    UserAvatar: {fileID: 0}
+    Userinfo: {fileID: 0}
+    Content: {fileID: 0}
+    PostImage: {fileID: 0}
+  LayoutImage:
+    LayoutRoot: {fileID: 0}
+    UserAvatar: {fileID: 0}
+    Userinfo: {fileID: 0}
+    Content: {fileID: 0}
+    PostImage: {fileID: 0}
+  LoadingScreen: {fileID: 0}
+  PostPanel: {fileID: 0}
+  Delay: 1
+  _go_player: {fileID: 0}
+  _cameraHolder: {fileID: 0}
+  _volume: {fileID: 0}
+  _vprofile_default: {fileID: 0}
+  _anim_cameraHolder: {fileID: 0}
+  _go_canvas_minigames: []
+  _go_canvas_hud: {fileID: 0}

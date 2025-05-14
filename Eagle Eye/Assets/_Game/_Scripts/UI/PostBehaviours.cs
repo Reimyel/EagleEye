@@ -44,13 +44,13 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject[] _go_canvas_minigames;
         [SerializeField] GameObject _go_canvas_hud;
 
-        private void Update()
+        /*private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 StartCoroutine(SwitchBackToPostCoroutine(Delay));
             }
-        }
+        }*/
 
         private void Start()
         {

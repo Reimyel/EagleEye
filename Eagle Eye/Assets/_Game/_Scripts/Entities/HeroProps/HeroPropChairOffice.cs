@@ -15,9 +15,11 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_player;
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] Transform _transf_cameraPosition;
-        [SerializeField] GameObject[] _go_canvas_minigames;
+        [SerializeField] GameObject _go_desktop_canvas;
+        [SerializeField] GameObject _go_initial_canvas;
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] PostBehaviours _postBehaviours;
+
 
         [Header("Rendering:")]
         [SerializeField] Volume _volume;
@@ -56,13 +58,17 @@ namespace FourZeroFourStudios
 
             _volume.profile = _vprofile_crt;
 
-            for (int i = 0; i < _go_canvas_minigames.Length; i++)
-                _go_canvas_minigames[i].SetActive(true);
+            _go_desktop_canvas.SetActive(true);
+            _go_initial_canvas.SetActive(true);
 
             if (_isFirstTime)
+            {
                 _isFirstTime = false;
+            }
             else
+            {
                 _postBehaviours.ReturnToPosts();
+            }
 
             this.enabled = false;
         }
