@@ -13995,6 +13995,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377136868}
   m_CullTransparentMesh: 1
+--- !u!114 &384677371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7850175870583993770, guid: 19d651bbc80bad84cb87dcc52e7500ac, type: 3}
+  m_PrefabInstance: {fileID: 413951214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3e41ca0655c5e469796f0f17ac6db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &388869774
 GameObject:
   m_ObjectHideFlags: 0
@@ -16282,7 +16293,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 384677371}
         m_TargetAssemblyTypeName: FourZeroFourStudios.ButtonBehaviours, Assembly-CSharp
         m_MethodName: SwitchCanvas
         m_Mode: 1
@@ -23816,6 +23827,14 @@ PrefabInstance:
       propertyPath: _postBehaviours
       value: 
       objectReference: {fileID: 421488412}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_desktop_canvas
+      value: 
+      objectReference: {fileID: 660108752}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_initial_canvas
+      value: 
+      objectReference: {fileID: 624858091}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _changeProfileDelay
       value: 1
@@ -76886,7 +76905,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 384677371}
         m_TargetAssemblyTypeName: FourZeroFourStudios.ButtonBehaviours, Assembly-CSharp
         m_MethodName: SwitchCanvas
         m_Mode: 1
