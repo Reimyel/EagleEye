@@ -9,6 +9,7 @@ namespace FourZeroFourStudios
 {
     public class ButtonBehaviours : MonoBehaviour
     {
+        #region Members
         [Header("Canvas")]
         public Canvas EagleEyeCanvas;
         public Canvas InitialCanvas;
@@ -22,13 +23,21 @@ namespace FourZeroFourStudios
         public Button HatredButton;
         public Button NSFWButton;
 
+        [Header("Tutorial")]
+        [SerializeField] Image _blackFilter;
+        [SerializeField] float _filterTransparency;
+        [SerializeField] float _changeDuration;
+        [SerializeField] Button _firstTutorialText;
+
         public enum Selection { None, NoViolation, TakeDown, Crime, Hatred, NSFW }
         Selection _currentSelection = Selection.None;
         ScriptablePostsData.Tag? _takeDownTag = null;
         Button _currentlySelectedButton;
         Button _currentlySelectedTagButton = null;
         PostBehaviours _postBehaviours;
+        #endregion
 
+        #region Mono
         private void Start()
         {
             _postBehaviours = FindObjectOfType<PostBehaviours>();
@@ -46,7 +55,9 @@ namespace FourZeroFourStudios
             SendAnalysisButton.interactable = false;
             SetTagButtonsInteractable(false);
         }
+        #endregion
 
+        #region Custom
         void SelectOption(Selection _selection)
         {
             _currentSelection = _selection;
@@ -194,6 +205,29 @@ namespace FourZeroFourStudios
             }
         }
 
+        public void StartTutorialSequence()
+        {
+            StartCoroutine(ImageFade(0f, _filterTransparency, _changeDuration));
+        }
+
+        IEnumerator ImageFade(float beginningValue, float endValue, float duration)
+        {
+            float elapsedTime = 0;
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+                float newAlpha = Mathf.Lerp(beginningValue, endValue, elapsedTime / duration);
+                _blackFilter.color = new Color(_blackFilter.color.r, _blackFilter.color.g, _blackFilter.color.b, newAlpha);
+                yield return null;
+                
+                if (elapsedTime >= endValue)
+                {
+                    //show first tutorial text
+                    _firstTutorialText.gameObject.SetActive(true);
+                }
+            }
+        }
+
         #region Button Visuals
         void SetButtonSelectedVisual(Button _button)
         {
@@ -235,6 +269,7 @@ namespace FourZeroFourStudios
 
             button.colors = cb;
         }
+        #endregion
         #endregion
     }
 }

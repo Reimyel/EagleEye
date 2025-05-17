@@ -16,4 +16,4 @@ MonoBehaviour:
   - Text: "(Can\u2019t enter here.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
-  _stopMove: 0
+  _stopMove: 1
