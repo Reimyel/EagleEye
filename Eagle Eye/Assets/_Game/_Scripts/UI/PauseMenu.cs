@@ -29,6 +29,8 @@ namespace FourZeroFourStudios
             Go_PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
             IsPaused = false;
+            Cursor.visible = false; // Esconde o cursor
+            Cursor.lockState = CursorLockMode.Locked; // Trava o cursor no centro da tela
             //Enable player movement
             //Desativar cursor
 
@@ -39,6 +41,8 @@ namespace FourZeroFourStudios
             Go_PauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
             IsPaused = true;
+            Cursor.visible = true; // Mostra o cursor
+            Cursor.lockState = CursorLockMode.None; // Libera o cursor
             //Disable player movement
             //Ativar cursor
         }
