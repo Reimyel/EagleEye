@@ -157,8 +157,13 @@ MonoBehaviour:
   _go_player: {fileID: 0}
   _cameraHolder: {fileID: 0}
   _transf_cameraPosition: {fileID: 3394066857160383710}
+  _go_desktop_canvas: {fileID: 0}
+  _go_initial_canvas: {fileID: 0}
+  _go_canvas_hud: {fileID: 0}
+  _postBehaviours: {fileID: 0}
   _volume: {fileID: 0}
   _vprofile_crt: {fileID: 11400000, guid: 553331cf622473d4c80e64052181e9f2, type: 2}
+  _changeProfileDelay: 0.1
 --- !u!1 &3394066857160383711
 GameObject:
   m_ObjectHideFlags: 0

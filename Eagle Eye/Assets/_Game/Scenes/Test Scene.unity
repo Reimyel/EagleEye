@@ -7089,6 +7089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_HeroProp_ChairOffice
       objectReference: {fileID: 0}
+    - target: {fileID: 3394066857160383710, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _volume
       value: 
@@ -7106,9 +7110,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1515843216}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
-      propertyPath: _changeProfileDelay
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: _go_desktop_canvas
+      value: 
+      objectReference: {fileID: 737101189}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _go_initial_canvas
+      value: 
+      objectReference: {fileID: 42033158}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _go_canvas_minigames.Array.size
       value: 2
