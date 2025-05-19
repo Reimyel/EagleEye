@@ -26251,6 +26251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_HeroProp_ChairOffice
       objectReference: {fileID: 0}
+    - target: {fileID: 3394066857160383710, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.58
+      objectReference: {fileID: 0}
     - target: {fileID: 3394066857160383711, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -42106,9 +42110,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1950877083}
     - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: _chair
+      value: 
+      objectReference: {fileID: 1140838340}
+    - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 2081974025}
+    - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: _cameraHolder
+      value: 
+      objectReference: {fileID: 348613083}
     - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
       propertyPath: _mouseSensitivity
       value: 500
@@ -48915,6 +48927,11 @@ Transform:
   m_Father: {fileID: 542590628}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!4 &1140838340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3394066857160383710, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+  m_PrefabInstance: {fileID: 632215328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1141617293
 GameObject:
   m_ObjectHideFlags: 0

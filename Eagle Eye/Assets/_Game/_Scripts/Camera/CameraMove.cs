@@ -12,6 +12,8 @@ namespace FourZeroFourStudios
         [Header("Parameters:")]
         [SerializeField] float _mouseSensitivity = 200f;
         [SerializeField] Transform _player;
+        [SerializeField] Transform _chair;
+        [SerializeField] CameraHolder _cameraHolder;
 
         float _xRotation = 0f;
 
@@ -37,7 +39,14 @@ namespace FourZeroFourStudios
             transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 
             // Left & Right
-            _player.Rotate(Vector3.up * mouseXLocal);
+            if (!_cameraHolder.IsPlayerSeated)
+            {
+                _player.Rotate(Vector3.up * mouseXLocal);
+            }
+            else
+            {
+                _chair.Rotate(Vector3.up * mouseXLocal);
+            }
         }
     }
 }
