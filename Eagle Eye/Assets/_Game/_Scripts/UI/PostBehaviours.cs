@@ -44,8 +44,10 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject[] _go_canvas_minigames;
         [SerializeField] GameObject _go_canvas_hud;
 
-        HeroPropDoorOffice _heroPropDoorOffice;
+        [Header("Max")]
+        [SerializeField] MaxBehaviour _maxBehaviour;
         bool _maxSequence = false;
+        HeroPropDoorOffice _heroPropDoorOffice;
 
         private void Start()
         {
@@ -113,6 +115,7 @@ namespace FourZeroFourStudios
                     SwitchDisplay();
                     //dialogue with Max
                     _maxSequence = true;
+                    _maxBehaviour.StartSequence();
                     break;
                 case 12:
                     SwitchDisplay();
@@ -163,7 +166,7 @@ namespace FourZeroFourStudios
         {
             yield return new WaitForSeconds(_delayInSeconds);
             _go_player.SetActive(true);
-            _cameraHolder.enabled = true;
+            _cameraHolder.IsPlayerSeated = false;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

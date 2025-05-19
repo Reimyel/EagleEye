@@ -14,7 +14,7 @@ namespace FourZeroFourStudios
         [Header("Hierarchy:")]
         [SerializeField] GameObject _go_player;
         [SerializeField] CameraHolder _cameraHolder;
-        [SerializeField] Transform _transf_cameraPosition;
+        [SerializeField] CameraHeadBob _cameraHeadBob;
         [SerializeField] GameObject _go_desktop_canvas;
         [SerializeField] GameObject _go_initial_canvas;
         [SerializeField] GameObject _go_canvas_hud;
@@ -32,17 +32,15 @@ namespace FourZeroFourStudios
             base.Interact();
             _go_player.SetActive(false);
 
-            _cameraHolder.enabled = false;
-
-            _cameraHolder.gameObject.transform.position = _transf_cameraPosition.position;
-            _cameraHolder.gameObject.transform.rotation = _transf_cameraPosition.rotation;
+            _cameraHolder.IsPlayerSeated = true;
+            _cameraHeadBob.enabled = false;
 
             _go_canvas_hud.SetActive(false);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            ApplyCrt();
+            //ApplyCrt();
         }
 
         void ApplyCrt() 
