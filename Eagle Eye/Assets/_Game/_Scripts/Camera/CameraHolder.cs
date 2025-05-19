@@ -17,13 +17,9 @@ namespace FourZeroFourStudios
         void Update()
         {
             if (!IsPlayerSeated)
-            {
                 UpdateTransform(_cameraPosition);
-            }
             else
-            {
                 UpdateTransform(_chairCameraPosition);
-            }
         }
 
         void UpdateTransform(Transform cameraLocation)
