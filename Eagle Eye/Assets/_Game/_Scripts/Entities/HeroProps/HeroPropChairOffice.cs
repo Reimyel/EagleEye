@@ -38,6 +38,7 @@ namespace FourZeroFourStudios
             _go_player.SetActive(false);
 
             _cameraHolder.gameObject.transform.position = _transf_cameraPosition.position;
+            _cameraHolder.gameObject.transform.rotation = _transf_cameraPosition.rotation;
 
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
 
