@@ -37,14 +37,14 @@ namespace FourZeroFourStudios
 
             _go_canvas_hud.SetActive(false);
 
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
             //ApplyCrt();
         }
 
         void ApplyCrt() 
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             _volume.profile = _vprofile_crt;
 
             _go_desktop_canvas.SetActive(true);
