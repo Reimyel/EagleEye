@@ -44,16 +44,11 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject[] _go_canvas_minigames;
         [SerializeField] GameObject _go_canvas_hud;
 
-        /*private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(SwitchBackToPostCoroutine(Delay));
-            }
-        }*/
+        HeroPropDoorOffice _heroPropDoorOffice;
 
         private void Start()
         {
+            _heroPropDoorOffice = FindObjectOfType<HeroPropDoorOffice>();
             DisplayCurrentPost();
         }
 
@@ -115,6 +110,7 @@ namespace FourZeroFourStudios
             {
                 case 5:
                     SwitchDisplay();
+                    _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;
                 case 12:
                     SwitchDisplay();
