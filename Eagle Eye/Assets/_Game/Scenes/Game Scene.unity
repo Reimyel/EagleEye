@@ -26033,6 +26033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_HeroProp_ChairOffice
       objectReference: {fileID: 0}
+    - target: {fileID: 3394066857160383710, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.408
+      objectReference: {fileID: 0}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _volume
       value: 
@@ -26061,10 +26065,6 @@ PrefabInstance:
       propertyPath: _go_initial_canvas
       value: 
       objectReference: {fileID: 624858091}
-    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
-      propertyPath: _changeProfileDelay
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _go_canvas_minigames.Array.size
       value: 3
@@ -44224,6 +44224,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9101830708900974993, guid: 3934eaf5584c2ec468668eed6d3cb819, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101830708900974994, guid: 3934eaf5584c2ec468668eed6d3cb819, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9101830708900975007, guid: 3934eaf5584c2ec468668eed6d3cb819, type: 3}
