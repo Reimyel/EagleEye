@@ -20,12 +20,17 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] PostBehaviours _postBehaviours;
 
+
         [Header("Rendering:")]
         [SerializeField] Volume _volume;
         [SerializeField] VolumeProfile _vprofile_crt;
         [SerializeField] float _changeProfileDelay;
 
+        Animator _anim_cameraHolder;
+
         bool _isFirstTime = true;
+
+        void Start() => _anim_cameraHolder = _cameraHolder.gameObject.GetComponent<Animator>();
 
         public override void Interact()
         {
@@ -37,25 +42,33 @@ namespace FourZeroFourStudios
             _cameraHolder.gameObject.transform.position = _transf_cameraPosition.position;
             _cameraHolder.gameObject.transform.rotation = _transf_cameraPosition.rotation;
 
+            _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
+
             _go_canvas_hud.SetActive(false);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            ApplyCrt();
+            StartCoroutine(ApplyCrt());
         }
 
-        void ApplyCrt() 
+        IEnumerator ApplyCrt() 
         {
+            yield return new WaitForSeconds(_changeProfileDelay);
+
             _volume.profile = _vprofile_crt;
 
             _go_desktop_canvas.SetActive(true);
             _go_initial_canvas.SetActive(true);
 
             if (_isFirstTime)
+            {
                 _isFirstTime = false;
+            }
             else
+            {
                 _postBehaviours.ReturnToPosts();
+            }
 
             this.enabled = false;
         }
