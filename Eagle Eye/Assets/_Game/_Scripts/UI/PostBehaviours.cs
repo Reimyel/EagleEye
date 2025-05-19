@@ -45,6 +45,7 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_canvas_hud;
 
         HeroPropDoorOffice _heroPropDoorOffice;
+        bool _maxSequence = false;
 
         private void Start()
         {
@@ -110,10 +111,12 @@ namespace FourZeroFourStudios
             {
                 case 5:
                     SwitchDisplay();
-                    _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
+                    //dialogue with Max
+                    _maxSequence = true;
                     break;
                 case 12:
                     SwitchDisplay();
+                    _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;
                 case 20:
                     SwitchDisplay();
@@ -150,7 +153,10 @@ namespace FourZeroFourStudios
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomOut");
             _volume.profile = _vprofile_default;
 
-            StartCoroutine(EnablePlayer(1f));
+            if (!_maxSequence)
+            {
+                StartCoroutine(EnablePlayer(1f));
+            }
         }
 
         private IEnumerator EnablePlayer(float _delayInSeconds) 
