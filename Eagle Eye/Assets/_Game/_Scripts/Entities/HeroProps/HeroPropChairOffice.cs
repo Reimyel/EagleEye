@@ -37,17 +37,12 @@ namespace FourZeroFourStudios
             base.Interact();
             _go_player.SetActive(false);
 
-            _cameraHolder.enabled = false;
-
             _cameraHolder.gameObject.transform.position = _transf_cameraPosition.position;
             _cameraHolder.gameObject.transform.rotation = _transf_cameraPosition.rotation;
 
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
 
             _go_canvas_hud.SetActive(false);
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
 
             StartCoroutine(ApplyCrt());
         }
@@ -69,6 +64,10 @@ namespace FourZeroFourStudios
             {
                 _postBehaviours.ReturnToPosts();
             }
+
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
             this.enabled = false;
         }

@@ -157,8 +157,13 @@ MonoBehaviour:
   _go_player: {fileID: 0}
   _cameraHolder: {fileID: 0}
   _transf_cameraPosition: {fileID: 3394066857160383710}
+  _go_desktop_canvas: {fileID: 0}
+  _go_initial_canvas: {fileID: 0}
+  _go_canvas_hud: {fileID: 0}
+  _postBehaviours: {fileID: 0}
   _volume: {fileID: 0}
   _vprofile_crt: {fileID: 11400000, guid: 553331cf622473d4c80e64052181e9f2, type: 2}
+  _changeProfileDelay: 0.1
 --- !u!1 &3394066857160383711
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +175,7 @@ GameObject:
   - component: {fileID: 3394066857160383710}
   m_Layer: 0
   m_Name: Go_Camera_Position
-  m_TagString: Untagged
+  m_TagString: ChairCameraPosition
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394066857160383711}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.3050001, z: 0.045}
+  m_LocalPosition: {x: 0.096, y: 1.3050001, z: 0.045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
