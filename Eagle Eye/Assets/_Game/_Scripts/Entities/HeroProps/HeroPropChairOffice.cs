@@ -15,62 +15,30 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_player;
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] CameraHeadBob _cameraHeadBob;
-        [SerializeField] Transform _transf_cameraPosition;
-        [SerializeField] GameObject _go_desktop_canvas;
-        [SerializeField] GameObject _go_initial_canvas;
-        [SerializeField] GameObject _go_canvas_hud;
-        [SerializeField] PostBehaviours _postBehaviours;
-
-
-        [Header("Rendering:")]
-        [SerializeField] Volume _volume;
-        [SerializeField] VolumeProfile _vprofile_crt;
-        [SerializeField] float _changeProfileDelay;
-
-        Animator _anim_cameraHolder;
-
-        bool _isFirstTime = true;
-
-        void Start() => _anim_cameraHolder = _cameraHolder.gameObject.GetComponent<Animator>();
+        [SerializeField] HeroPropLaptop _heroPropLaptop;
 
         public override void Interact()
         {
             base.Interact();
+            Sit();
+
+            this.enabled = false;
+
+            _heroPropLaptop.enabled = true;
+        }
+
+        void Sit()
+        {
             _go_player.SetActive(false);
 
             _cameraHolder.IsPlayerSeated = true;
             _cameraHeadBob.enabled = false;
-
-            _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
-
-            _go_canvas_hud.SetActive(false);
-
-            StartCoroutine(ApplyCrt());
         }
 
-        IEnumerator ApplyCrt() 
+        public void GetUp()
         {
-            yield return new WaitForSeconds(_changeProfileDelay);
-
-            _volume.profile = _vprofile_crt;
-
-            _go_desktop_canvas.SetActive(true);
-            _go_initial_canvas.SetActive(true);
-
-            if (_isFirstTime)
-            {
-                _isFirstTime = false;
-            }
-            else
-            {
-                _postBehaviours.ReturnToPosts();
-            }
-
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            this.enabled = false;
+            _go_player.SetActive(true);
+            _cameraHolder.IsPlayerSeated = false;
         }
     }
 }

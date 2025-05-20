@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
+using static UnityEditor.SceneView;
 
 namespace FourZeroFourStudios
 {
@@ -31,8 +32,9 @@ namespace FourZeroFourStudios
         public PostLayout LayoutImage;
 
         [Header("Canvas")]
-        public GameObject LoadingScreen;
-        public GameObject PostPanel;
+        [SerializeField] GameObject _loadingScreen;
+        [SerializeField] GameObject _postPanel;
+        ButtonBehaviours _buttonBehaviours;
         public float Delay = 1f;
 
         [Header("Disable / Active UI")]
@@ -43,19 +45,22 @@ namespace FourZeroFourStudios
         [SerializeField] private Animator _anim_cameraHolder;
         [SerializeField] GameObject[] _go_canvas_minigames;
         [SerializeField] GameObject _go_canvas_hud;
+        [SerializeField] CameraMove _cameraMove;
+        [SerializeField] HeroPropChairOffice _heroPropChairOffice;
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
-        bool _maxSequence = false;
         HeroPropDoorOffice _heroPropDoorOffice;
+
+        [Header("Triggers")]
+        [SerializeField] GameObject _triggerModerationPause1;
 
         private void Start()
         {
             _heroPropDoorOffice = FindObjectOfType<HeroPropDoorOffice>();
+            _buttonBehaviours = FindObjectOfType<ButtonBehaviours>();
             DisplayCurrentPost();
         }
-
-        public void ReturnToPosts() => StartCoroutine(SwitchBackToPostCoroutine(Delay));
 
         public void NextPost()
         {
@@ -111,39 +116,50 @@ namespace FourZeroFourStudios
             //go to loading screen after a certain amount of posts
             switch (CurrentPostIndex)
             {
+                //dialogue with Max
                 case 5:
-                    SwitchDisplay();
-                    //dialogue with Max
-                    _maxSequence = true;
+                    EndModeration();
                     _maxBehaviour.StartSequence();
                     break;
+                //Connor hears cultists
                 case 12:
-                    SwitchDisplay();
+                    EndModeration();
+                    StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;
                 case 20:
-                    SwitchDisplay();
+                    EndModeration();
                     break;
                 case 29:
-                    SwitchDisplay();
+                    EndModeration();
                     break;
             }
         }
 
-        public void SwitchDisplay()
+        public void EndModeration()
         {
-            if (Posts[CurrentPostIndex] != null && LoadingScreen != null)
+            if (Posts[CurrentPostIndex] != null && _loadingScreen != null)
             {
-                bool _isPostPanelActive = PostPanel.activeSelf;
-                bool _isLoadingScreenActive = LoadingScreen.activeSelf;
-
-                PostPanel.SetActive(!_isPostPanelActive);
-                LoadingScreen.SetActive(!_isLoadingScreenActive);
+                _postPanel.SetActive(false);
+                _loadingScreen.SetActive(true);
+                _buttonBehaviours.SetTagButtonsInteractable(false);
+                _buttonBehaviours.SetButtonsInteractable(false);
             }
-            StartCoroutine(SwitchToLoadingCoroutine(Delay));
+            StartCoroutine(SwitchToLoading(Delay));
         }
 
-        private IEnumerator SwitchToLoadingCoroutine(float _delayInSeconds)
+        public void ReturnToModeration()
+        {
+            if (Posts[CurrentPostIndex] != null && _loadingScreen != null)
+            {
+                _postPanel.SetActive(true);
+                _loadingScreen.SetActive(false);
+                _buttonBehaviours.SetTagButtonsInteractable(true);
+                _buttonBehaviours.SetButtonsInteractable(true);
+            }
+        }
+
+        private IEnumerator SwitchToLoading(float _delayInSeconds)
         {
             //adds a delay so Player can see its loading, before being "ejected" from the laptop
             yield return new WaitForSeconds(_delayInSeconds);
@@ -156,27 +172,27 @@ namespace FourZeroFourStudios
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomOut");
             _volume.profile = _vprofile_default;
 
-            if (!_maxSequence)
-            {
-                StartCoroutine(EnablePlayer(1f));
-            }
-
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            _cameraMove.MouseCanMoveScreen = true;
+            _cameraMove.HideCursor();
         }
 
-        private IEnumerator EnablePlayer(float _delayInSeconds) 
+        public IEnumerator EnablePlayer(float _delayInSeconds) 
         {
             yield return new WaitForSeconds(_delayInSeconds);
-            _go_player.SetActive(true);
-            _cameraHolder.IsPlayerSeated = false;
+            _heroPropChairOffice.GetUp();
         }
 
-        private IEnumerator SwitchBackToPostCoroutine(float _delayInSeconds)
+        public IEnumerator ReturnToPosts(float _delayInSeconds)
         {
             yield return new WaitForSeconds(_delayInSeconds);
-            SwitchDisplay();
+            ReturnToModeration();
             NextPost();
+        }
+
+        IEnumerator EnablePauseTrigger()
+        {
+            yield return new WaitForSeconds(Delay + 0.5f);
+            _triggerModerationPause1.SetActive(true);
         }
     }
 }
