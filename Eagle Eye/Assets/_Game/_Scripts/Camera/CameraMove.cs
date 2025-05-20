@@ -17,7 +17,10 @@ namespace FourZeroFourStudios
 
         float _xRotation = 0f;
 
-        void Start() => HideCursor();
+        void Start()
+        {
+            HideCursor();
+        }
 
         void Update() => ApplyMove();
 

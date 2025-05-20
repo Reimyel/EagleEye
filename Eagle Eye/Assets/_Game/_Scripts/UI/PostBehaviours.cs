@@ -160,6 +160,9 @@ namespace FourZeroFourStudios
             {
                 StartCoroutine(EnablePlayer(1f));
             }
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         private IEnumerator EnablePlayer(float _delayInSeconds) 
@@ -167,9 +170,6 @@ namespace FourZeroFourStudios
             yield return new WaitForSeconds(_delayInSeconds);
             _go_player.SetActive(true);
             _cameraHolder.IsPlayerSeated = false;
-
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         private IEnumerator SwitchBackToPostCoroutine(float _delayInSeconds)

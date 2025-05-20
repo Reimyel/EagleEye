@@ -62,7 +62,7 @@ namespace FourZeroFourStudios
 
             _cg.alpha = 1;
             _tmp_dialogue.text = string.Empty;
-            _tmp_dialogue.color = Color.white;
+            _tmp_dialogue.color = _curSequence.DialogueLines[_curIndex].Color;
 
             if (_curSequence.StopMove)
             {
@@ -95,12 +95,11 @@ namespace FourZeroFourStudios
 
         void NextLine()
         {
-            _tmp_dialogue.color = _curSequence.DialogueLines[_curIndex].Color;
-
             if (_curIndex < _curSequence.DialogueLines.Length - 1)
             {
                 _curIndex++;
                 _tmp_dialogue.text = string.Empty;
+                _tmp_dialogue.color = _curSequence.DialogueLines[_curIndex].Color;
                 StartCoroutine(TypeLine());
             }
             else
