@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
+using static UnityEditor.SceneView;
 
 namespace FourZeroFourStudios
 {
@@ -43,6 +44,7 @@ namespace FourZeroFourStudios
         [SerializeField] private Animator _anim_cameraHolder;
         [SerializeField] GameObject[] _go_canvas_minigames;
         [SerializeField] GameObject _go_canvas_hud;
+        [SerializeField] CameraMove _cameraMove;
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
@@ -112,38 +114,47 @@ namespace FourZeroFourStudios
             switch (CurrentPostIndex)
             {
                 case 5:
-                    SwitchDisplay();
+                    EndModeration();
                     //dialogue with Max
                     _maxSequence = true;
                     _maxBehaviour.StartSequence();
                     break;
                 case 12:
-                    SwitchDisplay();
+                    EndModeration();
                     _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;
                 case 20:
-                    SwitchDisplay();
+                    EndModeration();
                     break;
                 case 29:
-                    SwitchDisplay();
+                    EndModeration();
                     break;
             }
         }
 
-        public void SwitchDisplay()
+        public void EndModeration()
         {
             if (Posts[CurrentPostIndex] != null && LoadingScreen != null)
             {
-                bool _isPostPanelActive = PostPanel.activeSelf;
-                bool _isLoadingScreenActive = LoadingScreen.activeSelf;
-
-                PostPanel.SetActive(!_isPostPanelActive);
-                LoadingScreen.SetActive(!_isLoadingScreenActive);
+                PostPanel.SetActive(false);
+                LoadingScreen.SetActive(true);
             }
-            StartCoroutine(SwitchToLoadingCoroutine(Delay));
+
+            StartCoroutine(SwitchToLoading(Delay));
         }
 
-        private IEnumerator SwitchToLoadingCoroutine(float _delayInSeconds)
+        public void ReturnToModeration()
+        {
+            if (Posts[CurrentPostIndex] != null && LoadingScreen != null)
+            {
+                PostPanel.SetActive(true);
+                LoadingScreen.SetActive(false);
+            }
+
+            StartCoroutine(SwitchToLoading(Delay));
+        }
+
+        private IEnumerator SwitchToLoading(float _delayInSeconds)
         {
             //adds a delay so Player can see its loading, before being "ejected" from the laptop
             yield return new WaitForSeconds(_delayInSeconds);
@@ -161,8 +172,7 @@ namespace FourZeroFourStudios
                 StartCoroutine(EnablePlayer(1f));
             }
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            _cameraMove.HideCursor();
         }
 
         private IEnumerator EnablePlayer(float _delayInSeconds) 
@@ -175,7 +185,7 @@ namespace FourZeroFourStudios
         private IEnumerator SwitchBackToPostCoroutine(float _delayInSeconds)
         {
             yield return new WaitForSeconds(_delayInSeconds);
-            SwitchDisplay();
+            ReturnToModeration();
             NextPost();
         }
     }

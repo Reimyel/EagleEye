@@ -20,6 +20,7 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_initial_canvas;
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] PostBehaviours _postBehaviours;
+        [SerializeField] CameraMove _cameraMove;
 
 
         [Header("Rendering:")]
@@ -45,13 +46,14 @@ namespace FourZeroFourStudios
 
             _go_canvas_hud.SetActive(false);
 
-            StartCoroutine(ApplyCrt());
+            StartCoroutine(StartModeration());
         }
 
-        IEnumerator ApplyCrt() 
+        IEnumerator StartModeration() 
         {
             yield return new WaitForSeconds(_changeProfileDelay);
 
+            //apply CRT effect
             _volume.profile = _vprofile_crt;
 
             _go_desktop_canvas.SetActive(true);
@@ -66,9 +68,7 @@ namespace FourZeroFourStudios
                 _postBehaviours.ReturnToPosts();
             }
 
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            _cameraMove.ShowCursor();
 
             this.enabled = false;
         }

@@ -40669,8 +40669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerDialogue: {fileID: 941742257}
-  _canMove: 0
-  Speed: 1
+  Speed: 3
 --- !u!43 &947111380
 Mesh:
   m_ObjectHideFlags: 0
