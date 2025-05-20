@@ -177,13 +177,21 @@ namespace FourZeroFourStudios
             #endregion
         }
 
-        void SetTagButtonsInteractable(bool _interactable)
+        public void SetTagButtonsInteractable(bool _interactable)
         {
             //makes the tag buttons interactable
             //(for when the Player makes his decision after choosing take down)
             CrimeButton.interactable = _interactable;
             HatredButton.interactable = _interactable;
             NSFWButton.interactable = _interactable;
+        }
+
+        public void SetButtonsInteractable(bool _interactable)
+        {
+            //makes buttons interactable
+            NoViolationButton.interactable = _interactable;
+            TakeDownButton.interactable = _interactable;
+            SendAnalysisButton.interactable = _interactable;
         }
 
         public void SwitchCanvas()

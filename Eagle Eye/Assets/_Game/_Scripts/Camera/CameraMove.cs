@@ -14,6 +14,7 @@ namespace FourZeroFourStudios
         [SerializeField] Transform _player;
         [SerializeField] Transform _chair;
         [SerializeField] CameraHolder _cameraHolder;
+        public bool MouseCanMoveScreen = true;
 
         float _xRotation = 0f;
 
@@ -22,7 +23,13 @@ namespace FourZeroFourStudios
             HideCursor();
         }
 
-        void Update() => ApplyMove();
+        void Update()
+        {
+            if (MouseCanMoveScreen)
+            {
+                ApplyMove();
+            }
+        }
 
         public void ShowCursor()
         {

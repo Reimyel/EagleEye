@@ -35,7 +35,7 @@ namespace FourZeroFourStudios
             if (Physics.Raycast(ray, out hit, _distance, _layerMask))
             {
                 Debug.DrawLine(ray.origin, hit.point, Color.green);
-                Debug.Log("Ray collided: " + hit.collider.gameObject.name);
+                //Debug.Log("Ray collided: " + hit.collider.gameObject.name);
 
                 OnRaycast?.Invoke(hit.collider.gameObject, _tmp_action);
             }

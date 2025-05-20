@@ -16,6 +16,7 @@ namespace FourZeroFourStudios
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] GameObject _go_desktop_canvas;
         [SerializeField] GameObject _go_initial_canvas;
+        [SerializeField] GameObject _go_eagleeye_canvas;
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] PostBehaviours _postBehaviours;
         [SerializeField] CameraMove _cameraMove;
@@ -37,7 +38,13 @@ namespace FourZeroFourStudios
 
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
             _go_canvas_hud.SetActive(false);
+            _cameraMove.MouseCanMoveScreen = false;
             StartCoroutine(StartModeration());
+        }
+
+        public void EnableLaptop()
+        {
+            this.enabled = true;
         }
 
         IEnumerator StartModeration()
@@ -46,20 +53,21 @@ namespace FourZeroFourStudios
 
             //apply CRT effect
             _volume.profile = _vprofile_crt;
-
             _go_desktop_canvas.SetActive(true);
-            _go_initial_canvas.SetActive(true);
+
+            _cameraMove.ShowCursor();
 
             if (_isFirstTime)
             {
                 _isFirstTime = false;
+                _go_initial_canvas.SetActive(true);
             }
             else
             {
-                _postBehaviours.ReturnToPosts();
+                StartCoroutine(_postBehaviours.ReturnToPosts(_postBehaviours.Delay));
+                _go_eagleeye_canvas.SetActive(true);
+                _go_initial_canvas.SetActive(false);
             }
-
-            _cameraMove.ShowCursor();
 
             this.enabled = false;
         }
