@@ -6,14 +6,9 @@ namespace FourZeroFourStudios
 {
     public class CultistBehaviour : MonoBehaviour
     {
-        Vector3 _endingPos = new Vector3(-74.26485f, 3.15063f, 35.15703f);
+        Vector3 _endingPos = new Vector3(-84.16683f, 3.15063f, 35.15703f);
         bool _canMove = false;
         public float Speed;
-
-        private void Start()
-        {
-            this.gameObject.SetActive(false);
-        }
 
         private void Update()
         {
@@ -31,7 +26,6 @@ namespace FourZeroFourStudios
 
         public void SetCanMove()
         {
-            this.gameObject.SetActive(true);
             _canMove = true;
         }
     }

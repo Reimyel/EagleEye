@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FourZeroFourStudios
 {
-    public class Elevator : MonoBehaviour
+    public class PropElevatorDoors : MonoBehaviour
     {
         [Header("References:")]
         [SerializeField] Animator _doorAnimator = null;

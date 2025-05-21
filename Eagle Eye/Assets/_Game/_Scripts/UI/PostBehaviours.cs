@@ -55,6 +55,10 @@ namespace FourZeroFourStudios
         [Header("Triggers")]
         [SerializeField] GameObject _triggerModerationPause1;
 
+        [Header("Cultists")]
+        [SerializeField] GameObject _cultistMoveTrigger;
+        [SerializeField] GameObject _cultist;
+
         private void Start()
         {
             _heroPropDoorOffice = FindObjectOfType<HeroPropDoorOffice>();
@@ -193,6 +197,8 @@ namespace FourZeroFourStudios
         {
             yield return new WaitForSeconds(Delay + 0.5f);
             _triggerModerationPause1.SetActive(true);
+            _cultistMoveTrigger.SetActive(true);
+            _cultist.SetActive(true);
         }
     }
 }

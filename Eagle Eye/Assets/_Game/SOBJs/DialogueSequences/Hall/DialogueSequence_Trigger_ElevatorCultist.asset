@@ -15,9 +15,9 @@ MonoBehaviour:
   _dialogueLines:
   - Text: (Who was that? They left so quickly.)
     Color: {r: 1, g: 1, b: 1, a: 1}
-  - Text: (He must have gotten off on the wrong floor. Rookie mistake.)
+  - Text: (Must have gotten off on the wrong floor.)
     Color: {r: 1, g: 1, b: 1, a: 1}
-  - Text: (Better be going back.)
+  - Text: (Well, I better be going back.)
     Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
   _stopMove: 0
