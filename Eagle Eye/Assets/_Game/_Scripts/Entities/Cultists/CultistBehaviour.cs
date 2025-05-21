@@ -10,6 +10,11 @@ namespace FourZeroFourStudios
         bool _canMove = false;
         public float Speed;
 
+        private void Start()
+        {
+            this.gameObject.SetActive(false);
+        }
+
         private void Update()
         {
             if (_canMove)
@@ -26,6 +31,7 @@ namespace FourZeroFourStudios
 
         public void SetCanMove()
         {
+            this.gameObject.SetActive(true);
             _canMove = true;
         }
     }
