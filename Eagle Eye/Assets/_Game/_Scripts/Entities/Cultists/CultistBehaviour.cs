@@ -4,11 +4,9 @@ using UnityEngine;
 
 namespace FourZeroFourStudios
 {
-    public class MaxBehaviour : MonoBehaviour
+    public class CultistBehaviour : MonoBehaviour
     {
-        [SerializeField] TriggerDialogue _triggerDialogue;
-        [SerializeField] GameObject _workers;
-        Vector3 _endingPos = new Vector3(-28.95579f, 3.15063f, 6.15123f);
+        Vector3 _endingPos = new Vector3(-74.26485f, 3.15063f, 35.15703f);
         bool _canMove = false;
         public float Speed;
 
@@ -24,13 +22,6 @@ namespace FourZeroFourStudios
                     Destroy(gameObject);
                 }
             }
-        }
-
-        public void StartSequence()
-        {
-            Destroy(_workers);
-            _triggerDialogue.enabled = true;
-            transform.position = new Vector3(-9.551909f, 3.15063f, 6.15123f);
         }
 
         public void SetCanMove()
