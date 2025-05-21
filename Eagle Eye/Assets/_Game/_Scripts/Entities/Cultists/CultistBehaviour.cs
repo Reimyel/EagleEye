@@ -6,7 +6,7 @@ namespace FourZeroFourStudios
 {
     public class CultistBehaviour : MonoBehaviour
     {
-        Vector3 _endingPos = new Vector3(-84.16683f, 3.15063f, 35.15703f);
+        Vector3 _endingPos = new Vector3(-88.9f, 3.15063f, 35.15703f);
         bool _canMove = false;
         public float Speed;
 

@@ -57,7 +57,6 @@ namespace FourZeroFourStudios
 
         [Header("Cultists")]
         [SerializeField] GameObject _cultistMoveTrigger;
-        [SerializeField] GameObject _cultist;
 
         private void Start()
         {
@@ -198,7 +197,6 @@ namespace FourZeroFourStudios
             yield return new WaitForSeconds(Delay + 0.5f);
             _triggerModerationPause1.SetActive(true);
             _cultistMoveTrigger.SetActive(true);
-            _cultist.SetActive(true);
         }
     }
 }
