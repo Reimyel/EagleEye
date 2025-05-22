@@ -6,27 +6,30 @@ namespace FourZeroFourStudios
 {
     public class CultistBehaviour : MonoBehaviour
     {
+        // Inspector:
+        public float Speed;
+        [SerializeField] Animator _anim;
+
         Vector3 _endingPos = new Vector3(-88.9f, 3.15063f, 35.15703f);
         bool _canMove = false;
-        public float Speed;
 
-        private void Update()
+        void Start() => SetWalkAnimation();
+
+        void Update() => Move();
+
+        void Move() 
         {
-            if (_canMove)
-            {
-                gameObject.transform.position = Vector3.MoveTowards(transform.position, _endingPos, Speed * Time.deltaTime);
+            if (!_canMove) return;
+            
+            gameObject.transform.position = Vector3.MoveTowards(transform.position, _endingPos, Speed * Time.deltaTime);
 
-                float _distance = Vector2.Distance(transform.position, _endingPos);
-                if (_distance < 0.1f)
-                {
-                    Destroy(gameObject);
-                }
-            }
+            float _distance = Vector2.Distance(transform.position, _endingPos);
+            if (_distance < 0.1f)
+                 Destroy(gameObject);
         }
 
-        public void SetCanMove()
-        {
-            _canMove = true;
-        }
+        void SetWalkAnimation() => _anim.Play("Anim_Cultist_Walk");
+
+        public void SetCanMove() =>_canMove = true;
     }
 }
