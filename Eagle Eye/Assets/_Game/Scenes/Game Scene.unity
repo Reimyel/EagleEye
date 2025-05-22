@@ -71396,7 +71396,7 @@ GameObject:
   - component: {fileID: 1581078264}
   - component: {fileID: 1581078263}
   - component: {fileID: 1581078265}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EnterOffice_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
