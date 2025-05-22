@@ -43,6 +43,16 @@ namespace FourZeroFourStudios
             _disableDoor = disableDoorValue;
         }
 
+        //when used in trigger dialogue
+        public void TriggerDialogue_EnableCanOpenIN()
+        {
+            EnableCanOpen(DisableDoor.IN);
+        }
+        public void TriggerDialogue_EnableCanOpenOUT()
+        {
+            EnableCanOpen(DisableDoor.OUT);
+        }
+
         public void DisableCanOpen() 
         {
             _canOpen = false;
