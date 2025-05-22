@@ -32,6 +32,11 @@ namespace FourZeroFourStudios
                 StopHeadbob();
             }
         }
+
+        private void OnDisable()
+        {
+            Debug.Log("Teste");
+        }
         #endregion
 
         #region Custom

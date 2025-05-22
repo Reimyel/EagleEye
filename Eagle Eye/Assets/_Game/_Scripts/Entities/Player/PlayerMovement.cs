@@ -13,6 +13,7 @@ namespace FourZeroFourStudios
         [Header("References:")]
         [SerializeField] CharacterController _controller;
         [SerializeField] Transform _groundCheck;
+        [SerializeField] CameraHeadBob _headBob;
         [Space]
 
         [Header("Parameters:")]
@@ -40,6 +41,8 @@ namespace FourZeroFourStudios
             ApplyMove();
             ApplyGravityForce();
         }
+
+        void OnEnable() => _headBob.enabled = true;
         #endregion
 
         #region Custom

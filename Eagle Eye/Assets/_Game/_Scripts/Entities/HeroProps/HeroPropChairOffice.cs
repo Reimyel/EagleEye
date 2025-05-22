@@ -29,6 +29,7 @@ namespace FourZeroFourStudios
 
         void Sit()
         {
+            FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
 
             _cameraHolder.IsPlayerSeated = true;
@@ -37,6 +38,7 @@ namespace FourZeroFourStudios
 
         public void GetUp()
         {
+            FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
             _cameraHolder.IsPlayerSeated = false;
         }
