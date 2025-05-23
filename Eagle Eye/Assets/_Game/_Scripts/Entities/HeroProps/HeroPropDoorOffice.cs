@@ -9,7 +9,11 @@ namespace FourZeroFourStudios
         [Header("Settings:")]
         [Space]
 
+        [Header("Reset Door Rotation:")]
+        [SerializeField] float _resetSpeed;
+
         [Header("References:")]
+        [SerializeField] Transform _transf_door;
         [SerializeField] TriggerDialogue[] _trigger_blockDialogues;
         [SerializeField] TriggerRotateDoor _trigger_rotateDoor;
         [SerializeField] TriggerDisableRotateDoor[] _triggers_disableRotateDoor;
@@ -19,6 +23,10 @@ namespace FourZeroFourStudios
         int _curTriggerIndex = 0;
         bool _canOpen = false;
 
+        bool _resetRotation = false;
+
+        float _defaultRotationY;
+
         DisableDoor _disableDoor;
 
         public enum DisableDoor 
@@ -27,6 +35,37 @@ namespace FourZeroFourStudios
             OUT = 1
         }
         #endregion
+
+        #region Mono
+        void Start() => _defaultRotationY = _transf_door.rotation.y;
+
+
+        void Update() 
+        {
+            if (_resetRotation) ApplyRotationReset();
+        }
+        #endregion
+
+        #region Custom
+        void ApplyRotationReset() 
+        {
+            if (_transf_door.rotation.y != _defaultRotationY) 
+            {
+                float rotationDirLocal = 0;
+
+                if (_transf_door.rotation.y > _defaultRotationY)
+                    rotationDirLocal = -1;
+                else if (_transf_door.rotation.y < _defaultRotationY)
+                    rotationDirLocal = 1;
+
+                _transf_door.rotation *= Quaternion.Euler(0f, rotationDirLocal * _resetSpeed * Time.deltaTime, 0f);
+            }
+            else 
+            {
+                _transf_door.rotation = Quaternion.Euler(0f, _defaultRotationY, 0f);
+                _resetRotation = false;
+            }
+        }
 
         public override void Interact()
         {
@@ -59,6 +98,8 @@ namespace FourZeroFourStudios
 
             _trigger_rotateDoor.enabled = false;
 
+            _resetRotation = true;
+
             _go_light_off.SetActive(true);
             _go_light_on.SetActive(false);
         }
@@ -77,5 +118,6 @@ namespace FourZeroFourStudios
         }
 
         void ShowBlockDialogue() => _trigger_blockDialogues[_curTriggerIndex].enabled = true;
+        #endregion
     }
 }

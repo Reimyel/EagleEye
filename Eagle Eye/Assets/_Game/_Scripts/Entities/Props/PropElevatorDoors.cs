@@ -23,8 +23,6 @@ namespace FourZeroFourStudios
         public void CloseElevatorDoors()
         {
             _doorAnimator.Play("Anim_Elevator_Close");
-            Debug.Log("bolas");
-
         }
     }
 }
