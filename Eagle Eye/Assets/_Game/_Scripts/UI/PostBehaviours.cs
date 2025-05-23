@@ -194,7 +194,7 @@ namespace FourZeroFourStudios
 
         IEnumerator EnablePauseTrigger()
         {
-            yield return new WaitForSeconds(Delay + 0.5f);
+            yield return new WaitForSeconds(Delay);
             _triggerModerationPause1.SetActive(true);
             _cultistMoveTrigger.SetActive(true);
         }

@@ -21,4 +21,4 @@ MonoBehaviour:
   - Text: "(I\u2019ll turn it over to the lost and found when my shift is over.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
-  _stopMove: 0
+  _stopMove: 1
