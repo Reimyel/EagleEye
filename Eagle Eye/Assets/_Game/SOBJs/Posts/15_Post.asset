@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UserImage: {fileID: 21300000, guid: 00caecf264e8cff42bd63d85be75a807, type: 3}
   UserInfo: <b>Xx_Fanboiii</b> <i>@kylekis</i> | 23h
-  Content: "Just bought this new beauty. Finna run over some slow farts at the street
-    with it god bless (\u256F\u02D8 -\u02D8 )\u256F"
+  Content: Just bought this new beauty. Finna run over some slow farts at the street
+    with it #godbless
   PostImage: {fileID: 21300000, guid: 0e040ce4faed03b4a9d29232fcb57325, type: 3}
   CorrectTag: 1
   Layout: 3

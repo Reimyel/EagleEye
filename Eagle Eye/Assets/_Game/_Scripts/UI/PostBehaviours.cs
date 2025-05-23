@@ -54,6 +54,7 @@ namespace FourZeroFourStudios
 
         [Header("Triggers")]
         [SerializeField] GameObject _triggerModerationPause1;
+        [SerializeField] GameObject _triggerModerationPause2;
 
         [Header("Cultists")]
         [SerializeField] GameObject _cultistMoveTrigger;
@@ -130,8 +131,11 @@ namespace FourZeroFourStudios
                     StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;
+                //Connor goes out for coffee
                 case 20:
                     EndModeration();
+                    StartCoroutine(EnablePauseTrigger());
+                    _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;
                 case 29:
                     EndModeration();
@@ -195,8 +199,19 @@ namespace FourZeroFourStudios
         IEnumerator EnablePauseTrigger()
         {
             yield return new WaitForSeconds(Delay);
-            _triggerModerationPause1.SetActive(true);
-            _cultistMoveTrigger.SetActive(true);
+            switch (CurrentPostIndex)
+            {
+                case 12:
+                    _triggerModerationPause1.SetActive(true);
+                    _cultistMoveTrigger.SetActive(true);
+                    break;
+                case 20:
+                    _triggerModerationPause2.SetActive(true);
+                    break;
+                /*case 29:
+                    _triggerModerationPause3.SetActive(true);
+                    break;*/
+            }
         }
     }
 }
