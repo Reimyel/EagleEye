@@ -23721,7 +23721,7 @@ PrefabInstance:
       objectReference: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4740109400612725504, guid: cec08275ea79ec3468ae763f13bcdd1b, type: 3}
       propertyPath: _materials.Array.size
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4740109400612725504, guid: cec08275ea79ec3468ae763f13bcdd1b, type: 3}
       propertyPath: _materials.Array.data[0]
@@ -23806,7 +23806,7 @@ PrefabInstance:
     - target: {fileID: 4740109400612725504, guid: cec08275ea79ec3468ae763f13bcdd1b, type: 3}
       propertyPath: _materials.Array.data[20]
       value: 
-      objectReference: {fileID: 2100000, guid: 31e87d42f3ffa2546b1f527e7a0a4b9d, type: 2}
+      objectReference: {fileID: 1544678405756055709, guid: d25f8b40e4ea3ff44b73b5cb7605c83d, type: 3}
     - target: {fileID: 4740109400612725518, guid: cec08275ea79ec3468ae763f13bcdd1b, type: 3}
       propertyPath: m_Name
       value: MaterialShaderChanger
@@ -94996,6 +94996,8 @@ GameObject:
   - component: {fileID: 8051364880687570963}
   - component: {fileID: 4022827250804937172}
   - component: {fileID: 292723915940854492}
+  - component: {fileID: 8051364880687570965}
+  - component: {fileID: 8051364880687570964}
   m_Layer: 0
   m_Name: 8zCoffeeCup_Prop
   m_TagString: Untagged
@@ -95010,11 +95012,44 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4900994471059638739}
-  m_LocalRotation: {x: -0.7290496, y: -0.07254971, z: 0.078232184, w: 0.67609394}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7290496, y: -0.072549716, z: 0.07823219, w: 0.67609394}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1259856882}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -77.023, y: -109.12, z: 109.583}
+--- !u!114 &8051364880687570964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900994471059638739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98832aa0dff72446b02e2d767606284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim_coffeeCup: {fileID: 8051364880687570965}
+--- !u!95 &8051364880687570965
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900994471059638739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a9248dd8f79e6d4e992b6d50274be76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
