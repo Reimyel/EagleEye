@@ -47,6 +47,7 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] CameraMove _cameraMove;
         [SerializeField] HeroPropChairOffice _heroPropChairOffice;
+        [SerializeField] HeroPropVendingMachine _heroPropVendingMachine;
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
@@ -134,6 +135,7 @@ namespace FourZeroFourStudios
                 //Connor goes out for coffee
                 case 20:
                     EndModeration();
+                    _heroPropVendingMachine.SetCanTakeCoffee();
                     StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
                     break;

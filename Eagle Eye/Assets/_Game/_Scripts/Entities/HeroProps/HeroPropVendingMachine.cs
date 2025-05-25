@@ -8,7 +8,26 @@ namespace FourZeroFourStudios
     {
         [Header("References:")]
         [SerializeField] private TriggerDialogue _triggerDialogue;
+        [SerializeField] GameObject _coffeeCup;
+        [SerializeField] bool _canTakeCoffee = false;
 
-        public override void Interact() => _triggerDialogue.enabled = true;
+        public override void Interact()
+        {
+            if (_canTakeCoffee)
+            {
+                _coffeeCup.SetActive(true);
+                _canTakeCoffee = false;
+                this.enabled = false;
+            }
+            else
+            {
+                _triggerDialogue.enabled = true;
+            }
+        }
+
+        public void SetCanTakeCoffee()
+        {
+            _canTakeCoffee = true;
+        }
     }
 }
