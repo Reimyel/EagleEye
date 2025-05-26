@@ -20,6 +20,7 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] PostBehaviours _postBehaviours;
         [SerializeField] CameraMove _cameraMove;
+        [SerializeField] Collider _collider;
 
 
         [Header("Rendering:")]
@@ -40,11 +41,6 @@ namespace FourZeroFourStudios
             _go_canvas_hud.SetActive(false);
             _cameraMove.MouseCanMoveScreen = false;
             StartCoroutine(StartModeration());
-        }
-
-        public void EnableLaptop()
-        {
-            this.enabled = true;
         }
 
         IEnumerator StartModeration()
@@ -69,6 +65,18 @@ namespace FourZeroFourStudios
                 _go_initial_canvas.SetActive(false);
             }
 
+            DisableLaptop();
+        }
+
+        public void EnableLaptop()
+        {
+            _collider.enabled = true;
+            this.enabled = true;
+        }
+
+        public void DisableLaptop()
+        {
+            _collider.enabled = false;
             this.enabled = false;
         }
     }

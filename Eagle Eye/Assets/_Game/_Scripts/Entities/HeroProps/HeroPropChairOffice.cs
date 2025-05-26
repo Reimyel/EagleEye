@@ -24,8 +24,7 @@ namespace FourZeroFourStudios
             Sit();
 
             this.enabled = false;
-
-            _heroPropLaptop.enabled = true;
+            _heroPropLaptop.EnableLaptop();
         }
 
         void Sit()
@@ -42,6 +41,8 @@ namespace FourZeroFourStudios
             FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
             _cameraHolder.IsPlayerSeated = false;
+
+            _heroPropLaptop.DisableLaptop();
         }
     }
 }
