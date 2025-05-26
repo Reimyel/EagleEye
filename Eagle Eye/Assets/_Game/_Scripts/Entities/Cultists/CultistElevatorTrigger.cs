@@ -18,7 +18,7 @@ namespace FourZeroFourStudios
         {
             _elevatorCultistTrigger.SetActive(true);
             _cultistBehaviour.gameObject.SetActive(true);
-            _cultistBehaviour.SetCanMove();
+            _cultistBehaviour.Move();
 
             _heroPropElevatorButton.ElevatorButtonTrigger = 2;
             _heroPropElevatorButton2.ElevatorButtonTrigger = 2;

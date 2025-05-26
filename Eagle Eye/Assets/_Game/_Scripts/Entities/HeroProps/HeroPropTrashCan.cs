@@ -7,6 +7,8 @@ namespace FourZeroFourStudios
     public class HeroPropTrashCan : BaseHeroProp
     {
         [SerializeField] PropCoffeeCup _propCoffeeCup;
+        [SerializeField] CultistBehaviour _cultistBehaviour;
+        [SerializeField] GameObject _cultistHideTrigger;
 
         private void Start()
         {
@@ -18,6 +20,11 @@ namespace FourZeroFourStudios
             base.Interact();
 
             Destroy(_propCoffeeCup.gameObject);
+            _cultistHideTrigger.SetActive(true);
+
+            _cultistBehaviour.gameObject.SetActive(true);
+            _cultistBehaviour.Hide();
+
             this.enabled = false;
         }
     }

@@ -10,33 +10,68 @@ namespace FourZeroFourStudios
         public float Speed;
         [SerializeField] Animator _anim;
 
-        Vector3 _beginningPos = new Vector3(-56.21124f, 4.861425f, 39.05781f);
-        Vector3 _endingPos = new Vector3(-80.05568f, 4.861425f, 39.05781f);
-        bool _canMove = false;
+        Vector3 _beginningPos = new Vector3(-56.21124f, 5.082796f, 39.05781f);
+        Quaternion _beginningRot = Quaternion.Euler(0f, 270f, 0f);
+
+        Vector3 _endingPos = new Vector3(-80.05568f, 5.082796f, 39.05781f);
+
+        Vector3 _hidingPos = new Vector3(-29.63957f, 5.082796f, 11f);
+        Quaternion _HidingRot = Quaternion.Euler(0f, -110f, 0f);
+
+        bool _isMoving = false;
+        bool _isHiding = false;
 
         void Start()
         {
-            gameObject.transform.position = _beginningPos;
+            transform.position = _beginningPos;
+            transform.rotation = _beginningRot;
+        }
+
+        void Update()
+        {
+            if (_isMoving)
+            {
+                StartMoving();
+            }
+
+            if ( _isHiding )
+            {
+                StartHiding();
+            }
+        }
+
+        public void Move()
+        {
+            _isMoving = true;
             SetWalkAnimation();
         }
 
-        void Update() => Move();
-
-        void Move() 
+        public void Hide()
         {
-            if (!_canMove) return;
-            
-            gameObject.transform.position = Vector3.MoveTowards(transform.position, _endingPos, Speed * Time.deltaTime);
+            _isHiding = true;
+            SetHidingAnimation();
+        }
 
-            float _distance = Vector2.Distance(transform.position, _endingPos);
+        void StartMoving() 
+        {
+            transform.position = Vector3.MoveTowards(_beginningPos, _endingPos, Speed * Time.deltaTime);
+
+            float _distance = Vector3.Distance(transform.position, _endingPos);
             if (_distance < 0.1f)
-                 gameObject.SetActive(false);
+            {
+                _isMoving = false;
+                gameObject.SetActive(false);
+            }
+        }
+
+        void StartHiding()
+        {
+            transform.position = _hidingPos;
+            transform.rotation = _HidingRot;
         }
 
         void SetWalkAnimation() => _anim.Play("Anim_Cultist_Walk");
 
         void SetHidingAnimation() => _anim.Play("Anim_Cultist_Hiding");
-
-        public void SetCanMove() =>_canMove = true;
     }
 }

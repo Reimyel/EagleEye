@@ -17,7 +17,7 @@ namespace FourZeroFourStudios
             {
                 _anim_coffeeCup.SetBool("_isDrinking", true);
                 _canDrink = false;
-                StartCoroutine(AnimDefault(2));
+                StartCoroutine(AnimDefault(1.5f));
                 
             }
 
