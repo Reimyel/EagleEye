@@ -15,7 +15,7 @@ namespace FourZeroFourStudios
         [Header("References:")]
         [SerializeField] Transform _transf_door;
         [SerializeField] TriggerDialogue[] _trigger_blockDialogues;
-        [SerializeField] TriggerRotateDoor _trigger_rotateDoor;
+        [SerializeField] TriggerRotateDoor[] _trigger_rotateDoors;
         [SerializeField] TriggerDisableRotateDoor[] _triggers_disableRotateDoor;
         [SerializeField] GameObject _go_light_on;
         [SerializeField] GameObject _go_light_off;
@@ -50,20 +50,11 @@ namespace FourZeroFourStudios
         {
             float curYLocal = _transf_door.localEulerAngles.y;
 
-            if (!_flippedRotation) 
-            {
-                _defaultRotationY *= -1f;
-                _flippedRotation = true;
-            }
-
-            float newYLocal = Mathf.MoveTowardsAngle(curYLocal, _defaultRotationY, _resetSpeed * Time.deltaTime);
+            float newYLocal = Mathf.MoveTowards(curYLocal, _defaultRotationY,  _resetSpeed * Time.deltaTime);
             _transf_door.localRotation = Quaternion.Euler(0f, newYLocal, 0f);
 
             if (Mathf.Approximately(newYLocal, _defaultRotationY)) 
-            {
                 _resetRotation = false;
-                _flippedRotation = false;
-            }
         }
 
         public override void Interact()
@@ -82,20 +73,15 @@ namespace FourZeroFourStudios
         }
 
         //when used in trigger dialogue
-        public void TriggerDialogue_EnableCanOpenIN()
-        {
-            EnableCanOpen(DisableDoor.IN);
-        }
-        public void TriggerDialogue_EnableCanOpenOUT()
-        {
-            EnableCanOpen(DisableDoor.OUT);
-        }
+        public void TriggerDialogue_EnableCanOpenIN() => EnableCanOpen(DisableDoor.IN);
+        public void TriggerDialogue_EnableCanOpenOUT() => EnableCanOpen(DisableDoor.OUT);
 
         public void DisableCanOpen() 
         {
             _canOpen = false;
 
-            _trigger_rotateDoor.enabled = false;
+            for (int i = 0; i < _trigger_rotateDoors.Length; i++)
+                _trigger_rotateDoors[i].enabled = false;
 
             _resetRotation = true;
 
@@ -108,7 +94,8 @@ namespace FourZeroFourStudios
             if (_curTriggerIndex < _trigger_blockDialogues.Length - 1)
                 _curTriggerIndex++;
 
-            _trigger_rotateDoor.enabled = true;
+            for (int i = 0; i < _trigger_rotateDoors.Length; i++)
+                _trigger_rotateDoors[i].enabled = true;
 
             _go_light_off.SetActive(false);
             _go_light_on.SetActive(true);
