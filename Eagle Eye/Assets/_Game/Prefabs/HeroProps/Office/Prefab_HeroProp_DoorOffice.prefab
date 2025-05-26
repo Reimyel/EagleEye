@@ -3545,6 +3545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionText: Open
   _resetSpeed: 60
+  _defaultRotationY: 50
   _transf_door: {fileID: 7020457555657656284}
   _trigger_blockDialogues:
   - {fileID: 4549612016120845925}

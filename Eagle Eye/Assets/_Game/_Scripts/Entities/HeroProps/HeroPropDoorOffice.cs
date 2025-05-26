@@ -23,9 +23,9 @@ namespace FourZeroFourStudios
         int _curTriggerIndex = 0;
         bool _canOpen = false;
 
-        bool _resetRotation = false;
-
         float _defaultRotationY;
+        bool _resetRotation = false;
+        bool _flippedRotation = false;
 
         DisableDoor _disableDoor;
 
@@ -37,8 +37,7 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Mono
-        void Start() => _defaultRotationY = _transf_door.rotation.y;
-
+        void Start() => _defaultRotationY = _transf_door.localEulerAngles.y;
 
         void Update() 
         {
@@ -49,21 +48,21 @@ namespace FourZeroFourStudios
         #region Custom
         void ApplyRotationReset() 
         {
-            if (_transf_door.rotation.y != _defaultRotationY) 
+            float curYLocal = _transf_door.localEulerAngles.y;
+
+            if (!_flippedRotation) 
             {
-                float rotationDirLocal = 0;
-
-                if (_transf_door.rotation.y > _defaultRotationY)
-                    rotationDirLocal = -1;
-                else if (_transf_door.rotation.y < _defaultRotationY)
-                    rotationDirLocal = 1;
-
-                _transf_door.rotation *= Quaternion.Euler(0f, rotationDirLocal * _resetSpeed * Time.deltaTime, 0f);
+                _defaultRotationY *= -1f;
+                _flippedRotation = true;
             }
-            else 
+
+            float newYLocal = Mathf.MoveTowardsAngle(curYLocal, _defaultRotationY, _resetSpeed * Time.deltaTime);
+            _transf_door.localRotation = Quaternion.Euler(0f, newYLocal, 0f);
+
+            if (Mathf.Approximately(newYLocal, _defaultRotationY)) 
             {
-                _transf_door.rotation = Quaternion.Euler(0f, _defaultRotationY, 0f);
                 _resetRotation = false;
+                _flippedRotation = false;
             }
         }
 
