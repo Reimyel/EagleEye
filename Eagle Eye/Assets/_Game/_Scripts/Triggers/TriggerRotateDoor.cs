@@ -18,8 +18,6 @@ namespace FourZeroFourStudios
 
         [Header("Parameters:")]
         [SerializeField] float _rotateSpeed;
-
-        Transform _transf_player;
         #endregion
 
         #region Unity

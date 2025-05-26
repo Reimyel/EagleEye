@@ -5,9 +5,7 @@ namespace FourZeroFourStudios
 {
     public class TriggerDisableRotateDoor : MonoBehaviour
     {
-        HeroPropDoorOffice _heroPropDoorOffice;
-
-        void Start() => _heroPropDoorOffice = FindObjectOfType<HeroPropDoorOffice>();
+        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
 
         void OnEnable() => Raycaster.OnRaycast += CheckTrigger;
 

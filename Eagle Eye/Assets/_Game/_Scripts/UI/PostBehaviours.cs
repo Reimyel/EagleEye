@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
-using static UnityEditor.SceneView;
 
 namespace FourZeroFourStudios
 {
@@ -51,7 +49,7 @@ namespace FourZeroFourStudios
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
-        HeroPropDoorOffice _heroPropDoorOffice;
+        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice_Exit;
 
         [Header("Triggers")]
         [SerializeField] GameObject _triggerModerationPause1;
@@ -59,10 +57,10 @@ namespace FourZeroFourStudios
 
         [Header("Cultists")]
         [SerializeField] GameObject _cultistMoveTrigger;
+        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice_Entrance;
 
         private void Start()
         {
-            _heroPropDoorOffice = FindObjectOfType<HeroPropDoorOffice>();
             _buttonBehaviours = FindObjectOfType<ButtonBehaviours>();
             DisplayCurrentPost();
         }
@@ -130,14 +128,14 @@ namespace FourZeroFourStudios
                 case 12:
                     EndModeration();
                     StartCoroutine(EnablePauseTrigger());
-                    _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
+                    _heroPropDoorOffice_Exit.EnableCanOpen();
                     break;
                 //Connor goes out for coffee
                 case 20:
                     EndModeration();
                     _heroPropVendingMachine.SetCanTakeCoffee();
                     StartCoroutine(EnablePauseTrigger());
-                    _heroPropDoorOffice.EnableCanOpen(HeroPropDoorOffice.DisableDoor.OUT);
+                    _heroPropDoorOffice_Entrance.EnableCanOpen();
                     break;
                 case 29:
                     EndModeration();

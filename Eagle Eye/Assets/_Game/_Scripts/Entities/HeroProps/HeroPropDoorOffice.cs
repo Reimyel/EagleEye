@@ -15,8 +15,9 @@ namespace FourZeroFourStudios
         [Header("References:")]
         [SerializeField] Transform _transf_door;
         [SerializeField] TriggerDialogue[] _trigger_blockDialogues;
-        [SerializeField] TriggerRotateDoor[] _trigger_rotateDoors;
-        [SerializeField] TriggerDisableRotateDoor[] _triggers_disableRotateDoor;
+        [SerializeField] TriggerRotateDoor _trigger_rotateDoor;
+        [SerializeField] Collider _collider_blocker;
+        [SerializeField] TriggerDisableRotateDoor _trigger_disableRotateDoor;
         [SerializeField] GameObject _go_light_on;
         [SerializeField] GameObject _go_light_off;
 
@@ -25,15 +26,6 @@ namespace FourZeroFourStudios
 
         float _defaultRotationY;
         bool _resetRotation = false;
-        bool _flippedRotation = false;
-
-        DisableDoor _disableDoor;
-
-        public enum DisableDoor 
-        {
-            IN = 0,
-            OUT = 1
-        }
         #endregion
 
         #region Mono
@@ -65,28 +57,31 @@ namespace FourZeroFourStudios
             else ShowBlockDialogue();
         }
 
-        public void EnableCanOpen(DisableDoor disableDoorValue)
+        public void EnableCanOpen() => _canOpen = true;
+
+        // when used in trigger dialogue
+        public void TriggerDialogue_EnableCanOpenIN()
         {
-            _canOpen = true;
-
-            _disableDoor = disableDoorValue;
+            GameObject.FindGameObjectWithTag("Entrance").GetComponent<HeroPropDoorOffice>().EnableCanOpen();
         }
-
-        //when used in trigger dialogue
-        public void TriggerDialogue_EnableCanOpenIN() => EnableCanOpen(DisableDoor.IN);
-        public void TriggerDialogue_EnableCanOpenOUT() => EnableCanOpen(DisableDoor.OUT);
+        
+        public void TriggerDialogue_EnableCanOpenOUT() 
+        {
+            GameObject.FindGameObjectWithTag("Exit").GetComponent<HeroPropDoorOffice>().EnableCanOpen();
+        }
 
         public void DisableCanOpen() 
         {
             _canOpen = false;
 
-            for (int i = 0; i < _trigger_rotateDoors.Length; i++)
-                _trigger_rotateDoors[i].enabled = false;
-
             _resetRotation = true;
 
             _go_light_off.SetActive(true);
             _go_light_on.SetActive(false);
+
+            _trigger_disableRotateDoor.gameObject.SetActive(false);
+            _trigger_rotateDoor.enabled = false;
+            _collider_blocker.enabled = true;
         }
 
         void OpenDoor() 
@@ -94,16 +89,19 @@ namespace FourZeroFourStudios
             if (_curTriggerIndex < _trigger_blockDialogues.Length - 1)
                 _curTriggerIndex++;
 
-            for (int i = 0; i < _trigger_rotateDoors.Length; i++)
-                _trigger_rotateDoors[i].enabled = true;
-
             _go_light_off.SetActive(false);
             _go_light_on.SetActive(true);
 
-            _triggers_disableRotateDoor[(int)_disableDoor].gameObject.SetActive(true);
+            _trigger_disableRotateDoor.gameObject.SetActive(true);
+            _trigger_rotateDoor.enabled = true;
+            _collider_blocker.enabled = false;
         }
 
-        void ShowBlockDialogue() => _trigger_blockDialogues[_curTriggerIndex].enabled = true;
+        void ShowBlockDialogue()
+        {
+            if (_trigger_blockDialogues[_curTriggerIndex] != null)
+                _trigger_blockDialogues[_curTriggerIndex].enabled = true;
+        }
         #endregion
     }
 }

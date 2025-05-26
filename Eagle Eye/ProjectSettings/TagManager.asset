@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CameraPosition
   - ChairCameraPosition
+  - Entrance
+  - Exit
   layers:
   - Default
   - TransparentFX
