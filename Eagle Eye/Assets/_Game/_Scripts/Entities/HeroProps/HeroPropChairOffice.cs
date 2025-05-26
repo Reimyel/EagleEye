@@ -16,6 +16,7 @@ namespace FourZeroFourStudios
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] CameraHeadBob _cameraHeadBob;
         [SerializeField] HeroPropLaptop _heroPropLaptop;
+        [SerializeField] CameraZooming _cameraZooming;
 
         public override void Interact()
         {
@@ -31,6 +32,7 @@ namespace FourZeroFourStudios
         {
             FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
+            _cameraZooming.Disactivate();
 
             _cameraHolder.IsPlayerSeated = true;
             _cameraHeadBob.enabled = false;
@@ -40,6 +42,7 @@ namespace FourZeroFourStudios
         {
             FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
+            _cameraZooming.Activate();
             _cameraHolder.IsPlayerSeated = false;
 
             _heroPropLaptop.DisableLaptop();
