@@ -27679,6 +27679,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777027442}
     - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
+      propertyPath: _cameraZooming
+      value: 
+      objectReference: {fileID: 2040469785}
+    - target: {fileID: 6071295219390620865, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: _go_canvas_hud
       value: 
       objectReference: {fileID: 497570047}
@@ -89824,6 +89828,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66cd7735caee4ab4d9e567804efdf0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2040469785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2567637585457328632, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+  m_PrefabInstance: {fileID: 992917222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8024e8734e12c740a868b6ec69d2af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2049907656
