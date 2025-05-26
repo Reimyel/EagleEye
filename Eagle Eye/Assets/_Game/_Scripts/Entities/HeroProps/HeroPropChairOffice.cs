@@ -20,6 +20,7 @@ namespace FourZeroFourStudios
         public override void Interact()
         {
             base.Interact();
+
             Sit();
 
             this.enabled = false;

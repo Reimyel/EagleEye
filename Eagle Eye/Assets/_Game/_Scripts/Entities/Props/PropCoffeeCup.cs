@@ -7,8 +7,9 @@ namespace FourZeroFourStudios
     public class PropCoffeeCup : MonoBehaviour
     {
         [SerializeField] Animator _anim_coffeeCup;
+        [SerializeField] HeroPropTrashCan _heroPropTrashCan;
+        public int TimesDrank = 0;
         bool _canDrink = true;
-        int _timesDrank = 0;
 
         void Update()
         {
@@ -21,9 +22,10 @@ namespace FourZeroFourStudios
             }
 
             //discard coffee cup
-            if (_timesDrank >= 3)
+            if (TimesDrank >= 3)
             {
-                Destroy(gameObject);
+                _canDrink = false;
+                _heroPropTrashCan.enabled = true;
             }
         }
 
@@ -31,7 +33,7 @@ namespace FourZeroFourStudios
         {
             yield return new WaitForSeconds(_delayInSeconds);
             _anim_coffeeCup.SetBool("_isDrinking", false);
-            _timesDrank++;
+            TimesDrank++;
             _canDrink = true;
         }
     }

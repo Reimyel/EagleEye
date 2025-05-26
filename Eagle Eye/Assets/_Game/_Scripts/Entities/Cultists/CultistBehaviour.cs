@@ -10,10 +10,15 @@ namespace FourZeroFourStudios
         public float Speed;
         [SerializeField] Animator _anim;
 
-        Vector3 _endingPos = new Vector3(-88.9f, 3.15063f, 35.15703f);
+        Vector3 _beginningPos = new Vector3(-56.21124f, 4.861425f, 39.05781f);
+        Vector3 _endingPos = new Vector3(-80.05568f, 4.861425f, 39.05781f);
         bool _canMove = false;
 
-        void Start() => SetWalkAnimation();
+        void Start()
+        {
+            gameObject.transform.position = _beginningPos;
+            SetWalkAnimation();
+        }
 
         void Update() => Move();
 
@@ -25,10 +30,12 @@ namespace FourZeroFourStudios
 
             float _distance = Vector2.Distance(transform.position, _endingPos);
             if (_distance < 0.1f)
-                 Destroy(gameObject);
+                 gameObject.SetActive(false);
         }
 
         void SetWalkAnimation() => _anim.Play("Anim_Cultist_Walk");
+
+        void SetHidingAnimation() => _anim.Play("Anim_Cultist_Hiding");
 
         public void SetCanMove() =>_canMove = true;
     }
