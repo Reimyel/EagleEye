@@ -60,7 +60,7 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Managing Behaviour
-        public void Disactivate() 
+        public void Deactivate() 
         {
             _canZooming = false;
             _anim_camHolder.Play("Anim_CameraHolder_Default");

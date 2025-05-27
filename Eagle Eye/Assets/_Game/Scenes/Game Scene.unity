@@ -17988,6 +17988,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2123885221}
     - target: {fileID: 8211159790075188033, guid: c6762147046265640ba916706954effb, type: 3}
+      propertyPath: _heroPropDoorOffice
+      value: 
+      objectReference: {fileID: 314580481}
+    - target: {fileID: 8211159790075188033, guid: c6762147046265640ba916706954effb, type: 3}
       propertyPath: LayoutBig.LayoutRoot
       value: 
       objectReference: {fileID: 1072122790}
@@ -18059,6 +18063,10 @@ PrefabInstance:
       propertyPath: _triggerModerationPause2
       value: 
       objectReference: {fileID: 1613579696}
+    - target: {fileID: 8211159790075188033, guid: c6762147046265640ba916706954effb, type: 3}
+      propertyPath: _triggerModerationPause3
+      value: 
+      objectReference: {fileID: 1071997261}
     - target: {fileID: 8211159790075188033, guid: c6762147046265640ba916706954effb, type: 3}
       propertyPath: _heroPropDoorOffice_Entrance
       value: 
@@ -19691,8 +19699,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 6.7827396, z: 8.943331}
-  m_Center: {x: 6.3123506e-11, y: -0.45363045, z: 0.12692158}
+  m_Size: {x: 1.0481381, y: 6.7827396, z: 8.943331}
+  m_Center: {x: 1.3396524, y: -0.45363045, z: 0.12692155}
 --- !u!33 &471640435
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20579,6 +20587,49 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &482587006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+  m_PrefabInstance: {fileID: 1636615686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &482587008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482587006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8bba5cda0d9224f84a08702628444d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionText: Sit
+  _go_player: {fileID: 507863190}
+  _cameraHolder: {fileID: 348613083}
+  _cameraHeadBob: {fileID: 1777027442}
+  _cameraZooming: {fileID: 2040469785}
+--- !u!65 &482587009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482587006}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.82633185, y: 1.2282077, z: 0.8179782}
+  m_Center: {x: 0.023260996, y: 0.619955, z: 0.031234741}
 --- !u!1 &482897068
 GameObject:
   m_ObjectHideFlags: 0
@@ -27988,7 +28039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 588163936222728513, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: m_Name
-      value: Prefab_HeroProp_ChairOffice
+      value: HeroProp_ChairOffice
       objectReference: {fileID: 0}
     - target: {fileID: 3394066857160383710, guid: ae7f05d10d410a94a8242d296947673a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33424,6 +33475,9 @@ PrefabInstance:
       addedObject: {fileID: 1613579699}
     - targetCorrespondingSourceObject: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1071997262}
+    - targetCorrespondingSourceObject: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 345705194}
     - targetCorrespondingSourceObject: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
       insertIndex: -1
@@ -35917,6 +35971,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
+      - m_Target: {fileID: 314580481}
+        m_TargetAssemblyTypeName: FourZeroFourStudios.HeroPropDoorOffice, Assembly-CSharp
+        m_MethodName: EnableCanOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43754,6 +43820,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 2081974025}
+    - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: _toilet
+      value: 
+      objectReference: {fileID: 1259811642}
     - target: {fileID: 8051364880687570964, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
       propertyPath: _heroPropTrashCan
       value: 
@@ -47034,6 +47104,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067415863}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1071997261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071997262}
+  - component: {fileID: 1071997264}
+  - component: {fileID: 1071997263}
+  m_Layer: 6
+  m_Name: ModerationPause3_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1071997262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071997261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 464939468}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071997263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071997261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18edd60c8e174a74db97c1cda9d96e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: a07ca04e8ec12f947b90a20126e14eb0, type: 2}
+  _destroyAfterShow: 2
+  AfterDialogueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 897073227}
+        m_TargetAssemblyTypeName: FourZeroFourStudios.HeroPropChairOffice, Assembly-CSharp
+        m_MethodName: GetUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1071997264}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!65 &1071997264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071997261}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5417819, y: 0.37021077, z: 0.4897189}
+  m_Center: {x: 0.10102677, y: 0.14801961, z: 0}
 --- !u!1 &1072122790
 GameObject:
   m_ObjectHideFlags: 0
@@ -55991,6 +56156,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1259811641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259811642}
+  m_Layer: 0
+  m_Name: Go_Camera_Position
+  m_TagString: ToiletCameraPosition
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259811642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259811641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.335064, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1560445759}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261335146
 GameObject:
   m_ObjectHideFlags: 0
@@ -73030,6 +73226,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1028004024}
     m_Modifications:
+    - target: {fileID: 688204478257487802, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689100122474940565, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040899670675714287, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7064521443140077218, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -73092,12 +73300,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584598876083903512, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
       propertyPath: m_Name
-      value: Toilet
+      value: HeroProp_Toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655448550224686281, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323329951733285975, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Name
+      value: toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182576074579493970, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7064521443140077218, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1259811642}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 482587009}
+    - targetCorrespondingSourceObject: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 482587008}
   m_SourcePrefab: {fileID: 100100000, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
 --- !u!1 &1636769120
 GameObject:
@@ -95395,6 +95632,7 @@ MonoBehaviour:
   _propCoffeeCup: {fileID: 8051364880687570964}
   _cultistBehaviour: {fileID: 1405259915}
   _cultistHideTrigger: {fileID: 471640433}
+  _heroPropDoorOffice: {fileID: 314580481}
 --- !u!65 &9102004020587778861
 BoxCollider:
   m_ObjectHideFlags: 0

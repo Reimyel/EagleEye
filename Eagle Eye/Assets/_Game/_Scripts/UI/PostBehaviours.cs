@@ -54,6 +54,7 @@ namespace FourZeroFourStudios
         [Header("Triggers")]
         [SerializeField] GameObject _triggerModerationPause1;
         [SerializeField] GameObject _triggerModerationPause2;
+        [SerializeField] GameObject _triggerModerationPause3;
 
         [Header("Cultists")]
         [SerializeField] GameObject _cultistMoveTrigger;
@@ -134,10 +135,15 @@ namespace FourZeroFourStudios
                     EndModeration();
                     StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpenOUT();
+
                     _heroPropVendingMachine.SetCanTakeCoffee();
                     break;
                 case 29:
                     EndModeration();
+                    StartCoroutine(EnablePauseTrigger());
+                    _heroPropDoorOffice.EnableCanOpenOUT();
+
+                    //logic for toilet to enable
                     break;
             }
         }
@@ -207,9 +213,9 @@ namespace FourZeroFourStudios
                 case 20:
                     _triggerModerationPause2.SetActive(true);
                     break;
-                /*case 29:
+                case 29:
                     _triggerModerationPause3.SetActive(true);
-                    break;*/
+                    break;
             }
         }
     }

@@ -1,10 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace FourZeroFourStudios
 {
-    public class HeroPropChairOffice : BaseHeroProp
+    public class HeroPropToilet : BaseHeroProp
     {
         [Header("Settings:")]
         [Space]
@@ -15,8 +15,15 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _go_player;
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] CameraHeadBob _cameraHeadBob;
-        [SerializeField] HeroPropLaptop _heroPropLaptop;
         [SerializeField] CameraZooming _cameraZooming;
+
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                GetUp();
+            }
+        }
 
         public override void Interact()
         {
@@ -25,7 +32,6 @@ namespace FourZeroFourStudios
             Sit();
 
             this.enabled = false;
-            _heroPropLaptop.EnableLaptop();
         }
 
         void Sit()
@@ -33,7 +39,7 @@ namespace FourZeroFourStudios
             FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
             _cameraZooming.Deactivate();
-            _cameraHolder.IsPlayerSeated = true;
+            _cameraHolder.IsPlayerSeatedToilet = true;
             _cameraHeadBob.enabled = false;
         }
 
@@ -42,10 +48,8 @@ namespace FourZeroFourStudios
             FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
             _cameraZooming.Activate();
-            _cameraHolder.IsPlayerSeated = false;
+            _cameraHolder.IsPlayerSeatedToilet = false;
             _cameraHeadBob.enabled = true;
-
-            _heroPropLaptop.DisableLaptop();
         }
     }
 }

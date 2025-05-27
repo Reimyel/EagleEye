@@ -13,6 +13,7 @@ namespace FourZeroFourStudios
         [SerializeField] float _mouseSensitivity = 200f;
         [SerializeField] Transform _player;
         [SerializeField] Transform _chair;
+        [SerializeField] Transform _toilet;
         [SerializeField] CameraHolder _cameraHolder;
         public bool MouseCanMoveScreen = true;
 
@@ -55,14 +56,20 @@ namespace FourZeroFourStudios
             transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 
             // Left & Right
-            if (!_cameraHolder.IsPlayerSeated)
+            GetRotationTarget().Rotate(Vector3.up * mouseXLocal);
+        }
+
+        Transform GetRotationTarget()
+        {
+            if (_cameraHolder.IsPlayerSeated)
             {
-                _player.Rotate(Vector3.up * mouseXLocal);
+                return _chair;
             }
-            else
+            if (_cameraHolder.IsPlayerSeatedToilet)
             {
-                _chair.Rotate(Vector3.up * mouseXLocal);
+                return _toilet;
             }
+            return _player;
         }
     }
 }
