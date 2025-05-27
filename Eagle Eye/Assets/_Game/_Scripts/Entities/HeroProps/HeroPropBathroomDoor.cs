@@ -8,27 +8,28 @@ namespace FourZeroFourStudios
     {
         [Header("References:")]
         [SerializeField] Animator _bathroomDoorAnimator = null;
+        public bool DoorLocked = false;
         bool _bathroomDoorOpen = false;
 
         public override void Interact()
         {
-            if (!_bathroomDoorOpen)
+            if (!_bathroomDoorOpen && !DoorLocked)
             {
                 OpenBathroomDoor();
             }
-            else
+            else if (!DoorLocked)
             {
                 CloseBathroomDoor();
             }
         }
 
-        void OpenBathroomDoor()
+        public void OpenBathroomDoor()
         {
             _bathroomDoorAnimator.Play("Anim_Bathroom_Door_Open");
             _bathroomDoorOpen = true;
         }
 
-        void CloseBathroomDoor()
+        public void CloseBathroomDoor()
         {
             _bathroomDoorAnimator.Play("Anim_Bathroom_Door_Close");
             _bathroomDoorOpen = false;

@@ -44,9 +44,12 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject[] _go_canvas_minigames;
         [SerializeField] GameObject _go_canvas_hud;
         [SerializeField] CameraMove _cameraMove;
+
+        [Header("Props")]
         [SerializeField] HeroPropChairOffice _heroPropChairOffice;
         [SerializeField] HeroPropVendingMachine _heroPropVendingMachine;
         [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
+        [SerializeField] HeroPropToilet[] _heroPropToilet;
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
@@ -138,12 +141,16 @@ namespace FourZeroFourStudios
 
                     _heroPropVendingMachine.SetCanTakeCoffee();
                     break;
+                //Connor goes to the bathroom
                 case 29:
                     EndModeration();
                     StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpenOUT();
 
-                    //logic for toilet to enable
+                    foreach (HeroPropToilet _script in _heroPropToilet)
+                    {
+                        _script.enabled = true;
+                    }
                     break;
             }
         }
