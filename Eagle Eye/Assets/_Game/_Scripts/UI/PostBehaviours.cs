@@ -46,10 +46,10 @@ namespace FourZeroFourStudios
         [SerializeField] CameraMove _cameraMove;
         [SerializeField] HeroPropChairOffice _heroPropChairOffice;
         [SerializeField] HeroPropVendingMachine _heroPropVendingMachine;
+        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
-        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice_Exit;
 
         [Header("Triggers")]
         [SerializeField] GameObject _triggerModerationPause1;
@@ -57,7 +57,6 @@ namespace FourZeroFourStudios
 
         [Header("Cultists")]
         [SerializeField] GameObject _cultistMoveTrigger;
-        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice_Entrance;
 
         private void Start()
         {
@@ -128,14 +127,14 @@ namespace FourZeroFourStudios
                 case 12:
                     EndModeration();
                     StartCoroutine(EnablePauseTrigger());
-                    _heroPropDoorOffice_Exit.EnableCanOpen();
+                    _heroPropDoorOffice.EnableCanOpenOUT();
                     break;
                 //Connor goes out for coffee
                 case 20:
                     EndModeration();
-                    _heroPropVendingMachine.SetCanTakeCoffee();
                     StartCoroutine(EnablePauseTrigger());
-                    _heroPropDoorOffice_Entrance.EnableCanOpen();
+                    _heroPropDoorOffice.EnableCanOpenOUT();
+                    _heroPropVendingMachine.SetCanTakeCoffee();
                     break;
                 case 29:
                     EndModeration();

@@ -8,14 +8,14 @@ namespace FourZeroFourStudios
     {
         [Header("References:")]
         [SerializeField] Animator _anim_doorOrigin;
-        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice_Entrance;
+        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
         
         public override void Interact()
         {
             base.Interact();
 
             _anim_doorOrigin.enabled = true;
-            _heroPropDoorOffice_Entrance.EnableCanOpen();
+            _heroPropDoorOffice.EnableCanOpenIN();
 
             this.enabled = false;
         }

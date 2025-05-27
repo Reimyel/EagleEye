@@ -60,12 +60,12 @@ namespace FourZeroFourStudios
         public void EnableCanOpen() => _canOpen = true;
 
         // when used in trigger dialogue
-        public void TriggerDialogue_EnableCanOpenIN()
+        public void EnableCanOpenIN()
         {
             GameObject.FindGameObjectWithTag("Entrance").GetComponent<HeroPropDoorOffice>().EnableCanOpen();
         }
         
-        public void TriggerDialogue_EnableCanOpenOUT() 
+        public void EnableCanOpenOUT() 
         {
             GameObject.FindGameObjectWithTag("Exit").GetComponent<HeroPropDoorOffice>().EnableCanOpen();
         }

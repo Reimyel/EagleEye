@@ -67,7 +67,6 @@ namespace FourZeroFourStudios
             _isVanishing = true;
             _isHiding = false;
             _cultistCollider.enabled = false;
-            SetWalkAnimation();
         }
 
         void StartMoving() 

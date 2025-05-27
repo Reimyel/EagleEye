@@ -9,6 +9,7 @@ namespace FourZeroFourStudios
         [SerializeField] PropCoffeeCup _propCoffeeCup;
         [SerializeField] CultistBehaviour _cultistBehaviour;
         [SerializeField] GameObject _cultistHideTrigger;
+        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
 
         private void Start()
         {
@@ -24,6 +25,8 @@ namespace FourZeroFourStudios
 
             _cultistBehaviour.gameObject.SetActive(true);
             _cultistBehaviour.Hide();
+
+            _heroPropDoorOffice.EnableCanOpenIN();
 
             this.enabled = false;
         }
