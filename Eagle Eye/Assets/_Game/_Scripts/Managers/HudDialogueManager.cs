@@ -38,7 +38,7 @@ namespace FourZeroFourStudios
 
         void Update()
         {
-            if (_curSequence != null && Input.GetMouseButtonDown(0))
+            if (_curSequence != null && Input.GetButtonDown("Pass Dialogue"))
             {
                 if (_tmp_dialogue.text == _curSequence.DialogueLines[_curIndex].Text)
                 {

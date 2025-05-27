@@ -18,7 +18,7 @@ namespace FourZeroFourStudios
 
         void CheckZoomIn() 
         {
-            if (Input.GetMouseButtonDown(1) && _canZooming)
+            if (Input.GetButtonDown("Zoom") && _canZooming)
                 _anim_camHolder.Play("Anim_CameraHolder_ZoomIn");
         }
 

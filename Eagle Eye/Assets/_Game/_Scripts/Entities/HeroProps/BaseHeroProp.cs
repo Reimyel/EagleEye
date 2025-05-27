@@ -18,7 +18,7 @@ namespace FourZeroFourStudios
 
             tmpValue.text = _actionText;
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Interact"))
                 Interact();
         }
 
