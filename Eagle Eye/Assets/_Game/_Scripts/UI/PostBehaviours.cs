@@ -50,6 +50,7 @@ namespace FourZeroFourStudios
         [SerializeField] HeroPropVendingMachine _heroPropVendingMachine;
         [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
         [SerializeField] HeroPropToilet[] _heroPropToilet;
+        NarrativeManager _narrativeManager;
 
         [Header("Max")]
         [SerializeField] MaxBehaviour _maxBehaviour;
@@ -62,10 +63,14 @@ namespace FourZeroFourStudios
         [Header("Cultists")]
         [SerializeField] CultistBehaviour _cultistBehaviour;
         [SerializeField] GameObject _cultistMoveTrigger;
+        [SerializeField] HeroPropBathroomDoor _cultistBathroomDoor;
+        [SerializeField] GameObject _backpackProp;
+        [SerializeField] GameObject _cultistMapProp;
 
         private void Start()
         {
             _buttonBehaviours = FindObjectOfType<ButtonBehaviours>();
+            _narrativeManager = FindObjectOfType<NarrativeManager>();
             DisplayCurrentPost();
         }
 
@@ -148,6 +153,10 @@ namespace FourZeroFourStudios
                     StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpenOUT();
 
+                    _narrativeManager.Progress();
+                    _cultistMapProp.SetActive(true);
+                    _backpackProp.SetActive(true);
+                    _cultistBathroomDoor.DoorLocked = true;
                     _cultistBehaviour.gameObject.SetActive(true);
                     _cultistBehaviour.HideBathroom();
                     foreach (HeroPropToilet _script in _heroPropToilet)

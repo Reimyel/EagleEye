@@ -9,7 +9,6 @@ namespace FourZeroFourStudios
         // Inspector:
         public float Speed;
         [SerializeField] Animator _anim;
-        Collider _cultistCollider;
 
         Vector3 _beginningPos = new Vector3(-56.21124f, 5.082796f, 39.05781f);
         Quaternion _beginningRot = Quaternion.Euler(0f, 270f, 0f);
@@ -31,7 +30,6 @@ namespace FourZeroFourStudios
 
         void Start()
         {
-            _cultistCollider = GetComponent<CapsuleCollider>();
 
             transform.position = _beginningPos;
             transform.rotation = _beginningRot;
@@ -57,10 +55,12 @@ namespace FourZeroFourStudios
             if (_isInBathroom)
             {
                 GoToBathroom();
-                if (_canMoveBathroom)
-                {
-                    StartMovingBathroom();
-                }
+                
+            }
+
+            if (_canMoveBathroom)
+            {
+                StartMovingBathroom();
             }
         }
 
@@ -81,7 +81,6 @@ namespace FourZeroFourStudios
         {
             _isVanishing = true;
             _isHiding = false;
-            _cultistCollider.enabled = false;
         }
 
         public void HideBathroom()
@@ -140,17 +139,29 @@ namespace FourZeroFourStudios
 
         void StartMovingBathroom()
         {
+            _isInBathroom = false;
+
             Vector3 _walkPoint1 = new Vector3(-80.72201f, 5.082796f, 20.99621f);
+            Quaternion _rotation1 = Quaternion.Euler(0f, 0f, 0f);
             Vector3 _walkPoint2 = new Vector3(-66.12108f, 5.082796f, 20.99621f);
-            Quaternion _rotation = Quaternion.Euler(0f, 90f, 0f);
+            Quaternion _rotation2 = Quaternion.Euler(0f, 90f, 0f);
+            int _currentStep = 0;
 
-            transform.position = Vector3.MoveTowards(transform.position, _walkPoint1, Speed * Time.deltaTime);
-            transform.rotation = _rotation;
-
-            //if close to point, walk to other point
-            if (Vector3.Distance(transform.position, _walkPoint1) < 0.1f)
+            if (_currentStep == 0)
             {
-                transform.position = Vector3.MoveTowards(transform.position, _walkPoint2, Speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, _walkPoint1, Speed / 2 * Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, _rotation1, Speed / 2 * Time.deltaTime);
+
+                if (Vector3.Distance(transform.position, _walkPoint1) < 0.1f)
+                {
+                    _currentStep = 1;
+                    transform.rotation = _rotation2;
+                }
+            }
+            else if (_currentStep == 1)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, _walkPoint2, Speed / 2 * Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, _rotation2, Speed / 2 * Time.deltaTime);
 
                 if (Vector3.Distance(transform.position, _walkPoint2) < 0.1f)
                 {

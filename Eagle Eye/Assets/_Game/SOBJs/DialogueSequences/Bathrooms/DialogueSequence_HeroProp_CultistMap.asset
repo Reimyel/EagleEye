@@ -18,4 +18,4 @@ MonoBehaviour:
   - Text: "(And those symbols again. There are two of them I didn\u2019t see before.)"
     Color: {r: 1, g: 1, b: 1, a: 1}
   _typeSpeed: 0.05
-  _stopMove: 0
+  _stopMove: 1
