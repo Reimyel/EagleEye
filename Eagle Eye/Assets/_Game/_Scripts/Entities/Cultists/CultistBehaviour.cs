@@ -20,9 +20,14 @@ namespace FourZeroFourStudios
         Quaternion _HidingRot = Quaternion.Euler(0f, -110f, 0f);
         Vector3 _vanishPos = new Vector3(-29.4647f, 5.082796f, 7f);
 
+        Vector3 _bathroomPos = new Vector3(-80.72201f, 5.082796f, 15.56195f);
+        Quaternion _bathroomRot = Quaternion.Euler(0f, 360f, 0f);
+
         bool _isMoving = false;
         bool _isHiding = false;
         bool _isVanishing = false;
+        bool _isInBathroom = false;
+        bool _canMoveBathroom = false;
 
         void Start()
         {
@@ -48,8 +53,18 @@ namespace FourZeroFourStudios
             {
                 StartVanishing();
             }
+
+            if (_isInBathroom)
+            {
+                GoToBathroom();
+                if (_canMoveBathroom)
+                {
+                    StartMovingBathroom();
+                }
+            }
         }
 
+        #region CALL FUNCTIONS
         public void Move()
         {
             _isMoving = true;
@@ -69,6 +84,20 @@ namespace FourZeroFourStudios
             _cultistCollider.enabled = false;
         }
 
+        public void HideBathroom()
+        {
+            _isInBathroom = true;
+            SetHidingAnimation();
+        }
+
+        public void MoveBathroom()
+        {
+            _canMoveBathroom = true;
+            SetWalkAnimation();
+        }
+        #endregion
+
+        #region Walk Sequence
         void StartMoving() 
         {
             transform.position = Vector3.MoveTowards(transform.position, _endingPos, Speed * Time.deltaTime);
@@ -80,7 +109,9 @@ namespace FourZeroFourStudios
                 gameObject.SetActive(false);
             }
         }
+        #endregion
 
+        #region Hide Sequence
         void StartHiding()
         {
             transform.position = _hidingPos;
@@ -98,9 +129,41 @@ namespace FourZeroFourStudios
                 gameObject.SetActive(false);
             }
         }
+        #endregion
 
+        #region Bathroom Sequence
+        void GoToBathroom()
+        {
+            transform.position = _bathroomPos;
+            transform.rotation = _bathroomRot;
+        }
+
+        void StartMovingBathroom()
+        {
+            Vector3 _walkPoint1 = new Vector3(-80.72201f, 5.082796f, 20.99621f);
+            Vector3 _walkPoint2 = new Vector3(-66.12108f, 5.082796f, 20.99621f);
+            Quaternion _rotation = Quaternion.Euler(0f, 90f, 0f);
+
+            transform.position = Vector3.MoveTowards(transform.position, _walkPoint1, Speed * Time.deltaTime);
+            transform.rotation = _rotation;
+
+            //if close to point, walk to other point
+            if (Vector3.Distance(transform.position, _walkPoint1) < 0.1f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, _walkPoint2, Speed * Time.deltaTime);
+
+                if (Vector3.Distance(transform.position, _walkPoint2) < 0.1f)
+                {
+                    gameObject.SetActive(false);
+                }
+            }
+        }
+        #endregion
+
+        #region Set Animations
         void SetWalkAnimation() => _anim.Play("Anim_Cultist_Walk");
 
         void SetHidingAnimation() => _anim.Play("Anim_Cultist_Hiding");
+        #endregion
     }
 }

@@ -60,6 +60,7 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _triggerModerationPause3;
 
         [Header("Cultists")]
+        [SerializeField] CultistBehaviour _cultistBehaviour;
         [SerializeField] GameObject _cultistMoveTrigger;
 
         private void Start()
@@ -147,6 +148,8 @@ namespace FourZeroFourStudios
                     StartCoroutine(EnablePauseTrigger());
                     _heroPropDoorOffice.EnableCanOpenOUT();
 
+                    _cultistBehaviour.gameObject.SetActive(true);
+                    _cultistBehaviour.HideBathroom();
                     foreach (HeroPropToilet _script in _heroPropToilet)
                     {
                         _script.enabled = true;

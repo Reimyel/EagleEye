@@ -21,6 +21,7 @@ namespace FourZeroFourStudios
         [SerializeField] Collider _toiletCollider;
         [SerializeField] GameObject _toiletLid;
         [SerializeField] HeroPropBathroomDoor _heroPropBathroomDoor;
+        [SerializeField] CultistBehaviour _cultistBehaviour;
 
         public override void Interact()
         {
@@ -41,8 +42,12 @@ namespace FourZeroFourStudios
             _cameraHeadBob.enabled = false;
 
             _toiletLid.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+
+            _heroPropBathroomDoor.gameObject.GetComponent<Collider>().enabled = false;
             _heroPropBathroomDoor.DoorLocked = true;
             _heroPropBathroomDoor.CloseBathroomDoor();
+
+            StartCoroutine(CultistSequence(5f));
         }
 
         public void GetUp()
@@ -54,7 +59,16 @@ namespace FourZeroFourStudios
             _cameraHeadBob.enabled = true;
 
             _toiletLid.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+            _heroPropBathroomDoor.gameObject.GetComponent<Collider>().enabled = true;
             _heroPropBathroomDoor.DoorLocked = false;
+        }
+
+        IEnumerator CultistSequence(float _delay)
+        {
+            yield return new WaitForSeconds(_delay);
+
+            _cultistBehaviour.MoveBathroom();
         }
     }
 }
