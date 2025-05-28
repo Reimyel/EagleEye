@@ -38149,26 +38149,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 53700960}
     m_Modifications:
-    - target: {fileID: 345500290, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_Name
-      value: Trigger_DisableRotateDoor_Exit
-      objectReference: {fileID: 0}
-    - target: {fileID: 700490898, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_Name
-      value: Trigger_DisableRotateDoor_Entrance
-      objectReference: {fileID: 0}
-    - target: {fileID: 1209528915, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1209528916, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.10188949
-      objectReference: {fileID: 0}
-    - target: {fileID: 1209528916, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.04660005
-      objectReference: {fileID: 0}
     - target: {fileID: 3775217802900821817, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -38216,10 +38196,6 @@ PrefabInstance:
     - target: {fileID: 3777468377033820177, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_Name
       value: DoorOffice_HeroProp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7713796754531597785, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
