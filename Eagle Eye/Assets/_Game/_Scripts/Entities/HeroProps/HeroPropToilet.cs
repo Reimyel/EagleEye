@@ -21,6 +21,9 @@ namespace FourZeroFourStudios
         [SerializeField] Collider _toiletCollider;
         [SerializeField] GameObject _toiletLid;
         [SerializeField] HeroPropBathroomDoor _heroPropBathroomDoor;
+
+        [Header("Cultist")]
+        [SerializeField] HeroPropBathroomDoor _cultistBathroomDoor;
         [SerializeField] CultistBehaviour _cultistBehaviour;
 
         public override void Interact()
@@ -48,6 +51,7 @@ namespace FourZeroFourStudios
             _heroPropBathroomDoor.CloseBathroomDoor();
 
             StartCoroutine(CultistSequence(5f));
+            StartCoroutine(PlayerGetUp(15f));
         }
 
         public void GetUp()
@@ -67,8 +71,14 @@ namespace FourZeroFourStudios
         IEnumerator CultistSequence(float _delay)
         {
             yield return new WaitForSeconds(_delay);
-
+            _cultistBathroomDoor.OpenBathroomDoor();
             _cultistBehaviour.MoveBathroom();
+        }
+
+        IEnumerator PlayerGetUp(float _delay)
+        {
+            yield return new WaitForSeconds(_delay);
+            GetUp();
         }
     }
 }
