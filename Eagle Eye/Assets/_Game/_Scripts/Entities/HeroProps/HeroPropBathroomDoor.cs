@@ -13,6 +13,8 @@ namespace FourZeroFourStudios
 
         public override void Interact()
         {
+            base.Interact();
+
             if (!_bathroomDoorOpen && !DoorLocked)
             {
                 OpenBathroomDoor();

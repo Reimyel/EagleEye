@@ -21,6 +21,7 @@ namespace FourZeroFourStudios
         [SerializeField] Collider _toiletCollider;
         [SerializeField] GameObject _toiletLid;
         [SerializeField] HeroPropBathroomDoor _heroPropBathroomDoor;
+        [SerializeField] HeroPropLocker _heroPropConnorLocker;
 
         [Header("Cultist")]
         [SerializeField] HeroPropBathroomDoor _cultistBathroomDoor;
@@ -66,6 +67,8 @@ namespace FourZeroFourStudios
 
             _heroPropBathroomDoor.gameObject.GetComponent<Collider>().enabled = true;
             _heroPropBathroomDoor.DoorLocked = false;
+
+            _heroPropConnorLocker.enabled = true;
         }
 
         IEnumerator CultistSequence(float _delay)

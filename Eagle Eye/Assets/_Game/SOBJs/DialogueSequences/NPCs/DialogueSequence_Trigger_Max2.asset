@@ -28,4 +28,4 @@ MonoBehaviour:
       taking it."
     Color: {r: 0.6117647, g: 0.7607843, b: 0.8980392, a: 1}
   _typeSpeed: 0.05
-  _stopMove: 0
+  _stopMove: 1

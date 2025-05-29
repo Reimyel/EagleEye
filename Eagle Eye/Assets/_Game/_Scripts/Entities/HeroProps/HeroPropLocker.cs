@@ -9,15 +9,40 @@ namespace FourZeroFourStudios
         [Header("References:")]
         [SerializeField] Animator _anim_doorOrigin;
         [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
-        
+        [SerializeField] GameObject _connorStuff;
+        bool _lockerDoorOpen = true;
+
         public override void Interact()
         {
             base.Interact();
 
-            _anim_doorOrigin.enabled = true;
-            _heroPropDoorOffice.EnableCanOpenIN();
+            if (!_lockerDoorOpen)
+            {
+                OpenLockerDoor();
+                _connorStuff.GetComponent<HeroProp_DialogueOnly>().enabled = true;
 
-            this.enabled = false;
+                this.enabled = false;
+            }
+            else
+            {
+                CloseLockerDoor();
+                _heroPropDoorOffice.EnableCanOpenIN();
+                _connorStuff.SetActive(true);
+
+                this.enabled = false;
+            }
+        }
+
+        public void OpenLockerDoor()
+        {
+            _anim_doorOrigin.Play("Anim_HeroProp_Locker_Open");
+            _lockerDoorOpen = true;
+        }
+
+        public void CloseLockerDoor()
+        {
+            _anim_doorOrigin.Play("Anim_HeroProp_Locker_Close");
+            _lockerDoorOpen = false;
         }
     }
 }
