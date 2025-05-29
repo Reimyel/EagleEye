@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FourZeroFourStudios
 {
-    public class NewBehaviourScript : MonoBehaviour
+    public class DoorColliderAnimEvent : MonoBehaviour
     {
         [SerializeField] Collider _doorCollider;
 
