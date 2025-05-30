@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9196872461304932216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638842041293329260
+  FileSizes:
+  - Name: 
+    Value: 1246
+  Exists: 1
+--- !u!114 &-8669751096894293825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cultists/Voices/SFX_Gameplay_Female_Cultist_Whisper
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cultists/Voices/SFX_Gameplay_Female_Cultist_Whisper
+  Guid:
+    Data1: -692452642
+    Data2: 1244030414
+    Data3: -986230635
+    Data4: 748995640
+  Banks:
+  - {fileID: -7290478879304040317}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7290478879304040317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Desktop/SFX.bank
+  Name: Desktop/SFX
+  StudioPath: bank:/SFX
+  lastModified: 638842041295844149
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5771728388467432672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Desktop/Ambience.bank
+  Name: Desktop/Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638842041293283992
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2598220158152284207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638842041293319187
+  FileSizes: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -9196872461304932216}
+  - {fileID: -5771728388467432672}
+  - {fileID: -2598220158152284207}
+  - {fileID: 5141122596700326503}
+  - {fileID: -7290478879304040317}
+  EditorEvents:
+  - {fileID: 6813514586653156230}
+  - {fileID: 7633228358779301873}
+  - {fileID: 4885330479423736120}
+  - {fileID: -8669751096894293825}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -2598220158152284207}
+  StringsBanks:
+  - {fileID: -9196872461304932216}
+  cacheTime: 638842041295844149
+  cacheVersion: 131622
+--- !u!114 &4885330479423736120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cultists/Voices/SFX_Gameplay_Male_Cultist_Whisper
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cultists/Voices/SFX_Gameplay_Male_Cultist_Whisper
+  Guid:
+    Data1: -1125066882
+    Data2: 1103351896
+    Data3: 2021175684
+    Data4: -72319865
+  Banks:
+  - {fileID: -7290478879304040317}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5141122596700326503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Desktop/Music.bank
+  Name: Desktop/Music
+  StudioPath: bank:/Music
+  lastModified: 638842041293364304
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6813514586653156230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Noise/Ambience_Gameplay_Noise_Office
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Noise/Ambience_Gameplay_Noise_Office
+  Guid:
+    Data1: -1484990621
+    Data2: 1164233144
+    Data3: 547383941
+    Data4: -953098314
+  Banks:
+  - {fileID: -5771728388467432672}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7633228358779301873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Noise/Ambience_Gameplay_Noise_Strange
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Noise/Ambience_Gameplay_Noise_Strange
+  Guid:
+    Data1: -762536087
+    Data2: 1295690798
+    Data3: 919341226
+    Data4: -826412009
+  Banks:
+  - {fileID: -5771728388467432672}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
