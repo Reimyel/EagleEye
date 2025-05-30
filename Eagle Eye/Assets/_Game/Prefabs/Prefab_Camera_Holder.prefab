@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlayerSeated: 0
+  IsPlayerSeatedToilet: 0
 --- !u!95 &348613082
 Animator:
   serializedVersion: 5
@@ -145,6 +146,7 @@ GameObject:
   - component: {fileID: 4618562969628820145}
   - component: {fileID: 4618562969628820140}
   - component: {fileID: 2567637585457328632}
+  - component: {fileID: -2059366579727601766}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -243,6 +245,7 @@ MonoBehaviour:
   _mouseSensitivity: 500
   _player: {fileID: 0}
   _chair: {fileID: 0}
+  _toilet: {fileID: 0}
   _cameraHolder: {fileID: 4618562968773505113}
   MouseCanMoveScreen: 1
 --- !u!114 &4618562969628820145
@@ -294,6 +297,20 @@ MonoBehaviour:
   _anim_camHolder: {fileID: 348613082}
   _speedIn: 0.25
   _speedOut: 0.35
+--- !u!114 &-2059366579727601766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618562969628820134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &4900994471059638739
 GameObject:
   m_ObjectHideFlags: 0
