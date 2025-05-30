@@ -16,6 +16,7 @@ namespace FourZeroFourStudios
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] CameraHeadBob _cameraHeadBob;
         //[SerializeField] CameraZooming _cameraZooming;
+        [SerializeField] NarrativeManager _narrativeManager;
 
         [Header("Objects:")]
         [SerializeField] Collider _toiletCollider;
@@ -69,6 +70,8 @@ namespace FourZeroFourStudios
             _heroPropBathroomDoor.DoorLocked = false;
 
             _heroPropConnorLocker.enabled = true;
+
+            _narrativeManager.Progress();
         }
 
         IEnumerator CultistSequence(float _delay)
