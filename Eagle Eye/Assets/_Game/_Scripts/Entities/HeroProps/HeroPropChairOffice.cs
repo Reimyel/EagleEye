@@ -11,6 +11,9 @@ namespace FourZeroFourStudios
 
         [Header("References:")]
 
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
+
         [Header("Hierarchy:")]
         [SerializeField] GameObject _go_player;
         [SerializeField] CameraHolder _cameraHolder;
@@ -30,6 +33,7 @@ namespace FourZeroFourStudios
 
         void Sit()
         {
+            _sfxController.Play("Sit");
             FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
             _cameraZooming.Deactivate();

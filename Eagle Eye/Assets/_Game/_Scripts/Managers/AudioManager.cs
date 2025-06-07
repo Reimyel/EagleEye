@@ -177,7 +177,7 @@ namespace FourZeroFourStudios
         /// <summary>
         /// Creates an EventInstance for handling sound effects with logic.
         /// </summary>
-        /// <param name="refValue"> Referência no FMOD</param>
+        /// <param name="refValue">FMOD Reference</param>
         /// <returns></returns>
         public EventInstance Create_EventInstance(EventReference refValue)
         {

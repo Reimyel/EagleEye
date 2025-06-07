@@ -7,6 +7,11 @@ namespace FourZeroFourStudios
     public class HeroPropLocker : BaseHeroProp
     {
         [Header("References:")]
+
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
+
+        [Header("Hierarchy:")]
         [SerializeField] Animator _anim_doorOrigin;
         [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
         [SerializeField] GameObject _connorStuff;

@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 9101830708465070712}
   - component: {fileID: 9101830708465070714}
   - component: {fileID: 9101830708465070713}
+  - component: {fileID: 1057347301}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -88,7 +89,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9101830708465070695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.561468, y: 0, z: -0.25000033}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145,6 +146,68 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!108 &1057347301
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101830708465070695}
+  m_Enabled: 0
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 8
+  m_Range: 14
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &9101830708900975007
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +219,7 @@ GameObject:
   - component: {fileID: 9101830708900974993}
   - component: {fileID: 9101830708900974992}
   - component: {fileID: 9101830708900974994}
+  - component: {fileID: 8382239400876769337}
   m_Layer: 0
   m_Name: Prefab_Player
   m_TagString: Untagged
@@ -172,14 +236,14 @@ Transform:
   m_GameObject: {fileID: 9101830708900975007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.58, y: 2.52, z: -2.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9101830708465070712}
   - {fileID: 9101830708191288290}
   - {fileID: 9101830707600783194}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &9101830708900974992
 CharacterController:
@@ -219,7 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d596fd945a4b7444c98a463d68a8096d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 9101830708900974992}
+  _sfxController: {fileID: 8382239400876769337}
+  _charController: {fileID: 9101830708900974992}
   _groundCheck: {fileID: 9101830708191288290}
   _headBob: {fileID: 0}
   _speed: 6.5
@@ -228,3 +293,24 @@ MonoBehaviour:
   _groundMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &8382239400876769337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101830708900975007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Walk
+    EventRef:
+      Guid:
+        Data1: 1335013247
+        Data2: 1082777813
+        Data3: 943500978
+        Data4: 508834552
+      Path: event:/SFX/Player/SFX_Gameplay_Connor_Steps

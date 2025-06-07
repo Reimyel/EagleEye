@@ -20,6 +20,33 @@ MonoBehaviour:
   - Name: 
     Value: 1246
   Exists: 1
+--- !u!114 &-8963308933700126225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_Startup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_Startup
+  Guid:
+    Data1: -1696725895
+    Data2: 1267034667
+    Data3: -2094148209
+    Data4: 1330046025
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8669751096894293825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +67,33 @@ MonoBehaviour:
     Data4: 748995640
   Banks:
   - {fileID: -7290478879304040317}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7333746555009119227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Symbol/SFX_Gameplay_Symbol_Founded
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Symbol/SFX_Gameplay_Symbol_Founded
+  Guid:
+    Data1: 590069833
+    Data2: 1116794289
+    Data3: 1308790147
+    Data4: -626120301
+  Banks:
+  - {fileID: 418594143440363686}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -137,6 +191,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4913979307853118949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Coffee Machine/SFX_Gameplay_Prop_CoffeeMachine_Drink
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Coffee Machine/SFX_Gameplay_Prop_CoffeeMachine_Drink
+  Guid:
+    Data1: 796285810
+    Data2: 1139699615
+    Data3: -2041612644
+    Data4: 447770359
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4626230929350860882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,10 +233,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638846602140939540
+  lastModified: 638848427831912837
   FileSizes:
   - Name: 
-    Value: 1246
+    Value: 2580
   Exists: 1
 --- !u!114 &-4484578315829734646
 MonoBehaviour:
@@ -184,6 +265,141 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4150993125273902060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Locker/SFX_Gameplay_Prop_Locker_Open
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Locker/SFX_Gameplay_Prop_Locker_Open
+  Guid:
+    Data1: -830696000
+    Data2: 1198706746
+    Data3: 1357181368
+    Data4: -1130002081
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3938634918909624285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_MouseClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_MouseClick
+  Guid:
+    Data1: 868565007
+    Data2: 1115824948
+    Data3: 1216696963
+    Data4: 656083032
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3659598198049901384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_KeyboardTyping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_KeyboardTyping
+  Guid:
+    Data1: -1826864682
+    Data2: 1253863455
+    Data3: -981857109
+    Data4: -2000764530
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3177441627766686106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Locker/SFX_Gameplay_Prop_Locker_Close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Locker/SFX_Gameplay_Prop_Locker_Close
+  Guid:
+    Data1: 420499674
+    Data2: 1169310171
+    Data3: 964531127
+    Data4: -1339359120
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2825331519613562348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/SFX_UI_Select
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/SFX_UI_Select
+  Guid:
+    Data1: -1675082232
+    Data2: 1097574319
+    Data3: 1630386575
+    Data4: 1650073206
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2598220158152284207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +418,60 @@ MonoBehaviour:
   lastModified: 638842041293319187
   FileSizes: []
   Exists: 1
+--- !u!114 &-2271043781118532042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Map/SFX_Gameplay_Map
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Map/SFX_Gameplay_Map
+  Guid:
+    Data1: -104891115
+    Data2: 1209428549
+    Data3: 114548136
+    Data4: -277633402
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2223455620052700501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Pendrive/SFX_Gameplay_Pendrive_Error
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Pendrive/SFX_Gameplay_Pendrive_Error
+  Guid:
+    Data1: 134152973
+    Data2: 1204560806
+    Data3: -1167140195
+    Data4: 1598567711
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1673931996460305945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +487,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638846602140929537
+  lastModified: 638848427831902433
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -243,12 +513,32 @@ MonoBehaviour:
   - {fileID: -5760055767464299640}
   - {fileID: -4484578315829734646}
   - {fileID: -6995172887525158853}
+  - {fileID: 1504450375534188415}
+  - {fileID: -2825331519613562348}
+  - {fileID: -2223455620052700501}
+  - {fileID: -3938634918909624285}
+  - {fileID: -2271043781118532042}
+  - {fileID: 3304998472235076857}
+  - {fileID: 7228233362297468959}
+  - {fileID: 3662851680010423244}
+  - {fileID: -7333746555009119227}
+  - {fileID: 7406679253379471213}
+  - {fileID: -4913979307853118949}
+  - {fileID: 4464652351246310925}
+  - {fileID: 6999997646092917265}
+  - {fileID: 5530561578504596988}
+  - {fileID: -8963308933700126225}
+  - {fileID: -3659598198049901384}
+  - {fileID: 2291817074451042924}
+  - {fileID: -4150993125273902060}
+  - {fileID: -3177441627766686106}
+  - {fileID: 1288066492671605557}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
-  cacheTime: 638846602142142304
+  cacheTime: 638848449377380863
   cacheVersion: 131622
 --- !u!114 &418594143440363686
 MonoBehaviour:
@@ -265,9 +555,90 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638846602142142304
+  lastModified: 638848449377380863
   FileSizes: []
   Exists: 1
+--- !u!114 &1288066492671605557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/SFX_Gameplay_Connor_Steps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/SFX_Gameplay_Connor_Steps
+  Guid:
+    Data1: 1335013247
+    Data2: 1082777813
+    Data3: 943500978
+    Data4: 508834552
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1504450375534188415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Pendrive/SFX_Gameplay_Pendrive_PlugIn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Pendrive/SFX_Gameplay_Pendrive_PlugIn
+  Guid:
+    Data1: -182146815
+    Data2: 1093848423
+    Data3: 1752102531
+    Data4: 1868099654
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2291817074451042924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Denied
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Denied
+  Guid:
+    Data1: 1403683041
+    Data2: 1314580934
+    Data3: 1597500811
+    Data4: 1493185877
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2547410879391141490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +662,87 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3304998472235076857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Accepted
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Accepted
+  Guid:
+    Data1: 274072119
+    Data2: 1216872767
+    Data3: 12301217
+    Data4: 1331447298
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3662851680010423244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_NewPost
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_NewPost
+  Guid:
+    Data1: 1370116933
+    Data2: 1287151445
+    Data3: -1885169523
+    Data4: 1359403418
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4464652351246310925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Elevator/SFX_Gameplay_Prop_Elevator_Ding
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Elevator/SFX_Gameplay_Prop_Elevator_Ding
+  Guid:
+    Data1: -2035963530
+    Data2: 1223465991
+    Data3: 251366272
+    Data4: 1516369011
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -358,6 +810,33 @@ MonoBehaviour:
   lastModified: 638842041293364304
   FileSizes: []
   Exists: 1
+--- !u!114 &5530561578504596988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Coffee Machine/SFX_Gameplay_Prop_CoffeeMachine_Interact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Coffee Machine/SFX_Gameplay_Prop_CoffeeMachine_Interact
+  Guid:
+    Data1: -1180110472
+    Data2: 1304631317
+    Data3: -154943555
+    Data4: 1746407016
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6813514586653156230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +864,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6999997646092917265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/WaterBottle/SFX_Gameplay_WaterBottle_Catch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/WaterBottle/SFX_Gameplay_WaterBottle_Catch
+  Guid:
+    Data1: 141623159
+    Data2: 1137853361
+    Data3: -1047832943
+    Data4: 471370937
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7132547443128024138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +909,60 @@ MonoBehaviour:
   lastModified: 638846602140969690
   FileSizes: []
   Exists: 1
+--- !u!114 &7228233362297468959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Chair/SFX_Gameplay_Prop_Chair_Sit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Chair/SFX_Gameplay_Prop_Chair_Sit
+  Guid:
+    Data1: 416435006
+    Data2: 1137600364
+    Data3: 703687863
+    Data4: 443414464
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7406679253379471213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Phone/SFX_Gameplay_Phone_Notification
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Phone/SFX_Gameplay_Phone_Notification
+  Guid:
+    Data1: -1771711133
+    Data2: 1251155691
+    Data3: -134991220
+    Data4: 142978051
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7633228358779301873
 MonoBehaviour:
   m_ObjectHideFlags: 0
