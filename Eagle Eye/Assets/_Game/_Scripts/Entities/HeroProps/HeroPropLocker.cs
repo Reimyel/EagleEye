@@ -25,16 +25,16 @@ namespace FourZeroFourStudios
             {
                 OpenLockerDoor();
                 _connorStuff.GetComponent<HeroProp_DialogueOnly>().enabled = true;
-
-                this.enabled = false;
+                _sfxController.Play("Open");
+                StartCoroutine(SetDisableInterval());
             }
             else
             {
                 CloseLockerDoor();
                 _heroPropDoorOffice.EnableCanOpenIN();
                 _connorStuff.SetActive(true);
-
-                this.enabled = false;
+                _sfxController.Play("Close");
+                StartCoroutine(SetDisableInterval());
             }
         }
 
@@ -48,6 +48,12 @@ namespace FourZeroFourStudios
         {
             _anim_doorOrigin.Play("Anim_HeroProp_Locker_Close");
             _lockerDoorOpen = false;
+        }
+
+        IEnumerator SetDisableInterval() 
+        {
+            yield return null;
+            this.enabled = false;
         }
     }
 }
