@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace FourZeroFourStudios
 {
+    /// <summary>
+    /// General purpose SFX Controller for Entities in Gameplay
+    /// </summary>
     public class EntitySFXController : MonoBehaviour
     {
+        // Inspector:
         [Header("Sound Effects:")]
         [SerializeField] List<SFX> _list_sfxs;
 
