@@ -13,6 +13,11 @@ namespace FourZeroFourStudios
         [SerializeField] float _resetSpeed;
 
         [Header("References:")]
+
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
+
+        [Header("Hierarchy:")]
         [SerializeField] Transform _transf_door;
         [SerializeField] TriggerDialogue[] _trigger_blockDialogues;
         [SerializeField] TriggerRotateDoor _trigger_rotateDoor;
@@ -95,12 +100,16 @@ namespace FourZeroFourStudios
             _trigger_disableRotateDoor.gameObject.SetActive(true);
             _trigger_rotateDoor.enabled = true;
             _collider_blocker.enabled = false;
+
+            _sfxController.Play("Accept");
         }
 
         void ShowBlockDialogue()
         {
             if (_trigger_blockDialogues[_curTriggerIndex] != null)
                 _trigger_blockDialogues[_curTriggerIndex].enabled = true;
+
+            _sfxController.Play("Deny");
         }
         #endregion
     }

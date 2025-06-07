@@ -77,7 +77,7 @@ Transform:
   - {fileID: 8616366549789645851}
   - {fileID: 2709840346294312545}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2709840347029918687
 GameObject:
@@ -1681,6 +1681,7 @@ GameObject:
   - component: {fileID: 8616366549791416059}
   - component: {fileID: 8616366549787224121}
   - component: {fileID: 302590262743986583}
+  - component: {fileID: 3507663614707149964}
   m_Layer: 6
   m_Name: Go_Player_Locker_Door
   m_TagString: Untagged
@@ -1787,8 +1788,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionText: Store
+  _sfxController: {fileID: 3507663614707149964}
   _anim_doorOrigin: {fileID: 1998556367}
   _heroPropDoorOffice: {fileID: 0}
+  _connorStuff: {fileID: 0}
+--- !u!114 &3507663614707149964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616366549789474873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Close
+    EventRef:
+      Guid:
+        Data1: -830696000
+        Data2: 1198706746
+        Data3: 1357181368
+        Data4: -1130002081
+      Path: event:/SFX/Props/Locker/SFX_Gameplay_Prop_Locker_Open
+  - Name: Open
+    EventRef:
+      Guid:
+        Data1: -830696000
+        Data2: 1198706746
+        Data3: 1357181368
+        Data4: -1130002081
+      Path: event:/SFX/Props/Locker/SFX_Gameplay_Prop_Locker_Open
 --- !u!1 &8616366549789474875
 GameObject:
   m_ObjectHideFlags: 0

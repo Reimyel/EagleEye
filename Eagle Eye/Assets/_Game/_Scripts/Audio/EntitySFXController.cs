@@ -1,8 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace FourZeroFourStudios
 {
@@ -11,7 +12,9 @@ namespace FourZeroFourStudios
         [Header("Sound Effects:")]
         [SerializeField] List<SFX> _list_sfxs;
 
-        public void PlayAudios(string nameValue)
+        List<EventInstance> _events;
+
+        public void Play(string nameValue)
         {
             if (string.IsNullOrEmpty(nameValue)) return;
 
@@ -22,6 +25,18 @@ namespace FourZeroFourStudios
             AudioManager.Instance.Play_OneShotAtPosition(sfxLocal.EventRef, transform.position);
 
         }
+
+        public EventInstance CreateLoop(string nameValue) 
+        {
+            if (string.IsNullOrEmpty(nameValue)) return new EventInstance();
+
+            SFX sfxLocal = _list_sfxs.Find(x => x.Name.Equals(nameValue));
+
+            if (sfxLocal == null) return new EventInstance();
+
+            return AudioManager.Instance.Create_EventInstance(sfxLocal.EventRef);
+        }
+
     }
 
     [Serializable]

@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace FourZeroFourStudios 
@@ -11,7 +13,8 @@ namespace FourZeroFourStudios
         [Space]
 
         [Header("References:")]
-        [SerializeField] CharacterController _controller;
+        [SerializeField] EntitySFXController _sfxController;
+        [SerializeField] CharacterController _charController;
         [SerializeField] Transform _groundCheck;
         [SerializeField] CameraHeadBob _headBob;
         [Space]
@@ -30,9 +33,14 @@ namespace FourZeroFourStudios
         float _gravityForce;
         bool _isGrounded;
 
+        EventInstance _sfxLoop_walk;
+        bool _playingSFXWalk = false;
+
         #endregion
 
         #region Mono
+        void Start() => _sfxLoop_walk = _sfxController.CreateLoop("Walk");
+        
         void Update()
         {
             GroundCheck();
@@ -57,7 +65,24 @@ namespace FourZeroFourStudios
         void ApplyMove()
         {
             Vector3 moveLocal = transform.right * _moveInput.x + transform.forward * _moveInput.y;
-            _controller.Move(moveLocal * _speed * Time.deltaTime);
+
+            if (moveLocal.magnitude > 0f) 
+            {
+                _sfxLoop_walk.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                
+                if (!_playingSFXWalk) 
+                {
+                    _sfxLoop_walk.start();
+                    _playingSFXWalk = true;
+                }
+            }
+            else 
+            {
+                _sfxLoop_walk.stop(STOP_MODE.ALLOWFADEOUT);
+                _playingSFXWalk = false;
+            }
+            
+            _charController.Move(moveLocal * _speed * Time.deltaTime);
         }
         #endregion
 
@@ -72,7 +97,7 @@ namespace FourZeroFourStudios
         {
             _gravityForce += _gravity * Time.deltaTime;
 
-            _controller.Move(_gravityForce * Vector3.up * Time.deltaTime);
+            _charController.Move(_gravityForce * Vector3.up * Time.deltaTime);
         }
 
         /*

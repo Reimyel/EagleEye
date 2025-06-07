@@ -12,6 +12,9 @@ namespace FourZeroFourStudios
 
         [Header("References:")]
 
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
+
         [Header("Hierarchy:")]
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] GameObject _go_desktop_canvas;
@@ -56,10 +59,14 @@ namespace FourZeroFourStudios
             if (_isFirstTime)
             {
                 _isFirstTime = false;
+                PlaySFXKeyboard();
+                Invoke("PlaySFXStartup", 1f);
+                
                 _go_initial_canvas.SetActive(true);
             }
             else
             {
+                PlaySFXKeyboard();
                 StartCoroutine(_postBehaviours.ReturnToPosts(_postBehaviours.Delay));
                 _go_eagleeye_canvas.SetActive(true);
                 _go_initial_canvas.SetActive(false);
@@ -79,5 +86,9 @@ namespace FourZeroFourStudios
             _collider.enabled = false;
             this.enabled = false;
         }
+
+        void PlaySFXKeyboard() => _sfxController.Play("Keyboard");
+
+        void PlaySFXStartup() => _sfxController.Play("Startup");
     }
 }

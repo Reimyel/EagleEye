@@ -31,7 +31,7 @@ Transform:
   - {fileID: 8164474080186780081}
   - {fileID: 3394066857160383710}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1513322269421620606
 GameObject:
@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2484407974421860660}
   - component: {fileID: 6071295219390620866}
   - component: {fileID: 6071295219390620865}
+  - component: {fileID: 344756194758954144}
   m_Layer: 6
   m_Name: Go_Chair
   m_TagString: Untagged
@@ -154,16 +155,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionText: Sit
+  _sfxController: {fileID: 344756194758954144}
   _go_player: {fileID: 0}
   _cameraHolder: {fileID: 0}
-  _transf_cameraPosition: {fileID: 3394066857160383710}
-  _go_desktop_canvas: {fileID: 0}
-  _go_initial_canvas: {fileID: 0}
-  _go_canvas_hud: {fileID: 0}
-  _postBehaviours: {fileID: 0}
-  _volume: {fileID: 0}
-  _vprofile_crt: {fileID: 11400000, guid: 553331cf622473d4c80e64052181e9f2, type: 2}
-  _changeProfileDelay: 0.1
+  _cameraHeadBob: {fileID: 0}
+  _heroPropLaptop: {fileID: 0}
+  _cameraZooming: {fileID: 0}
+--- !u!114 &344756194758954144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513322269421620606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Sit
+    EventRef:
+      Guid:
+        Data1: 416435006
+        Data2: 1137600364
+        Data3: 703687863
+        Data4: 443414464
+      Path: event:/SFX/Props/Chair/SFX_Gameplay_Prop_Chair_Sit
 --- !u!1 &3394066857160383711
 GameObject:
   m_ObjectHideFlags: 0
