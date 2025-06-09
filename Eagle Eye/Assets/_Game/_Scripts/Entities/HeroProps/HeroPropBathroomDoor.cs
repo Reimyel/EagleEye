@@ -7,6 +7,7 @@ namespace FourZeroFourStudios
     public class HeroPropBathroomDoor : BaseHeroProp
     {
         [Header("References:")]
+        [SerializeField] EntitySFXController _sfxController;
         [SerializeField] Animator _bathroomDoorAnimator = null;
         public bool DoorLocked = false;
         bool _bathroomDoorOpen = false;
@@ -28,12 +29,14 @@ namespace FourZeroFourStudios
         public void OpenBathroomDoor()
         {
             _bathroomDoorAnimator.Play("Anim_Bathroom_Door_Open");
+            _sfxController.Play("Open");
             _bathroomDoorOpen = true;
         }
 
         public void CloseBathroomDoor()
         {
             _bathroomDoorAnimator.Play("Anim_Bathroom_Door_Close");
+            _sfxController.Play("Close");
             _bathroomDoorOpen = false;
         }
     }

@@ -23,7 +23,7 @@ namespace FourZeroFourStudios
     /// </summary>
     public class AudioManager : MonoBehaviour
     {
-        #region Membros
+        #region Members
         public static AudioManager Instance { get; private set; }
 
         // FMOD Mixers
@@ -51,7 +51,7 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Unity
-        void Start() => Setup();
+        void Awake() => Setup();
 
         void Setup()
         {
@@ -127,7 +127,7 @@ namespace FourZeroFourStudios
         */
         #endregion
 
-        #region SFXs Simples
+        #region SFXs
 
         public void Play_OneShotAtPosition(EventReference sfxRefValue, Vector3 posValue)
         {
@@ -157,7 +157,7 @@ namespace FourZeroFourStudios
         }
         #endregion
 
-        #region Ambiente
+        #region Ambience
         public void Play_Ambience(EventReference ambienceRefValue)
         {
             if (_eventInstance_ambience.isValid())
@@ -173,7 +173,7 @@ namespace FourZeroFourStudios
         }
         #endregion
 
-        #region Gerenciando EventInstances
+        #region EventInstances
         /// <summary>
         /// Creates an EventInstance for handling sound effects with logic.
         /// </summary>
