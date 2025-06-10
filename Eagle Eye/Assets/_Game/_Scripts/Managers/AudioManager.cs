@@ -40,12 +40,6 @@ namespace FourZeroFourStudios
 
         static bool _isDefaultSet;
 
-        // Music
-        EventInstance _eventInstance_music;
-
-        // Ambience
-        EventInstance _eventInstance_ambience;
-
         // Stores all created EventInstances so they can be cleared from memory at the end to avoid possible leaks
         List<EventInstance> _eventsInstances;
         #endregion
@@ -140,39 +134,6 @@ namespace FourZeroFourStudios
         }
         #endregion
 
-        #region Musicas
-        public void Play_Music(EventReference musicRefValue)
-        {
-            // If there's music playing
-            if (_eventInstance_music.isValid())
-                _eventInstance_music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
-            _eventInstance_music = Create_EventInstance(musicRefValue);
-            _eventInstance_music.start();
-        }
-
-        public void Set_MusicParameter(string nameValue, float value)
-        {
-            _eventInstance_music.setParameterByName(nameValue, value);
-        }
-        #endregion
-
-        #region Ambience
-        public void Play_Ambience(EventReference ambienceRefValue)
-        {
-            if (_eventInstance_ambience.isValid())
-                _eventInstance_ambience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
-            _eventInstance_ambience = Create_EventInstance(ambienceRefValue);
-            _eventInstance_ambience.start();
-        }
-
-        public void Set_AmbienceParameter(string nameValue, float value)
-        {
-            _eventInstance_ambience.setParameterByName(nameValue, value);
-        }
-        #endregion
-
         #region EventInstances
         /// <summary>
         /// Creates an EventInstance for handling sound effects with logic.
@@ -187,23 +148,34 @@ namespace FourZeroFourStudios
         }
 
         /// <summary>
-        /// Executes the provided EventInstance.
+        /// Plays the informed EventInstance
         /// </summary>
-        /// <param name="instanceValue">Instância</param>
-        public void Play_EventInstance(EventInstance instanceValue)
+        /// <param name="instanceValue">Instance</param>
+        /// <param name="initialPosValue">Start Position</param>
+        public void Play_EventInstance(EventInstance instanceValue, Vector3 initialPosValue)
         {
+            instanceValue.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(initialPosValue));
             instanceValue.start();
         }
 
         /// <summary>
-        /// Executes the provided EventInstance at the desired location.
+        /// Attaches the EventInstance to the specified GameObject.
         /// </summary>
-        /// <param name="instanceValue">Instância</param>
-        /// <param name="posValue">Posição</param>
-        public void Play_EventInstanceAtPosition(EventInstance instanceValue, Vector3 posValue)
+        /// <param name="instanceValue">Instance</param>
+        /// <param name="targetValue">GameObject where it will be attached</param>
+        public void Attach_EventInstance(EventInstance instanceValue, GameObject targetValue)
+        {
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(instanceValue, targetValue);
+        }
+
+        /// <summary>
+        /// Updates the EventInstance to the desired location.
+        /// </summary>
+        /// <param name="instanceValue">Instance</param>
+        /// <param name="posValue">Position</param>
+        public void Set_EventInstancePosition(EventInstance instanceValue, Vector3 posValue)
         {
             instanceValue.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(posValue));
-            instanceValue.start();
         }
 
         /// <summary>
