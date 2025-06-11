@@ -20,6 +20,33 @@ MonoBehaviour:
   - Name: 
     Value: 1246
   Exists: 1
+--- !u!114 &-9118340538478457591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_KeyboardTyping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_KeyboardTyping
+  Guid:
+    Data1: -1826864682
+    Data2: 1253863455
+    Data3: -981857109
+    Data4: -2000764530
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8963308933700126225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,10 +287,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638850728384566058
+  lastModified: 638852653123634555
   FileSizes:
   - Name: 
-    Value: 2834
+    Value: 2922
   Exists: 1
 --- !u!114 &-4484578315829734646
 MonoBehaviour:
@@ -310,60 +337,6 @@ MonoBehaviour:
     Data2: 1198706746
     Data3: 1357181368
     Data4: -1130002081
-  Banks:
-  - {fileID: 418594143440363686}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3938634918909624285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_MouseClick
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_MouseClick
-  Guid:
-    Data1: 868565007
-    Data2: 1115824948
-    Data3: 1216696963
-    Data4: 656083032
-  Banks:
-  - {fileID: 418594143440363686}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3659598198049901384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_KeyboardTyping
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_KeyboardTyping
-  Guid:
-    Data1: -1826864682
-    Data2: 1253863455
-    Data3: -981857109
-    Data4: -2000764530
   Banks:
   - {fileID: 418594143440363686}
   IsStream: 0
@@ -514,7 +487,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638850715740687413
+  lastModified: 638852653123624504
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -543,7 +516,6 @@ MonoBehaviour:
   - {fileID: 1504450375534188415}
   - {fileID: -2825331519613562348}
   - {fileID: -2223455620052700501}
-  - {fileID: -3938634918909624285}
   - {fileID: -2271043781118532042}
   - {fileID: 3304998472235076857}
   - {fileID: 7228233362297468959}
@@ -552,52 +524,27 @@ MonoBehaviour:
   - {fileID: 7406679253379471213}
   - {fileID: -4913979307853118949}
   - {fileID: 4464652351246310925}
-  - {fileID: 6999997646092917265}
   - {fileID: 5530561578504596988}
   - {fileID: -8963308933700126225}
-  - {fileID: -3659598198049901384}
   - {fileID: 2291817074451042924}
   - {fileID: -4150993125273902060}
   - {fileID: -3177441627766686106}
   - {fileID: 1288066492671605557}
-  - {fileID: 6025135978326887990}
-  - {fileID: 252105074229363408}
   - {fileID: 2204128467370954017}
   - {fileID: -5587203700913356568}
+  - {fileID: 4696660765163731821}
+  - {fileID: 6212672272573463459}
+  - {fileID: 8093811731225502896}
+  - {fileID: 4045792261163852175}
+  - {fileID: -9118340538478457591}
+  - {fileID: 6582337687262927003}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
-  cacheTime: 638850728384626288
+  cacheTime: 638852653125113559
   cacheVersion: 131622
---- !u!114 &252105074229363408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Door_Bathroom_Open
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Door_Bathroom_Open
-  Guid:
-    Data1: 478672583
-    Data2: 1130787477
-    Data3: 1952266431
-    Data4: -582890169
-  Banks:
-  - {fileID: 418594143440363686}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &418594143440363686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,7 +560,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638850728384626288
+  lastModified: 638852653125113559
   FileSizes: []
   Exists: 1
 --- !u!114 &1288066492671605557
@@ -805,6 +752,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4045792261163852175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Prop_Door_Bathroom_Open
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Prop_Door_Bathroom_Open
+  Guid:
+    Data1: 478672583
+    Data2: 1130787477
+    Data3: 1952266431
+    Data4: -582890169
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4464652351246310925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,6 +797,33 @@ MonoBehaviour:
     Data2: 1223465991
     Data3: 251366272
     Data4: 1516369011
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4696660765163731821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_MouseClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_MouseClick
+  Guid:
+    Data1: 868565007
+    Data2: 1115824948
+    Data3: 1216696963
+    Data4: 656083032
   Banks:
   - {fileID: 418594143440363686}
   IsStream: 0
@@ -874,7 +875,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Ambience.bank
   Name: Desktop/Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638850728384556021
+  lastModified: 638852651003171411
   FileSizes: []
   Exists: 1
 --- !u!114 &5141122596700326503
@@ -922,7 +923,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6025135978326887990
+--- !u!114 &6212672272573463459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -932,9 +933,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Door_Bathroom_Close
+  m_Name: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Prop_Door_Bathroom_Close
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Door_Bathroom_Close
+  Path: event:/SFX/Props/Doors/Bathroom/SFX_Gameplay_Prop_Door_Bathroom_Close
   Guid:
     Data1: 1927350057
     Data2: 1228126050
@@ -949,6 +950,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6582337687262927003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/TrashCan/SFX_Gameplay_Prop_TrashCan_Deposit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/TrashCan/SFX_Gameplay_Prop_TrashCan_Deposit
+  Guid:
+    Data1: 820313759
+    Data2: 1255579269
+    Data3: 1747454889
+    Data4: 1098920803
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3024
 --- !u!114 &6813514586653156230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,33 +1000,6 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6999997646092917265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Props/WaterBottle/SFX_Gameplay_WaterBottle_Catch
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Props/WaterBottle/SFX_Gameplay_WaterBottle_Catch
-  Guid:
-    Data1: 141623159
-    Data2: 1137853361
-    Data3: -1047832943
-    Data4: 471370937
-  Banks:
-  - {fileID: 418594143440363686}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -1098,6 +1099,33 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8093811731225502896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/WaterBottle/SFX_Gameplay_Prop_WaterBottle_Catch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/WaterBottle/SFX_Gameplay_Prop_WaterBottle_Catch
+  Guid:
+    Data1: 141623159
+    Data2: 1137853361
+    Data3: -1047832943
+    Data4: 471370937
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

@@ -12601,6 +12601,7 @@ GameObject:
   - component: {fileID: 8136686322532711926}
   - component: {fileID: 7767700493028122985}
   - component: {fileID: 5693581395258747734}
+  - component: {fileID: 1631054165509775909}
   m_Layer: 6
   m_Name: Prefab_HeroProp_CoffeeMachine
   m_TagString: Untagged
@@ -12617,12 +12618,12 @@ Transform:
   m_GameObject: {fileID: 7767700493028122984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.532, y: -0.04, z: 11.95}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8492691665634860912}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8136686322532711926
 BoxCollider:
@@ -12659,6 +12660,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogue: {fileID: 11400000, guid: f9ee19924a4b9d64ca9481df820c4d86, type: 2}
   _destroyAfterShow: 2
+  AfterDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5693581395258747734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12671,8 +12675,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afc670a3ad01884fa14a8fabcaee316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionText: Interact
+  _actionText: Buy
+  _sfxController: {fileID: 1631054165509775909}
   _triggerDialogue: {fileID: 7767700493028122985}
+  _coffeeCup: {fileID: 0}
+  _canTakeCoffee: 0
+--- !u!114 &1631054165509775909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767700493028122984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Take
+    EventRef:
+      Guid:
+        Data1: -1180110472
+        Data2: 1304631317
+        Data3: -154943555
+        Data4: 1746407016
+      Path: event:/SFX/Props/Coffee Machine/SFX_Gameplay_Prop_CoffeeMachine_Interact
 --- !u!1 &7826447154218233199
 GameObject:
   m_ObjectHideFlags: 0

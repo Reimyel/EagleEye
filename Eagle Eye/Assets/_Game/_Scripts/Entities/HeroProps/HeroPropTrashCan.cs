@@ -6,10 +6,12 @@ namespace FourZeroFourStudios
 {
     public class HeroPropTrashCan : BaseHeroProp
     {
+        [Header("References:")]
         [SerializeField] PropCoffeeCup _propCoffeeCup;
         [SerializeField] CultistBehaviour _cultistBehaviour;
         [SerializeField] GameObject _cultistHideTrigger;
         [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
+        [SerializeField] EntitySFXController _sfxController;
 
         private void Start()
         {
@@ -20,6 +22,7 @@ namespace FourZeroFourStudios
         {
             base.Interact();
 
+            _sfxController.Play("Deposit");
             Destroy(_propCoffeeCup.gameObject);
             _cultistHideTrigger.SetActive(true);
 

@@ -165,7 +165,7 @@ MonoBehaviour:
         Data2: 1253863455
         Data3: -981857109
         Data4: -2000764530
-      Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_KeyboardTyping
+      Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_KeyboardTyping
   - Name: Mouse
     EventRef:
       Guid:
@@ -173,7 +173,7 @@ MonoBehaviour:
         Data2: 1115824948
         Data3: 1216696963
         Data4: 656083032
-      Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Laptop_MouseClick
+      Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_MouseClick
 --- !u!1 &92956925
 GameObject:
   m_ObjectHideFlags: 0

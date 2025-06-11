@@ -7,6 +7,7 @@ namespace FourZeroFourStudios
     public class HeroPropVendingMachine : BaseHeroProp
     {
         [Header("References:")]
+        [SerializeField] EntitySFXController _sfxController;
         [SerializeField] private TriggerDialogue _triggerDialogue;
         [SerializeField] GameObject _coffeeCup;
         [SerializeField] bool _canTakeCoffee = false;
@@ -18,6 +19,7 @@ namespace FourZeroFourStudios
             if (_canTakeCoffee)
             {
                 _coffeeCup.SetActive(true);
+                _sfxController.Play("Take");
                 _canTakeCoffee = false;
                 this.enabled = false;
             }

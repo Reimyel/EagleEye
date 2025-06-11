@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 292723915940854492}
   - component: {fileID: 8051364880687570965}
   - component: {fileID: 8051364880687570964}
+  - component: {fileID: 1549195104337259628}
   m_Layer: 0
   m_Name: 8zCoffeeCup_Prop
   m_TagString: Untagged
@@ -505,4 +506,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _anim_coffeeCup: {fileID: 8051364880687570965}
   _heroPropTrashCan: {fileID: 0}
+  _sfxController: {fileID: 1549195104337259628}
   TimesDrank: 0
+--- !u!114 &1549195104337259628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900994471059638739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Drink
+    EventRef:
+      Guid:
+        Data1: 796285810
+        Data2: 1139699615
+        Data3: -2041612644
+        Data4: 447770359
+      Path: event:/SFX/Props/Coffee Machine/SFX_Gameplay_Prop_CoffeeMachine_Drink
