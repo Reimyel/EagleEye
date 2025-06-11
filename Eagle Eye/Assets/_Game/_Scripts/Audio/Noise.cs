@@ -7,7 +7,7 @@ namespace FourZeroFourStudios
     {
         // Inspector:
         [Header("References:")]
-        [SerializeField] Transform _transf_camera;
+        [SerializeField] GameObject _go_cameraHolder;
 
         // Components:
         AmbienceMusicController _ambienceController;
@@ -15,9 +15,7 @@ namespace FourZeroFourStudios
         void Start()
         {
             _ambienceController = GetComponent<AmbienceMusicController>();
-            _ambienceController.Begin(_transf_camera.position);
+            _ambienceController.BeginAttached(_go_cameraHolder);
         }
-
-        void Update() => _ambienceController.UpdatePos(_transf_camera.position);
     }
 }

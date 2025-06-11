@@ -18,21 +18,28 @@ namespace FourZeroFourStudios
         public void Begin(Vector3 initialPosValue)
         {
             _instance = AudioManager.Instance.Create_EventInstance(_eventRef);
-            AudioManager.Instance.Play_EventInstance(_instance, initialPosValue);
+            AudioManager.Instance?.Play_EventInstance(_instance, initialPosValue);
+        }
+
+        public void BeginAttached(GameObject targetValue) 
+        {
+            _instance = AudioManager.Instance.Create_EventInstance(_eventRef);
+            AudioManager.Instance?.Attach_EventInstance(_instance, targetValue);
+            AudioManager.Instance?.Play_EventInstance(_instance, Vector3.zero);
         }
 
         public void UpdatePos(Vector3 posValue)
         {
-            AudioManager.Instance.Set_EventInstancePosition(_instance, posValue);
+            AudioManager.Instance?.Set_EventInstancePosition(_instance, posValue);
         }
 
         public void Stop(bool selfDestroyValue = false)
         {
-            AudioManager.Instance.Stop_EventInstance(_instance, true);
+            AudioManager.Instance?.Stop_EventInstance(_instance, true);
 
             if (selfDestroyValue)
             {
-                AudioManager.Instance.Delete_EventInstance(_instance);
+                AudioManager.Instance?.Delete_EventInstance(_instance);
                 Destroy(this);
             }
         }

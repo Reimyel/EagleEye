@@ -62,19 +62,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8173277014672478362, guid: 5878bc6c545b30148b358729fc9cacb2, type: 3}
       propertyPath: _eventRef.Guid.Data1
-      value: -1484990621
+      value: 292940766
       objectReference: {fileID: 0}
     - target: {fileID: 8173277014672478362, guid: 5878bc6c545b30148b358729fc9cacb2, type: 3}
       propertyPath: _eventRef.Guid.Data2
-      value: 1164233144
+      value: 1191610736
       objectReference: {fileID: 0}
     - target: {fileID: 8173277014672478362, guid: 5878bc6c545b30148b358729fc9cacb2, type: 3}
       propertyPath: _eventRef.Guid.Data3
-      value: 547383941
+      value: -337523311
       objectReference: {fileID: 0}
     - target: {fileID: 8173277014672478362, guid: 5878bc6c545b30148b358729fc9cacb2, type: 3}
       propertyPath: _eventRef.Guid.Data4
-      value: -953098314
+      value: 1863494736
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
