@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace FourZeroFourStudios
 {
@@ -40,6 +40,7 @@ namespace FourZeroFourStudios
         {
             base.Interact();
 
+            _sfxController.Play("Keyboard");
             _anim_cameraHolder.Play("Anim_CameraHolder_ZoomIn");
             _go_canvas_hud.SetActive(false);
             _cameraMove.MouseCanMoveScreen = false;
@@ -59,14 +60,12 @@ namespace FourZeroFourStudios
             if (_isFirstTime)
             {
                 _isFirstTime = false;
-                PlaySFXKeyboard();
-                Invoke("PlaySFXStartup", 1f);
+                Invoke("PlaySFXStartup", 0.45f);
                 
                 _go_initial_canvas.SetActive(true);
             }
             else
             {
-                PlaySFXKeyboard();
                 StartCoroutine(_postBehaviours.ReturnToPosts(_postBehaviours.Delay));
                 _go_eagleeye_canvas.SetActive(true);
                 _go_initial_canvas.SetActive(false);
@@ -86,8 +85,6 @@ namespace FourZeroFourStudios
             _collider.enabled = false;
             this.enabled = false;
         }
-
-        void PlaySFXKeyboard() => _sfxController.Play("Keyboard");
 
         void PlaySFXStartup() => _sfxController.Play("Startup");
     }

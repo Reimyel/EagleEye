@@ -161,10 +161,10 @@ MonoBehaviour:
   - Name: Keyboard
     EventRef:
       Guid:
-        Data1: -1826864682
-        Data2: 1253863455
-        Data3: -981857109
-        Data4: -2000764530
+        Data1: 1653581704
+        Data2: 1321262705
+        Data3: -618210940
+        Data4: -1725170045
       Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_KeyboardTyping
   - Name: Mouse
     EventRef:

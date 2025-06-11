@@ -34,10 +34,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Props/Laptop/Equipments/SFX_Gameplay_Prop_Laptop_KeyboardTyping
   Guid:
-    Data1: -1826864682
-    Data2: 1253863455
-    Data3: -981857109
-    Data4: -2000764530
+    Data1: 1653581704
+    Data2: 1321262705
+    Data3: -618210940
+    Data4: -1725170045
   Banks:
   - {fileID: 418594143440363686}
   IsStream: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638852660236979022
+  lastModified: 638852675376807025
   FileSizes:
   - Name: 
     Value: 2922
@@ -487,7 +487,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638852660236979022
+  lastModified: 638852675376796554
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -543,7 +543,7 @@ MonoBehaviour:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
-  cacheTime: 638852660236979022
+  cacheTime: 638852675377676547
   cacheVersion: 131622
 --- !u!114 &418594143440363686
 MonoBehaviour:
@@ -560,7 +560,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638852653125113559
+  lastModified: 638852675377676547
   FileSizes: []
   Exists: 1
 --- !u!114 &1288066492671605557
