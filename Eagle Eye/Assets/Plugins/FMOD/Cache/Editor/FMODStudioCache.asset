@@ -260,7 +260,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638850728384566058
+  lastModified: 638856722773250980
   FileSizes:
   - Name: 
     Value: 2834
@@ -514,7 +514,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638850715740687413
+  lastModified: 638842049353717072
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -569,7 +569,7 @@ MonoBehaviour:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
-  cacheTime: 638850728384626288
+  cacheTime: 638856722773356409
   cacheVersion: 131622
 --- !u!114 &252105074229363408
 MonoBehaviour:
@@ -613,7 +613,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638850728384626288
+  lastModified: 638856722773356409
   FileSizes: []
   Exists: 1
 --- !u!114 &1288066492671605557
@@ -874,7 +874,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Ambience.bank
   Name: Desktop/Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638850728384556021
+  lastModified: 638856722773250980
   FileSizes: []
   Exists: 1
 --- !u!114 &5141122596700326503
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 638846602140969690
+  lastModified: 638842049353737321
   FileSizes: []
   Exists: 1
 --- !u!114 &7228233362297468959
