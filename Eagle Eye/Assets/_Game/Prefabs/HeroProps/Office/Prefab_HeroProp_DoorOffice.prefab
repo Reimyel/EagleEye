@@ -4787,6 +4787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3775217802900821817}
+  - component: {fileID: 4106341213418061765}
   m_Layer: 0
   m_Name: Prefab_HeroProp_DoorOffice
   m_TagString: Untagged
@@ -4812,6 +4813,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4106341213418061765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777468377033820177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Rotate
+    EventRef:
+      Guid:
+        Data1: -804985633
+        Data2: 1121698056
+        Data3: 891205776
+        Data4: 54602000
+      Path: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Rotation
 --- !u!1 &3840745671970725367
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,7 +5767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae064680037ba542a034ba1fae6bf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sfxInterval: 0
   _transf_door: {fileID: 7020457555657656284}
+  _sfxController: {fileID: 4106341213418061765}
   _rotateSpeed: 65
 --- !u!1 &4549612016120845927
 GameObject:
@@ -8238,7 +8262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae064680037ba542a034ba1fae6bf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sfxInterval: 0
   _transf_door: {fileID: 7020457555657656284}
+  _sfxController: {fileID: 4106341213418061765}
   _rotateSpeed: 65
 --- !u!1 &5817167682148219146
 GameObject:
