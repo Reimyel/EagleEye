@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
-using static UnityEngine.Rendering.DebugUI;
 
 namespace FourZeroFourStudios
 {
@@ -24,7 +23,6 @@ namespace FourZeroFourStudios
         [SerializeField] PostBehaviours _postBehaviours;
         [SerializeField] CameraMove _cameraMove;
         [SerializeField] Collider _collider;
-
 
         [Header("Rendering:")]
         [SerializeField] Volume _volume;

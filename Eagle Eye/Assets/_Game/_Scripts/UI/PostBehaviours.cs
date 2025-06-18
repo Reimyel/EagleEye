@@ -67,6 +67,9 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _backpackProp;
         [SerializeField] GameObject _cultistMapProp;
 
+        [Header("Audio")]
+        [SerializeField] EntitySFXController _laptopSfxController;
+
         private void Start()
         {
             _buttonBehaviours = FindObjectOfType<ButtonBehaviours>();
@@ -78,6 +81,7 @@ namespace FourZeroFourStudios
         {
             if (Posts.Length == 0) return;
             CurrentPostIndex = (CurrentPostIndex + 1) % Posts.Length;
+            _laptopSfxController.Play("New Post");
             DisplayCurrentPost();
         }
 

@@ -173,6 +173,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6687278790809616438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_Check
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_Check
+  Guid:
+    Data1: -574325738
+    Data2: 1251986724
+    Data3: 1804537244
+    Data4: 1428052670
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5771728388467432672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,10 +314,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638852675376807025
+  lastModified: 638858633567387918
   FileSizes:
   - Name: 
-    Value: 2922
+    Value: 3036
   Exists: 1
 --- !u!114 &-4484578315829734646
 MonoBehaviour:
@@ -418,6 +445,33 @@ MonoBehaviour:
   lastModified: 638842041293319187
   FileSizes: []
   Exists: 1
+--- !u!114 &-2421583881930014712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_NV
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_NV
+  Guid:
+    Data1: -1957420629
+    Data2: 1338291671
+    Data3: -1454115425
+    Data4: -53731116
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2271043781118532042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +541,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638852675376796554
+  lastModified: 638858633567377853
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -538,12 +592,15 @@ MonoBehaviour:
   - {fileID: 4045792261163852175}
   - {fileID: -9118340538478457591}
   - {fileID: 6582337687262927003}
+  - {fileID: -6687278790809616438}
+  - {fileID: 8068179329197595211}
+  - {fileID: -2421583881930014712}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
-  cacheTime: 638852675377676547
+  cacheTime: 638858633573127001
   cacheVersion: 131622
 --- !u!114 &418594143440363686
 MonoBehaviour:
@@ -560,7 +617,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638852675377676547
+  lastModified: 638858633573127001
   FileSizes: []
   Exists: 1
 --- !u!114 &1288066492671605557
@@ -875,7 +932,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Ambience.bank
   Name: Desktop/Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638852660236948259
+  lastModified: 638858633567305286
   FileSizes: []
   Exists: 1
 --- !u!114 &5141122596700326503
@@ -1099,6 +1156,33 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8068179329197595211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_TD
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Laptop/EagleEye/SFX_Gameplay_EagleEye_TD
+  Guid:
+    Data1: -1039435968
+    Data2: 1177054952
+    Data3: 1925276545
+    Data4: 727354131
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
