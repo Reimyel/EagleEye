@@ -13,8 +13,13 @@ namespace FourZeroFourStudios
         [Header("Settings:")]
         [Space]
 
+        [Header("Parameters:")]
+        [SerializeField] float _minDistance;
+
         [Header("References:")]
+        [SerializeField] Transform _playerTransform;
         [SerializeField] Transform _transf_door;
+        [Space]
 
         [Header("Parameters:")]
         [SerializeField] float _rotateSpeed;
@@ -31,7 +36,9 @@ namespace FourZeroFourStudios
         {
             if (gameObjectValue != gameObject) return;
 
-            if (Input.GetKey(KeyCode.W))
+            float distance = Vector3.Distance(gameObject.transform.position, _playerTransform.position);
+
+            if (Input.GetKey(KeyCode.W) && distance <= _minDistance)
                 Rotate();
         }
 

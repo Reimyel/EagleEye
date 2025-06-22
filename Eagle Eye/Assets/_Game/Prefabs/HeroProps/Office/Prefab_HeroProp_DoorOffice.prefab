@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionText: Open
   _resetSpeed: 105
-  _sfxController: {fileID: 0}
+  _sfxController: {fileID: 6611138651983269776}
   _transf_door: {fileID: 7020457555657656284}
   _trigger_blockDialogues:
   - {fileID: 0}
@@ -4787,6 +4787,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3775217802900821817}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 6611138651983269776}
+>>>>>>> duca
   m_Layer: 0
   m_Name: Prefab_HeroProp_DoorOffice
   m_TagString: Untagged
@@ -4810,8 +4814,48 @@ Transform:
   - {fileID: 700490899}
   - {fileID: 4083007272589778401}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &6611138651983269776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777468377033820177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _list_sfxs:
+  - Name: Accept
+    EventRef:
+      Guid:
+        Data1: 274072119
+        Data2: 1216872767
+        Data3: 12301217
+        Data4: 1331447298
+      Path: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Accepted
+  - Name: Deny
+    EventRef:
+      Guid:
+        Data1: 1403683041
+        Data2: 1314580934
+        Data3: 1597500811
+        Data4: 1493185877
+      Path: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Denied
+  - Name: Reset
+    EventRef:
+      Guid:
+        Data1: -1250383402
+        Data2: 1315312646
+        Data3: -1987927160
+        Data4: 1019684807
+      Path: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Reset
+>>>>>>> duca
 --- !u!1 &3840745671970725367
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,7 +5789,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae064680037ba542a034ba1fae6bf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   _transf_door: {fileID: 7020457555657656284}
+=======
+  _sfxInterval: 0
+  _minDistance: 0.5
+  _playerTransform: {fileID: 0}
+  _transf_door: {fileID: 7020457555657656284}
+  _sfxController: {fileID: 0}
+>>>>>>> duca
   _rotateSpeed: 65
 --- !u!1 &4549612016120845927
 GameObject:
@@ -5761,7 +5813,6 @@ GameObject:
   - component: {fileID: 4549612016120845923}
   - component: {fileID: 4549612016120845922}
   - component: {fileID: 4549612016120845925}
-  - component: {fileID: 6687002881428424475}
   m_Layer: 6
   m_Name: Go_IDChecker_Entrance
   m_TagString: Entrance
@@ -5872,7 +5923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionText: Open
   _resetSpeed: 105
-  _sfxController: {fileID: 6687002881428424475}
+  _sfxController: {fileID: 6611138651983269776}
   _transf_door: {fileID: 7020457555657656284}
   _trigger_blockDialogues:
   - {fileID: 4549612016120845925}
@@ -5898,35 +5949,6 @@ MonoBehaviour:
   AfterDialogueEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6687002881428424475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4549612016120845927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b476d5e5bd7a49442aaea185ca1a63f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _list_sfxs:
-  - Name: Accept
-    EventRef:
-      Guid:
-        Data1: 274072119
-        Data2: 1216872767
-        Data3: 12301217
-        Data4: 1331447298
-      Path: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Accepted
-  - Name: Deny
-    EventRef:
-      Guid:
-        Data1: 1403683041
-        Data2: 1314580934
-        Data3: 1597500811
-        Data4: 1493185877
-      Path: event:/SFX/Props/IDChecker/SFX_Gameplay_Prop_IDChecker_Denied
 --- !u!1 &4549612016194206832
 GameObject:
   m_ObjectHideFlags: 0
@@ -8238,7 +8260,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae064680037ba542a034ba1fae6bf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   _transf_door: {fileID: 7020457555657656284}
+=======
+  _sfxInterval: 0
+  _minDistance: 0.5
+  _playerTransform: {fileID: 0}
+  _transf_door: {fileID: 7020457555657656284}
+  _sfxController: {fileID: 0}
+>>>>>>> duca
   _rotateSpeed: 65
 --- !u!1 &5817167682148219146
 GameObject:

@@ -314,10 +314,17 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 638858645007705240
   FileSizes:
   - Name: 
     Value: 3036
+=======
+  lastModified: 638861465516525649
+  FileSizes:
+  - Name: 
+    Value: 3108
+>>>>>>> duca
   Exists: 1
 --- !u!114 &-4484578315829734646
 MonoBehaviour:
@@ -541,7 +548,11 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 638858645007619441
+=======
+  lastModified: 638861465516510609
+>>>>>>> duca
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -595,12 +606,20 @@ MonoBehaviour:
   - {fileID: -6687278790809616438}
   - {fileID: 8068179329197595211}
   - {fileID: -2421583881930014712}
+<<<<<<< HEAD
+=======
+  - {fileID: 2587270682042522700}
+>>>>>>> duca
   EditorParameters: []
   MasterBanks:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
+<<<<<<< HEAD
   cacheTime: 638858645007891206
+=======
+  cacheTime: 638861465517413477
+>>>>>>> duca
   cacheVersion: 131622
 --- !u!114 &418594143440363686
 MonoBehaviour:
@@ -617,7 +636,11 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
+<<<<<<< HEAD
   lastModified: 638858645007891206
+=======
+  lastModified: 638861465517413477
+>>>>>>> duca
   FileSizes: []
   Exists: 1
 --- !u!114 &1288066492671605557
@@ -755,6 +778,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 24711
+--- !u!114 &2587270682042522700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Reset
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Reset
+  Guid:
+    Data1: -1250383402
+    Data2: 1315312646
+    Data3: -1987927160
+    Data4: 1019684807
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3304998472235076857
 MonoBehaviour:
   m_ObjectHideFlags: 0
