@@ -14,20 +14,15 @@ namespace FourZeroFourStudios
         [Space]
 
         [Header("Parameters:")]
-        [SerializeField] float _sfxInterval;
-        [Space]
+        [SerializeField] float _minDistance;
 
         [Header("References:")]
+        [SerializeField] Transform _playerTransform;
         [SerializeField] Transform _transf_door;
-        [SerializeField] EntitySFXController _sfxController;
         [Space]
 
         [Header("Parameters:")]
         [SerializeField] float _rotateSpeed;
-        [Space]
-
-        // SFX Control
-        bool _isPlayingSFX = false;
         #endregion
 
         #region Unity
@@ -39,36 +34,15 @@ namespace FourZeroFourStudios
         #region Custom
         void CheckRotate(GameObject gameObjectValue, TextMeshProUGUI tmpValue) 
         {
-            if (gameObjectValue != gameObject)
-            {
-                if (_isPlayingSFX) 
-                {
-                    _isPlayingSFX = false;
-                    StopAllCoroutines();
-                }
-                return;
-            }
+            if (gameObjectValue != gameObject) return;
 
-            if (Input.GetKey(KeyCode.W)) 
-            {
-                if (!_isPlayingSFX) 
-                {
-                    StartCoroutine(PlayRotating());
-                    _isPlayingSFX = true;
-                }
+            float distance = Vector3.Distance(gameObject.transform.position, _playerTransform.position);
 
+            if (Input.GetKey(KeyCode.W) && distance <= _minDistance)
                 Rotate();
-            }
         }
 
         void Rotate() => _transf_door.rotation *= Quaternion.Euler(0f, -_rotateSpeed * Time.deltaTime, 0f);
-        
-        IEnumerator PlayRotating() 
-        {
-            _sfxController.Play("Rotate");
-            yield return new WaitForSeconds(_sfxInterval);
-            StartCoroutine(PlayRotating()); 
-        }
         #endregion
     }
 }

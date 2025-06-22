@@ -299,33 +299,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4631211394047705508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Rotation
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Rotation
-  Guid:
-    Data1: -804985633
-    Data2: 1121698056
-    Data3: 891205776
-    Data4: 54602000
-  Banks:
-  - {fileID: 418594143440363686}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1008
 --- !u!114 &-4626230929350860882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,10 +314,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638858674853197582
+  lastModified: 638861465516525649
   FileSizes:
   - Name: 
-    Value: 3112
+    Value: 3108
   Exists: 1
 --- !u!114 &-4484578315829734646
 MonoBehaviour:
@@ -568,7 +541,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638858661700981419
+  lastModified: 638861465516510609
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -622,13 +595,13 @@ MonoBehaviour:
   - {fileID: -6687278790809616438}
   - {fileID: 8068179329197595211}
   - {fileID: -2421583881930014712}
-  - {fileID: -4631211394047705508}
+  - {fileID: 2587270682042522700}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1673931996460305945}
   StringsBanks:
   - {fileID: -4626230929350860882}
-  cacheTime: 638858674853259640
+  cacheTime: 638861465517413477
   cacheVersion: 131622
 --- !u!114 &418594143440363686
 MonoBehaviour:
@@ -645,7 +618,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638858674853259640
+  lastModified: 638861465517413477
   FileSizes: []
   Exists: 1
 --- !u!114 &1288066492671605557
@@ -783,6 +756,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 24711
+--- !u!114 &2587270682042522700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Reset
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Props/Doors/Turnstile/SFX_Gameplay_TurnstileDoor_Reset
+  Guid:
+    Data1: -1250383402
+    Data2: 1315312646
+    Data3: -1987927160
+    Data4: 1019684807
+  Banks:
+  - {fileID: 418594143440363686}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3304998472235076857
 MonoBehaviour:
   m_ObjectHideFlags: 0

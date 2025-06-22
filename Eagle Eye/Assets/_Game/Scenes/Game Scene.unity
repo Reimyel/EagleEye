@@ -44319,7 +44319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh149234
+  m_Name: pb_Mesh73626
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -100975,9 +100975,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 53700960}
     m_Modifications:
     - target: {fileID: 1193808257968222711, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _minDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193808257968222711, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: _sfxInterval
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1193808257968222711, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _playerTransform
+      value: 
+      objectReference: {fileID: 2081974025}
     - target: {fileID: 3775217802900821817, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -101027,10 +101035,20 @@ PrefabInstance:
       value: DoorOffice_HeroProp
       objectReference: {fileID: 0}
     - target: {fileID: 4549612016065040542, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _minDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549612016065040542, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: _sfxInterval
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4549612016065040542, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _playerTransform
+      value: 
+      objectReference: {fileID: 2081974025}
+    m_RemovedComponents:
+    - {fileID: 4106341213418061765, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+    - {fileID: 6687002881428424475, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -148677,7 +148695,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29838
+  m_Name: pb_Mesh75804
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
