@@ -80,7 +80,6 @@ namespace FourZeroFourStudios
             _canOpen = false;
 
             _resetRotation = true;
-            _sfxController.Play("Reset");
 
             _go_light_off.SetActive(true);
             _go_light_on.SetActive(false);
