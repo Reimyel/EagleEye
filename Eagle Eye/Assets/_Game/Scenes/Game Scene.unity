@@ -59633,7 +59633,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30332
+  m_Name: pb_Mesh30206
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -101028,7 +101028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3777468377033820177, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
       propertyPath: m_Name
-      value: DoorOffice_HeroProp
+      value: Turnstile_HeroProp
       objectReference: {fileID: 0}
     - target: {fileID: 4549612016065040542, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
       propertyPath: _minDistance
@@ -148701,7 +148701,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29838
+  m_Name: pb_Mesh29712
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
