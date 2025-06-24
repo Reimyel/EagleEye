@@ -40228,7 +40228,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4618562968773505113, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
   m_PrefabInstance: {fileID: 992917222}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 992917223}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3647c00b9e3988e49be480c9260989ce, type: 3}
@@ -100971,6 +100971,18 @@ PrefabInstance:
       propertyPath: _playerTransform
       value: 
       objectReference: {fileID: 2081974025}
+    - target: {fileID: 4549612016065040542, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
+      propertyPath: _minDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549612016065040542, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
+      propertyPath: _playerTransform
+      value: 
+      objectReference: {fileID: 2081974025}
+    - target: {fileID: 4549612016120845922, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
+      propertyPath: _sfxController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3775217802900821817, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -101018,18 +101030,6 @@ PrefabInstance:
     - target: {fileID: 3777468377033820177, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_Name
       value: Prefab_HeroProp_DoorOffice
-      objectReference: {fileID: 0}
-    - target: {fileID: 4549612016065040542, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
-      propertyPath: _minDistance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4549612016065040542, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
-      propertyPath: _playerTransform
-      value: 
-      objectReference: {fileID: 2081974025}
-    - target: {fileID: 4549612016120845922, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
-      propertyPath: _sfxController
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6687002881428424475, guid: 618266d7237f6fa4aa515a0a267ffc33, type: 3}
@@ -112009,6 +112009,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+--- !u!1 &992917223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4618562968773505110, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+  m_PrefabInstance: {fileID: 992917222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997187326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 997187326, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
@@ -170203,6 +170208,10 @@ PrefabInstance:
       propertyPath: _transf_camera
       value: 
       objectReference: {fileID: 2040469786}
+    - target: {fileID: 3295475512355017016, guid: 699aeb8cc630e294caa4b89efed915c9, type: 3}
+      propertyPath: _go_cameraHolder
+      value: 
+      objectReference: {fileID: 992917223}
     - target: {fileID: 3295475512355017017, guid: 699aeb8cc630e294caa4b89efed915c9, type: 3}
       propertyPath: _eventRef.Path
       value: event:/Ambience/Noise/Ambience_Gameplay_Noise_Office
