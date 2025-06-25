@@ -7,10 +7,12 @@ namespace FourZeroFourStudios
     public class HeroPropMaxLocker : BaseHeroProp
     {
         [Header("References:")]
+
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
+
+        [Header("Hierarchy:")]
         [SerializeField] Animator _anim_doorOrigin;
-        [SerializeField] HeroPropDoorOffice _heroPropDoorOffice;
-        [SerializeField] GameObject _waterBottleHandObject;
-        [SerializeField] GameObject _propMaxWatterBottle;
         bool _lockerDoorOpen = false;
 
         public override void Interact()
@@ -20,13 +22,14 @@ namespace FourZeroFourStudios
             if (!_lockerDoorOpen)
             {
                 OpenLockerDoor();
+                _sfxController.Play("Open");
+
+                this.enabled = false;
             }
             else 
             {
                 CloseLockerDoor();
-                _heroPropDoorOffice.EnableCanOpenIN();
-                Destroy(_waterBottleHandObject);
-                _propMaxWatterBottle.SetActive(true);
+                _sfxController.Play("Close");
 
                 this.enabled = false;
             }

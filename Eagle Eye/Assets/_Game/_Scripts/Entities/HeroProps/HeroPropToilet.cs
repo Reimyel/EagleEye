@@ -68,6 +68,7 @@ namespace FourZeroFourStudios
 
             _heroPropBathroomDoor.gameObject.GetComponent<Collider>().enabled = true;
             _heroPropBathroomDoor.DoorLocked = false;
+            _heroPropBathroomDoor.OpenBathroomDoor();
 
             _heroPropConnorLocker.enabled = true;
 

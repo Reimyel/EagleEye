@@ -9,6 +9,7 @@ namespace FourZeroFourStudios
         // Inspector:
         public float Speed;
         [SerializeField] Animator _anim;
+        [SerializeField] int _currentStep = 0;
 
         Vector3 _beginningPos = new Vector3(-56.21124f, 5.082796f, 39.05781f);
         Quaternion _beginningRot = Quaternion.Euler(0f, 270f, 0f);
@@ -26,7 +27,7 @@ namespace FourZeroFourStudios
         bool _isHiding = false;
         bool _isVanishing = false;
         bool _isInBathroom = false;
-        bool _canMoveBathroom = false;
+        [SerializeField] bool _canMoveBathroom = false;
 
         void Start()
         {
@@ -145,7 +146,6 @@ namespace FourZeroFourStudios
             Quaternion _rotation1 = Quaternion.Euler(0f, 0f, 0f);
             Vector3 _walkPoint2 = new Vector3(-66.12108f, 5.082796f, 20.99621f);
             Quaternion _rotation2 = Quaternion.Euler(0f, 90f, 0f);
-            int _currentStep = 0;
 
             if (_currentStep == 0)
             {
@@ -160,6 +160,7 @@ namespace FourZeroFourStudios
             }
             else if (_currentStep == 1)
             {
+                Debug.Log("walking");
                 transform.position = Vector3.MoveTowards(transform.position, _walkPoint2, Speed / 2 * Time.deltaTime);
                 transform.rotation = Quaternion.Lerp(transform.rotation, _rotation2, Speed / 2 * Time.deltaTime);
 
