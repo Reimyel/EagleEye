@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 4618562969628820142}
   - component: {fileID: 4618562969628820145}
   - component: {fileID: 4618562969628820140}
+  - component: {fileID: 5700682390223970241}
   - component: {fileID: 2567637585457328632}
   - component: {fileID: -2059366579727601766}
   m_Layer: 0
@@ -358,6 +359,24 @@ MonoBehaviour:
   _rayPoint: {fileID: 4618562967951360243}
   _tmp_action: {fileID: 0}
   _hudDialogueManager: {fileID: 0}
+--- !u!114 &5700682390223970241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618562969628820134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2088bc9589094b740bfa7643236161f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 8.1
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  _rayPoint: {fileID: 4618562967951360243}
+  _raycaster: {fileID: 4618562969628820140}
 --- !u!114 &2567637585457328632
 MonoBehaviour:
   m_ObjectHideFlags: 0

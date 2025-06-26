@@ -12,6 +12,7 @@ namespace FourZeroFourStudios
         [Header("Parameters:")]
         [SerializeField] float _distance;
         [SerializeField] LayerMask _layerMask;
+        public bool IsInteracting;
         [Space]
 
         [Header("References")]
@@ -37,6 +38,7 @@ namespace FourZeroFourStudios
                 Debug.DrawLine(ray.origin, hit.point, Color.green);
                 //Debug.Log("Ray collided: " + hit.collider.gameObject.name);
 
+                IsInteracting = true;
                 OnRaycast?.Invoke(hit.collider.gameObject, _tmp_action);
             }
             else
@@ -44,6 +46,7 @@ namespace FourZeroFourStudios
                 Debug.DrawLine(ray.origin, ray.origin + ray.direction * _distance, Color.green);
                 _tmp_action.text = string.Empty;
 
+                IsInteracting = false;
                 if (_hudDialogueManager.IsTrigger == false)
                      _hudDialogueManager.StopDialogue();
             }
