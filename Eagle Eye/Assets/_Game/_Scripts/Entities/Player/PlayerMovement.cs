@@ -13,10 +13,11 @@ namespace FourZeroFourStudios
         [Space]
 
         [Header("References:")]
+        [SerializeField] Animator _anim_player;
         [SerializeField] EntitySFXController _sfxController;
         [SerializeField] CharacterController _charController;
         [SerializeField] Transform _groundCheck;
-        [SerializeField] CameraHeadBob _headBob;
+        //[SerializeField] CameraHeadBob _headBob;
         [Space]
 
         [Header("Parameters:")]
@@ -50,7 +51,7 @@ namespace FourZeroFourStudios
             ApplyGravityForce();
         }
 
-        void OnEnable() => _headBob.enabled = true;
+        //void OnEnable() => _headBob.enabled = true;
         #endregion
 
         #region Custom
@@ -69,7 +70,8 @@ namespace FourZeroFourStudios
             if (moveLocal.magnitude > 0f) 
             {
                 _sfxLoop_walk.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-                
+                _anim_player.SetBool("moving", true);
+
                 if (!_playingSFXWalk) 
                 {
                     _sfxLoop_walk.start();
@@ -80,6 +82,7 @@ namespace FourZeroFourStudios
             {
                 _sfxLoop_walk.stop(STOP_MODE.ALLOWFADEOUT);
                 _playingSFXWalk = false;
+                _anim_player.SetBool("moving", false);
             }
             
             _charController.Move(moveLocal * _speed * Time.deltaTime);
