@@ -1,5 +1,4 @@
 using FMOD.Studio;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace FourZeroFourStudios 
@@ -70,7 +69,7 @@ namespace FourZeroFourStudios
             if (moveLocal.magnitude > 0f) 
             {
                 _sfxLoop_walk.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-                _anim_player.SetBool("moving", true);
+                _anim_player.Play("Anim_Player_Walking");
 
                 if (!_playingSFXWalk) 
                 {
@@ -82,7 +81,7 @@ namespace FourZeroFourStudios
             {
                 _sfxLoop_walk.stop(STOP_MODE.ALLOWFADEOUT);
                 _playingSFXWalk = false;
-                _anim_player.SetBool("moving", false);
+                _anim_player.SetTrigger("stopWalk");
             }
             
             _charController.Move(moveLocal * _speed * Time.deltaTime);
