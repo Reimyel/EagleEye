@@ -6,7 +6,13 @@ namespace FourZeroFourStudios
 {
     public class CultistBehaviour : MonoBehaviour
     {
+        #region Members
         // Inspector:
+        [Header("References:")]
+        [SerializeField] EntitySFXController _sfxController;
+        [SerializeField] AmbienceMusicController _strangeNoiseController;
+
+        [Header("Parameters:")]
         public float Speed;
         [SerializeField] Animator _anim;
         [SerializeField] int _currentStep = 0;
@@ -29,9 +35,13 @@ namespace FourZeroFourStudios
         bool _isInBathroom = false;
         [SerializeField] bool _canMoveBathroom = false;
 
+        // SFX
+        string _sfxName_vanishing = "Vanishing";
+        #endregion
+
+        #region Unity
         void Start()
         {
-
             transform.position = _beginningPos;
             transform.rotation = _beginningRot;
         }
@@ -39,31 +49,21 @@ namespace FourZeroFourStudios
         void Update()
         {
             if (_isMoving)
-            {
                 StartMoving();
-            }
 
             if (_isHiding)
-            {
                 StartHiding();
-            }
 
             if (_isVanishing)
-            {
                 StartVanishing();
-            }
 
             if (_isInBathroom)
-            {
                 GoToBathroom();
-                
-            }
 
             if (_canMoveBathroom)
-            {
                 StartMovingBathroom();
-            }
         }
+        #endregion
 
         #region CALL FUNCTIONS
         public void Move()
@@ -125,6 +125,7 @@ namespace FourZeroFourStudios
             float _distance = Vector3.Distance(transform.position, _vanishPos);
             if (_distance < 0.1f)
             {
+                _sfxController.Play(_sfxName_vanishing);
                 _isVanishing = false;
                 gameObject.SetActive(false);
             }
