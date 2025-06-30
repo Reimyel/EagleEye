@@ -49,19 +49,19 @@ namespace FourZeroFourStudios
         void Update()
         {
             if (_isMoving)
-                StartMoving();
+                StartMoving(); //not needed sfx
 
             if (_isHiding)
-                StartHiding();
+                StartHiding(); //not needed sfx
 
             if (_isVanishing)
                 StartVanishing();
 
             if (_isInBathroom)
-                GoToBathroom();
+                GoToBathroom(); //not needed sfx
 
             if (_canMoveBathroom)
-                StartMovingBathroom();
+                StartMovingBathroom(); //not needed sfx
         }
         #endregion
 
