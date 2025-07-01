@@ -1947,7 +1947,7 @@ GameObject:
   - component: {fileID: 8285808592859241175}
   - component: {fileID: 6107431621497923485}
   m_Layer: 6
-  m_Name: Laptop_HeroProp
+  m_Name: Computer_HeroProp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
