@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace FourZeroFourStudios 
 {
@@ -19,6 +20,9 @@ namespace FourZeroFourStudios
         [SerializeField] Transform _rayPoint;
         [SerializeField] TextMeshProUGUI _tmp_action;
         [SerializeField] HudDialogueManager _hudDialogueManager;
+        [SerializeField] Image _crosshairIris;
+        [SerializeField] Sprite _crosshairIrisEmpty;
+        [SerializeField] Sprite _crosshairIrisFill;
 
         public static event System.Action<GameObject, TextMeshProUGUI> OnRaycast;
         #endregion
@@ -40,6 +44,7 @@ namespace FourZeroFourStudios
 
                 IsInteracting = true;
                 OnRaycast?.Invoke(hit.collider.gameObject, _tmp_action);
+                _crosshairIris.sprite = _crosshairIrisFill;
             }
             else
             {
@@ -49,6 +54,7 @@ namespace FourZeroFourStudios
                 IsInteracting = false;
                 if (_hudDialogueManager.IsTrigger == false)
                      _hudDialogueManager.StopDialogue();
+                _crosshairIris.sprite = _crosshairIrisEmpty;
             }
         }
         #endregion
