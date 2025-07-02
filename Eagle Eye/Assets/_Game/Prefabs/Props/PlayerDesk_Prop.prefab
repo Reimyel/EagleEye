@@ -2212,7 +2212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8285808592729756259}
   m_Layer: 0
-  m_Name: PlayerDesk
+  m_Name: PlayerDesk_Prop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
