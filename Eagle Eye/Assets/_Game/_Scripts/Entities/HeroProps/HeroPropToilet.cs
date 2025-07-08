@@ -71,6 +71,7 @@ namespace FourZeroFourStudios
             _heroPropBathroomDoor.OpenBathroomDoor();
 
             _heroPropConnorLocker.enabled = true;
+            _heroPropConnorLocker.GetComponent<BoxCollider>().enabled = true;
 
             _narrativeManager.Progress();
         }

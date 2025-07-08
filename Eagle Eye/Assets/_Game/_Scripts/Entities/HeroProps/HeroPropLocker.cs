@@ -34,6 +34,8 @@ namespace FourZeroFourStudios
                 _heroPropDoorOffice.EnableCanOpenIN();
                 _connorStuff.SetActive(true);
                 _sfxController.Play("Close");
+                GetComponent<BoxCollider>().enabled = false;
+                this.enabled = false;
                 //StartCoroutine(SetDisableInterval());
             }
         }
