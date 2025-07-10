@@ -10,6 +10,7 @@ namespace FourZeroFourStudios
         [Space]
 
         [Header("References:")]
+        [SerializeField] HeroPropDoor _heroPropDoor;
 
         [Header("Hierarchy:")]
         [SerializeField] GameObject _go_player;
@@ -27,6 +28,9 @@ namespace FourZeroFourStudios
         [Header("Cultist")]
         [SerializeField] HeroPropBathroomDoor _cultistBathroomDoor;
         [SerializeField] CultistBehaviour _cultistBehaviour;
+
+        [Header("Audio")]
+        [SerializeField] EntitySFXController _officeDoorSfxController;
 
         public override void Interact()
         {
@@ -53,6 +57,7 @@ namespace FourZeroFourStudios
             _heroPropBathroomDoor.CloseBathroomDoor();
 
             StartCoroutine(CultistSequence(5f));
+            StartCoroutine(PlayOfficeDoor(8f, 10f));
             StartCoroutine(PlayerGetUp(15f));
         }
 
@@ -81,6 +86,14 @@ namespace FourZeroFourStudios
             yield return new WaitForSeconds(_delay);
             _cultistBathroomDoor.OpenBathroomDoor();
             _cultistBehaviour.MoveBathroom();
+        }
+
+        IEnumerator PlayOfficeDoor(float _delay1, float _delay2)
+        {
+            yield return new WaitForSeconds(_delay1);
+            _heroPropDoor.Interact();
+            yield return new WaitForSeconds(_delay2);
+            _officeDoorSfxController.Play("Accept");
         }
 
         IEnumerator PlayerGetUp(float _delay)

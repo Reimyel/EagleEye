@@ -9,13 +9,15 @@ namespace FourZeroFourStudios
         #region Members
         // Inspector:
         [Header("References:")]
-        [SerializeField] EntitySFXController _sfxController;
         [SerializeField] AmbienceMusicController _strangeNoiseController;
 
         [Header("Parameters:")]
         public float Speed;
         [SerializeField] Animator _anim;
         [SerializeField] int _currentStep = 0;
+
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
 
         Vector3 _beginningPos = new Vector3(-56.21124f, 5.082796f, 39.05781f);
         Quaternion _beginningRot = Quaternion.Euler(0f, 270f, 0f);
@@ -161,7 +163,7 @@ namespace FourZeroFourStudios
             }
             else if (_currentStep == 1)
             {
-                Debug.Log("walking");
+                //Debug.Log("walking");
                 transform.position = Vector3.MoveTowards(transform.position, _walkPoint2, Speed / 2 * Time.deltaTime);
                 transform.rotation = Quaternion.Lerp(transform.rotation, _rotation2, Speed / 2 * Time.deltaTime);
 
@@ -171,6 +173,7 @@ namespace FourZeroFourStudios
                 }
             }
         }
+
         #endregion
 
         #region Set Animations

@@ -77,6 +77,24 @@ namespace FourZeroFourStudios
             DisplayCurrentPost();
         }
 
+        //TEMP
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                _cultistMapProp.SetActive(true);
+                _backpackProp.SetActive(true);
+                _cultistBathroomDoor.DoorLocked = true;
+                _cultistBehaviour.gameObject.SetActive(true);
+                _cultistBehaviour.HideBathroom();
+                foreach (HeroPropToilet _script in _heroPropToilet)
+                {
+                    _script.enabled = true;
+                }
+                Debug.Log("Bathroom path opened");
+            }
+        }
+
         public void NextPost()
         {
             if (Posts.Length == 0) return;
