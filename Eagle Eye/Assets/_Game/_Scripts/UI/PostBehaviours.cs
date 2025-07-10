@@ -80,7 +80,7 @@ namespace FourZeroFourStudios
         //TEMP
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Q) )
             {
                 _cultistMapProp.SetActive(true);
                 _backpackProp.SetActive(true);

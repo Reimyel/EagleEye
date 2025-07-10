@@ -11,6 +11,7 @@ namespace FourZeroFourStudios
 
         [Header("References:")]
         [SerializeField] HeroPropDoor _heroPropDoor;
+        [SerializeField] GameObject _cellphoneSoundTrigger;
 
         [Header("Hierarchy:")]
         [SerializeField] GameObject _go_player;
@@ -57,7 +58,8 @@ namespace FourZeroFourStudios
             _heroPropBathroomDoor.CloseBathroomDoor();
 
             StartCoroutine(CultistSequence(5f));
-            StartCoroutine(PlayOfficeDoor(8f, 10f));
+            StartCoroutine(PlayInteractSound(8f));
+            StartCoroutine(PlayOfficeDoorSound(10f));
             StartCoroutine(PlayerGetUp(15f));
         }
 
@@ -79,6 +81,8 @@ namespace FourZeroFourStudios
             _heroPropConnorLocker.GetComponent<BoxCollider>().enabled = true;
 
             _narrativeManager.Progress();
+
+            _cellphoneSoundTrigger.SetActive(true);
         }
 
         IEnumerator CultistSequence(float _delay)
@@ -88,12 +92,17 @@ namespace FourZeroFourStudios
             _cultistBehaviour.MoveBathroom();
         }
 
-        IEnumerator PlayOfficeDoor(float _delay1, float _delay2)
+        IEnumerator PlayInteractSound(float _delay)
         {
-            yield return new WaitForSeconds(_delay1);
+            yield return new WaitForSeconds(_delay);
             _heroPropDoor.Interact();
-            yield return new WaitForSeconds(_delay2);
+        }
+
+        IEnumerator PlayOfficeDoorSound(float _delay)
+        {
+            yield return new WaitForSeconds(_delay);
             _officeDoorSfxController.Play("Accept");
+            Debug.Log("Not Playing");
         }
 
         IEnumerator PlayerGetUp(float _delay)
