@@ -22,7 +22,7 @@ namespace FourZeroFourStudios
         {
             base.Interact();
 
-            _sfxController.Play("Deposit");
+            //_sfxController.Play("Deposit");
             Destroy(_propCoffeeCup.gameObject);
             _cultistHideTrigger.SetActive(true);
 

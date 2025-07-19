@@ -30,7 +30,7 @@ namespace FourZeroFourStudios
         {
             Destroy(_workers);
             _triggerDialogue.enabled = true;
-            transform.position = new Vector3(-9.551909f, 3.15063f, 6.15123f);
+            transform.position = new Vector3(-10.87671f, 3.15063f, 6.15729f);
         }
 
         public void SetCanMove()

@@ -25,14 +25,14 @@ namespace FourZeroFourStudios
 
         void OpenBathroomDoor()
         {
-            _doorAnimator.Play("Anim_Door_Open");
+            _doorAnimator.Play("Anim_BathroomDoor_Open");
             _sfxController.Play("Open");
             _doorOpen = true;
         }
 
         void CloseBathroomDoor()
         {
-            _doorAnimator.Play("Anim_Door_Close");
+            _doorAnimator.Play("Anim_BathroomDoor_Close");
             _sfxController.Play("Close");
             _doorOpen = false;
         }

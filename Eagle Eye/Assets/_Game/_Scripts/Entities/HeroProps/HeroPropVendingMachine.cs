@@ -11,6 +11,7 @@ namespace FourZeroFourStudios
         [SerializeField] private TriggerDialogue _triggerDialogue;
         [SerializeField] GameObject _coffeeCup;
         [SerializeField] bool _canTakeCoffee = false;
+        [SerializeField] float _takeCoffeeDelay;
 
         public override void Interact()
         {
@@ -18,8 +19,8 @@ namespace FourZeroFourStudios
 
             if (_canTakeCoffee)
             {
-                _coffeeCup.SetActive(true);
                 _sfxController.Play("Take");
+                StartCoroutine(GiveCoffee());
                 _canTakeCoffee = false;
                 this.enabled = false;
             }
@@ -32,6 +33,12 @@ namespace FourZeroFourStudios
         public void SetCanTakeCoffee()
         {
             _canTakeCoffee = true;
+        }
+
+        IEnumerator GiveCoffee()
+        {
+            yield return new WaitForSeconds(_takeCoffeeDelay);
+            _coffeeCup.SetActive(true);
         }
     }
 }

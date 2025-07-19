@@ -26,7 +26,7 @@ namespace FourZeroFourStudios
                 OpenLockerDoor();
                 _connorStuff.GetComponent<HeroProp_DialogueOnly>().enabled = true;
                 _sfxController.Play("Open");
-                StartCoroutine(SetDisableInterval());
+                //StartCoroutine(SetDisableInterval());
             }
             else
             {
@@ -34,7 +34,9 @@ namespace FourZeroFourStudios
                 _heroPropDoorOffice.EnableCanOpenIN();
                 _connorStuff.SetActive(true);
                 _sfxController.Play("Close");
-                StartCoroutine(SetDisableInterval());
+                GetComponent<BoxCollider>().enabled = false;
+                this.enabled = false;
+                //StartCoroutine(SetDisableInterval());
             }
         }
 

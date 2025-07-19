@@ -6,9 +6,18 @@ namespace FourZeroFourStudios
 {
     public class CultistBehaviour : MonoBehaviour
     {
+        #region Members
         // Inspector:
+        [Header("References:")]
+        [SerializeField] AmbienceMusicController _strangeNoiseController;
+
+        [Header("Parameters:")]
         public float Speed;
         [SerializeField] Animator _anim;
+        [SerializeField] int _currentStep = 0;
+
+        [Header("Audio:")]
+        [SerializeField] EntitySFXController _sfxController;
 
         Vector3 _beginningPos = new Vector3(-56.21124f, 5.082796f, 39.05781f);
         Quaternion _beginningRot = Quaternion.Euler(0f, 270f, 0f);
@@ -26,11 +35,15 @@ namespace FourZeroFourStudios
         bool _isHiding = false;
         bool _isVanishing = false;
         bool _isInBathroom = false;
-        bool _canMoveBathroom = false;
+        [SerializeField] bool _canMoveBathroom = false;
 
+        // SFX
+        string _sfxName_vanishing = "Vanishing";
+        #endregion
+
+        #region Unity
         void Start()
         {
-
             transform.position = _beginningPos;
             transform.rotation = _beginningRot;
         }
@@ -38,31 +51,21 @@ namespace FourZeroFourStudios
         void Update()
         {
             if (_isMoving)
-            {
-                StartMoving();
-            }
+                StartMoving(); //not needed sfx
 
             if (_isHiding)
-            {
-                StartHiding();
-            }
+                StartHiding(); //not needed sfx
 
             if (_isVanishing)
-            {
                 StartVanishing();
-            }
 
             if (_isInBathroom)
-            {
-                GoToBathroom();
-                
-            }
+                GoToBathroom(); //not needed sfx
 
             if (_canMoveBathroom)
-            {
-                StartMovingBathroom();
-            }
+                StartMovingBathroom(); //not needed sfx
         }
+        #endregion
 
         #region CALL FUNCTIONS
         public void Move()
@@ -124,6 +127,7 @@ namespace FourZeroFourStudios
             float _distance = Vector3.Distance(transform.position, _vanishPos);
             if (_distance < 0.1f)
             {
+                _sfxController.Play(_sfxName_vanishing);
                 _isVanishing = false;
                 gameObject.SetActive(false);
             }
@@ -145,7 +149,6 @@ namespace FourZeroFourStudios
             Quaternion _rotation1 = Quaternion.Euler(0f, 0f, 0f);
             Vector3 _walkPoint2 = new Vector3(-66.12108f, 5.082796f, 20.99621f);
             Quaternion _rotation2 = Quaternion.Euler(0f, 90f, 0f);
-            int _currentStep = 0;
 
             if (_currentStep == 0)
             {
@@ -160,6 +163,7 @@ namespace FourZeroFourStudios
             }
             else if (_currentStep == 1)
             {
+                //Debug.Log("walking");
                 transform.position = Vector3.MoveTowards(transform.position, _walkPoint2, Speed / 2 * Time.deltaTime);
                 transform.rotation = Quaternion.Lerp(transform.rotation, _rotation2, Speed / 2 * Time.deltaTime);
 
@@ -169,6 +173,7 @@ namespace FourZeroFourStudios
                 }
             }
         }
+
         #endregion
 
         #region Set Animations

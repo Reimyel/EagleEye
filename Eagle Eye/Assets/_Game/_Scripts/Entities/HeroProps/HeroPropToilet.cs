@@ -10,6 +10,8 @@ namespace FourZeroFourStudios
         [Space]
 
         [Header("References:")]
+        [SerializeField] HeroPropDoor _heroPropDoor;
+        [SerializeField] GameObject _cellphoneSoundTrigger;
 
         [Header("Hierarchy:")]
         [SerializeField] GameObject _go_player;
@@ -27,6 +29,9 @@ namespace FourZeroFourStudios
         [Header("Cultist")]
         [SerializeField] HeroPropBathroomDoor _cultistBathroomDoor;
         [SerializeField] CultistBehaviour _cultistBehaviour;
+
+        [Header("Audio")]
+        [SerializeField] EntitySFXController _officeDoorSfxController;
 
         public override void Interact()
         {
@@ -53,6 +58,8 @@ namespace FourZeroFourStudios
             _heroPropBathroomDoor.CloseBathroomDoor();
 
             StartCoroutine(CultistSequence(5f));
+            StartCoroutine(PlayInteractSound(8f));
+            StartCoroutine(PlayOfficeDoorSound(10f));
             StartCoroutine(PlayerGetUp(15f));
         }
 
@@ -68,10 +75,14 @@ namespace FourZeroFourStudios
 
             _heroPropBathroomDoor.gameObject.GetComponent<Collider>().enabled = true;
             _heroPropBathroomDoor.DoorLocked = false;
+            _heroPropBathroomDoor.OpenBathroomDoor();
 
             _heroPropConnorLocker.enabled = true;
+            _heroPropConnorLocker.GetComponent<BoxCollider>().enabled = true;
 
             _narrativeManager.Progress();
+
+            _cellphoneSoundTrigger.SetActive(true);
         }
 
         IEnumerator CultistSequence(float _delay)
@@ -79,6 +90,19 @@ namespace FourZeroFourStudios
             yield return new WaitForSeconds(_delay);
             _cultistBathroomDoor.OpenBathroomDoor();
             _cultistBehaviour.MoveBathroom();
+        }
+
+        IEnumerator PlayInteractSound(float _delay)
+        {
+            yield return new WaitForSeconds(_delay);
+            _heroPropDoor.Interact();
+        }
+
+        IEnumerator PlayOfficeDoorSound(float _delay)
+        {
+            yield return new WaitForSeconds(_delay);
+            _officeDoorSfxController.Play("Accept");
+            Debug.Log("Not Playing");
         }
 
         IEnumerator PlayerGetUp(float _delay)
