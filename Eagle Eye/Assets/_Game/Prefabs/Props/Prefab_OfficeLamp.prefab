@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6531619258475575632}
   - component: {fileID: 6531619258475575633}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: OfficeLamp_SpotLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ Transform:
   m_Children:
   - {fileID: 6531619258475575632}
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6531619258921200234
 MonoBehaviour:
