@@ -54,6 +54,8 @@ namespace FourZeroFourStudios
         #endregion
 
         #region Custom
+        public bool IsDialogueActive => _curSequence != null && _cg.alpha > 0;
+
         public void StartDialogue(ScriptableDialogueSequence sequenceValue, UnityEvent eventValue=null, bool isTriggerValue=false)
         {
             StopAllCoroutines();

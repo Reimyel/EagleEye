@@ -16,6 +16,12 @@ namespace FourZeroFourStudios
         {
             if (gameObjectValue != gameObject) return;
 
+            if (HudDialogueManager.Instance.IsDialogueActive)
+            {
+                tmpValue.text = string.Empty;
+                return;
+            }
+
             tmpValue.text = _actionText;
 
             if (Input.GetButtonDown("Interact"))
