@@ -22,7 +22,7 @@ namespace FourZeroFourStudios
         [SerializeField] TriggerDialogue[] _trigger_blockDialogues;
         [SerializeField] TriggerRotateDoor _trigger_rotateDoor;
         [SerializeField] Collider _collider_blocker;
-        [SerializeField] TriggerDisableRotateDoor _trigger_disableRotateDoor;
+        [SerializeField] TriggerDisableRotateDoor[] _triggers_disableRotateDoor;
         [SerializeField] GameObject _go_light_on;
         [SerializeField] GameObject _go_light_off;
 
@@ -84,7 +84,9 @@ namespace FourZeroFourStudios
             _go_light_off.SetActive(true);
             _go_light_on.SetActive(false);
 
-            _trigger_disableRotateDoor.gameObject.SetActive(false);
+            foreach (TriggerDisableRotateDoor trigger in _triggers_disableRotateDoor)
+                trigger.gameObject.SetActive(false);
+                
             _trigger_rotateDoor.enabled = false;
             _collider_blocker.enabled = true;
         }
@@ -97,7 +99,9 @@ namespace FourZeroFourStudios
             _go_light_off.SetActive(false);
             _go_light_on.SetActive(true);
 
-            _trigger_disableRotateDoor.gameObject.SetActive(true);
+            foreach (TriggerDisableRotateDoor trigger in _triggers_disableRotateDoor)
+                trigger.gameObject.SetActive(false);
+                
             _trigger_rotateDoor.enabled = true;
             _collider_blocker.enabled = false;
 
