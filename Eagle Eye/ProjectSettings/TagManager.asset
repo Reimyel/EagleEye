@@ -8,7 +8,8 @@ TagManager:
   - ChairCameraPosition
   - Entrance
   - Exit
-  - ToiletCameraPosition
+  - ToiletCameraPosition1
+  - ToiletCameraPosition2
   layers:
   - Default
   - TransparentFX

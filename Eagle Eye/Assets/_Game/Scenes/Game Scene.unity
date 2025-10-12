@@ -48256,6 +48256,7 @@ MonoBehaviour:
   _toiletLid: {fileID: 1429275107}
   _heroPropBathroomDoor: {fileID: 1147851211}
   _heroPropConnorLocker: {fileID: 302590263522805131}
+  _go_cameraPosition: {fileID: 0}
   _cultistBathroomDoor: {fileID: 929312124}
   _cultistBehaviour: {fileID: 1405259915}
   _officeDoorSfxController: {fileID: 1773994167}
@@ -112242,7 +112243,11 @@ PrefabInstance:
     - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
       propertyPath: _toilet
       value: 
-      objectReference: {fileID: 1259811642}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
+      propertyPath: _playerTransform
+      value: 
+      objectReference: {fileID: 2081974025}
     - target: {fileID: 4618562969628820142, guid: 602ab8dfa2befb941bea21c00f8e621e, type: 3}
       propertyPath: _mouseSensitivity
       value: 250
@@ -131845,37 +131850,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1259811641
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1259811642}
-  m_Layer: 0
-  m_Name: Go_Camera_Position
-  m_TagString: ToiletCameraPosition
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1259811642
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259811641}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.000000014901161, y: 1.335064, z: 0.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1560445759}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1261335146
 GameObject:
   m_ObjectHideFlags: 0
@@ -150623,10 +150597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7064521443140077218, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1259811642}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
       insertIndex: -1
@@ -160392,10 +160363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7064521443140077218, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1722278980}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8493172177526745401, guid: 5e1b8b1cf115f2940b01346027776031, type: 3}
       insertIndex: -1
@@ -160442,6 +160410,7 @@ MonoBehaviour:
   _toiletLid: {fileID: 1713942687}
   _heroPropBathroomDoor: {fileID: 1360651204}
   _heroPropConnorLocker: {fileID: 302590263522805131}
+  _go_cameraPosition: {fileID: 0}
   _cultistBathroomDoor: {fileID: 929312124}
   _cultistBehaviour: {fileID: 1405259915}
   _officeDoorSfxController: {fileID: 1773994167}
@@ -166666,37 +166635,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2352986513785961898, guid: 5ce08597c0be940479164ae3f4058a2d, type: 3}
   m_PrefabInstance: {fileID: 1722065440}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1722278979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1722278980}
-  m_Layer: 0
-  m_Name: Go_Camera_Position
-  m_TagString: ToiletCameraPosition
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1722278980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722278979}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.000000014901161, y: 1.335064, z: 0.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1713942686}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1724957345
 GameObject:
   m_ObjectHideFlags: 0

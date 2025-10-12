@@ -25,6 +25,7 @@ namespace FourZeroFourStudios
         [SerializeField] GameObject _toiletLid;
         [SerializeField] HeroPropBathroomDoor _heroPropBathroomDoor;
         [SerializeField] HeroPropLocker _heroPropConnorLocker;
+        [SerializeField] GameObject _go_cameraPosition;
 
         [Header("Cultist")]
         [SerializeField] HeroPropBathroomDoor _cultistBathroomDoor;
@@ -48,7 +49,10 @@ namespace FourZeroFourStudios
             FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
             //_cameraZooming.Deactivate();
-            _cameraHolder.IsPlayerSeatedToilet = true;
+
+            _cameraHolder.UpdateTransform(_go_cameraPosition.transform.position, _go_cameraPosition.transform.rotation);
+            _cameraHolder.IsSeating = true;
+
             _cameraHeadBob.enabled = false;
 
             _toiletLid.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
@@ -68,10 +72,12 @@ namespace FourZeroFourStudios
             FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
             //_cameraZooming.Activate();
-            _cameraHolder.IsPlayerSeatedToilet = false;
+            
             _cameraHeadBob.enabled = true;
 
             _toiletLid.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+            _cameraHolder.IsSeating = false;
 
             _heroPropBathroomDoor.gameObject.GetComponent<Collider>().enabled = true;
             _heroPropBathroomDoor.DoorLocked = false;
