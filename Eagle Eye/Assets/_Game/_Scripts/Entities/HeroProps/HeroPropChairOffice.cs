@@ -16,6 +16,7 @@ namespace FourZeroFourStudios
 
         [Header("Hierarchy:")]
         [SerializeField] GameObject _go_player;
+        [SerializeField] GameObject _go_cameraPosition;
         [SerializeField] CameraHolder _cameraHolder;
         [SerializeField] CameraHeadBob _cameraHeadBob;
         [SerializeField] HeroPropLaptop _heroPropLaptop;
@@ -37,18 +38,22 @@ namespace FourZeroFourStudios
             FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
             _cameraZooming.Deactivate();
-            _cameraHolder.IsPlayerSeated = true;
+            
+            _cameraHolder.UpdateTransform(_go_cameraPosition.transform.position, _go_cameraPosition.transform.rotation);
+
+            _cameraHolder.IsSeating = true;
+
             _cameraHeadBob.enabled = false;
         }
 
         public void GetUp()
         {
+            _cameraHolder.IsSeating = false;
+
             FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
             _cameraZooming.Activate();
-            _cameraHolder.IsPlayerSeated = false;
             _cameraHeadBob.enabled = true;
-
             _heroPropLaptop.DisableLaptop();
         }
     }

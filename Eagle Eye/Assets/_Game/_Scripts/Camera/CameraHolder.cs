@@ -4,39 +4,24 @@ namespace FourZeroFourStudios
 {
     public class CameraHolder : MonoBehaviour
     {
-        Transform _cameraPosition;
-        Transform _chairCameraPosition;
-        Transform _toiletCameraPosition;
-        public bool IsPlayerSeated = false;
-        public bool IsPlayerSeatedToilet = false;
+        public bool IsSeating = false;
 
-        void Awake()
-        {
-            _cameraPosition = GameObject.FindGameObjectWithTag("CameraPosition").transform;
-            _chairCameraPosition = GameObject.FindGameObjectWithTag("ChairCameraPosition").transform;
-            _toiletCameraPosition = GameObject.FindGameObjectWithTag("ToiletCameraPosition").transform;
-        }
+        // Não serializadas
+        Transform _cameraTransform;
+
+        void Start() => _cameraTransform = GameObject.FindGameObjectWithTag("CameraPosition").transform;
 
         void Update()
         {
-            if (IsPlayerSeatedToilet)
-            {
-                UpdateTransform(_toiletCameraPosition);
-            }
-            else if (IsPlayerSeated)
-            {
-                UpdateTransform(_chairCameraPosition);
-            }
-            else
-            {
-                UpdateTransform(_cameraPosition);
-            }
+            if (IsSeating) return;
+
+            UpdateTransform(_cameraTransform.position, _cameraTransform.rotation);
         }
 
-        void UpdateTransform(Transform cameraLocation)
+        public void UpdateTransform(Vector3 position, Quaternion rotation)
         {
-            transform.position = cameraLocation.position;
-            transform.rotation = cameraLocation.rotation;
+            transform.position = position;
+            transform.rotation = rotation;
         }
     }
 }
