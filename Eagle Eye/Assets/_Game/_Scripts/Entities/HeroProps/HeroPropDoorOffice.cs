@@ -35,7 +35,7 @@ namespace FourZeroFourStudios
         #region Mono
         void Start() => _defaultRotationY = _transf_door.localEulerAngles.y;
 
-        void Update() 
+        void Update()
         {
             if (_resetRotation) ApplyRotationReset();
         }
@@ -98,7 +98,7 @@ namespace FourZeroFourStudios
             _go_light_on.SetActive(true);
 
             foreach (TriggerDisableRotateDoor trigger in _triggers_disableRotateDoor)
-                trigger.gameObject.SetActive(false);
+                trigger.gameObject.SetActive(true);
                 
             _trigger_rotateDoor.enabled = true;
 

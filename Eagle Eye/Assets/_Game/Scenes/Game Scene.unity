@@ -100875,21 +100875,85 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 53700960}
     m_Modifications:
-    - target: {fileID: 1209528916, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0968
+    - target: {fileID: 345500290, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_Name
+      value: Trigger_DisableRotateDoor_Exit
       objectReference: {fileID: 0}
-    - target: {fileID: 1209528916, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0883
+    - target: {fileID: 345500290, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2140210505, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+    - target: {fileID: 345500291, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.22663005
+      value: 28.498291
       objectReference: {fileID: 0}
-    - target: {fileID: 2140210505, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+    - target: {fileID: 345500291, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0037
+      value: -9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345500291, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345500291, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6773498
+      objectReference: {fileID: 0}
+    - target: {fileID: 345500291, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7356611
+      objectReference: {fileID: 0}
+    - target: {fileID: 345500291, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 94.726
+      objectReference: {fileID: 0}
+    - target: {fileID: 345500293, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209528917, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _triggers_disableRotateDoor.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852174, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_Name
+      value: Trigger_DisableRotateDoor_Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852174, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852175, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18.045856
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852175, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852175, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852175, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69912475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852175, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.71499974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852175, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -91.286
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852177, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424852178, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3775217802900821817, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
       propertyPath: m_RootOrder
@@ -100939,40 +101003,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_HeroProp_DoorOffice
       objectReference: {fileID: 0}
-    - target: {fileID: 4549612016120845924, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0987
+    - target: {fileID: 4549612016120845922, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _triggers_disableRotateDoor.Array.size
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4549612016120845924, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0487
-      objectReference: {fileID: 0}
-    - target: {fileID: 7020457555657656284, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7020457555657656284, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193726942981370489, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193726942981370489, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0102
-      objectReference: {fileID: 0}
-    - target: {fileID: 8427887917276296237, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8427887917276296237, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1443
-      objectReference: {fileID: 0}
+    - target: {fileID: 4549612016120845922, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+      propertyPath: _triggers_disableRotateDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 1188835415}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 700490898, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+    - {fileID: 1110621547, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
@@ -129326,6 +129368,17 @@ Transform:
   m_Father: {fileID: 1151980311}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!114 &1188835415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1424852176, guid: da7a4043a0e86d84dbb200c03825d447, type: 3}
+  m_PrefabInstance: {fileID: 869838147}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5b330e6ad1f624d972cdad8b1b72b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211509051
 GameObject:
   m_ObjectHideFlags: 0
