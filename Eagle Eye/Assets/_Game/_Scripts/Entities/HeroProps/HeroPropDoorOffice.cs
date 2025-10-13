@@ -21,7 +21,6 @@ namespace FourZeroFourStudios
         [SerializeField] Transform _transf_door;
         [SerializeField] TriggerDialogue[] _trigger_blockDialogues;
         [SerializeField] TriggerRotateDoor _trigger_rotateDoor;
-        [SerializeField] Collider _collider_blocker;
         [SerializeField] TriggerDisableRotateDoor[] _triggers_disableRotateDoor;
         [SerializeField] GameObject _go_light_on;
         [SerializeField] GameObject _go_light_off;
@@ -88,7 +87,6 @@ namespace FourZeroFourStudios
                 trigger.gameObject.SetActive(false);
                 
             _trigger_rotateDoor.enabled = false;
-            _collider_blocker.enabled = true;
         }
 
         void OpenDoor() 
@@ -103,7 +101,6 @@ namespace FourZeroFourStudios
                 trigger.gameObject.SetActive(false);
                 
             _trigger_rotateDoor.enabled = true;
-            _collider_blocker.enabled = false;
 
             _sfxController.Play("Accept");
         }
