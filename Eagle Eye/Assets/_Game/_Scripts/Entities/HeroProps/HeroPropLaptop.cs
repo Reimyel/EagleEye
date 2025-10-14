@@ -25,8 +25,8 @@ namespace FourZeroFourStudios
         [SerializeField] Collider _collider;
 
         [Header("Rendering:")]
-        [SerializeField] Volume _volume;
-        [SerializeField] VolumeProfile _vprofile_crt;
+        //[SerializeField] Volume _volume;
+        //[SerializeField] VolumeProfile _vprofile_crt;
         [SerializeField] float _changeProfileDelay;
 
         Animator _anim_cameraHolder;
@@ -50,7 +50,7 @@ namespace FourZeroFourStudios
             yield return new WaitForSeconds(_changeProfileDelay);
 
             //apply CRT effect
-            _volume.profile = _vprofile_crt;
+            //_volume.profile = _vprofile_crt;
             _go_desktop_canvas.SetActive(true);
 
             _cameraMove.ShowCursor();

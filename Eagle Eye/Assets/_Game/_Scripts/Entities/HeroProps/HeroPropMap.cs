@@ -14,8 +14,9 @@ namespace FourZeroFourStudios
         [Header("References")]
         [SerializeField] GameObject _go_player;
         [SerializeField] Transform _inspectionPoint;
+        [SerializeField] CanvasGroup _cg_crossHair;
 
-        // Não serializadas
+         // Não serializadas
         bool _isShowing = false;
         bool _isAlreadyHiding = false;
         Vector3 _initialPos;
@@ -65,6 +66,7 @@ namespace FourZeroFourStudios
             _cameraMove.MouseCanMoveScreen = false;
             _cameraHeadBob.enabled = false;
             _cameraZooming.Deactivate();
+            _cg_crossHair.alpha = 0f;
 
             if (_moveRoutine != null)
                 StopCoroutine(_moveRoutine);
@@ -80,6 +82,7 @@ namespace FourZeroFourStudios
             _cameraMove.MouseCanMoveScreen = true;
             _cameraHeadBob.enabled = true;
             _cameraZooming.Activate();
+            _cg_crossHair.alpha = 1f;
 
             if (_moveRoutine != null)
                 StopCoroutine(_moveRoutine);
