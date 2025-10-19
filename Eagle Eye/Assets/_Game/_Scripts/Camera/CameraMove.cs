@@ -1,35 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace FourZeroFourStudios 
 {
     public class CameraMove : MonoBehaviour
     {
-        [Header("Settings:")]
-        [Space]
-
-        [Header("Parameters:")]
+        [Header("Parâmetros:")]
         [SerializeField] float _mouseSensitivity = 200f;
-        [SerializeField] Transform _player;
-        [SerializeField] Transform _chair;
-        [SerializeField] Transform _toilet;
-        [SerializeField] CameraHolder _cameraHolder;
         public bool MouseCanMoveScreen = true;
 
+        [Header("Referências")]
+        [SerializeField] CameraHolder _cameraHolder;
+        [SerializeField] Transform _playerTransform;
+
+        // Não serializadas
         float _xRotation = 0f;
 
-        void Start()
-        {
-            HideCursor();
-        }
+        void Start() => HideCursor();
 
         void Update()
         {
             if (MouseCanMoveScreen)
-            {
                 ApplyMove();
-            }
         }
 
         public void ShowCursor()
@@ -44,7 +35,7 @@ namespace FourZeroFourStudios
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        void ApplyMove() 
+        void ApplyMove()
         {
             float mouseXLocal = Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
             float mouseYLocal = Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
@@ -56,20 +47,16 @@ namespace FourZeroFourStudios
             transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 
             // Left & Right
-            GetRotationTarget().Rotate(Vector3.up * mouseXLocal);
+            _cameraHolder.transform.Rotate(Vector3.up * mouseXLocal);
+            
+            GetCurrentTransform().Rotate(Vector3.up * mouseXLocal);
         }
-
-        Transform GetRotationTarget()
+        
+        Transform GetCurrentTransform()
         {
-            if (_cameraHolder.IsPlayerSeated)
-            {
-                return _chair;
-            }
-            if (_cameraHolder.IsPlayerSeatedToilet)
-            {
-                return _toilet;
-            }
-            return _player;
+            Transform curTransform = _cameraHolder.IsSeating ? _cameraHolder.transform : _playerTransform;
+
+            return curTransform;
         }
     }
 }

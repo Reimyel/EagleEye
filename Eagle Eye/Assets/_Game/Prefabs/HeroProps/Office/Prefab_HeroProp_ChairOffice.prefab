@@ -157,6 +157,7 @@ MonoBehaviour:
   _actionText: Sit
   _sfxController: {fileID: 344756194758954144}
   _go_player: {fileID: 0}
+  _go_cameraPosition: {fileID: 3394066857160383711}
   _cameraHolder: {fileID: 0}
   _cameraHeadBob: {fileID: 0}
   _heroPropLaptop: {fileID: 0}

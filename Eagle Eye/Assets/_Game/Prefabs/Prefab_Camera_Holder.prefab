@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &224207872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224207873}
+  m_Layer: 0
+  m_Name: Inpection Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224207873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224207872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4618562969628820139}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259856881
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104774467287886960}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -180,7 +211,7 @@ Transform:
   m_Children:
   - {fileID: 4618562969628820139}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4618562968773505113
 MonoBehaviour:
@@ -194,8 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3647c00b9e3988e49be480c9260989ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPlayerSeated: 0
-  IsPlayerSeatedToilet: 0
+  IsSeating: 0
 --- !u!95 &348613082
 Animator:
   serializedVersion: 5
@@ -253,6 +283,7 @@ Transform:
   m_Children:
   - {fileID: 4618562967951360243}
   - {fileID: 1259856882}
+  - {fileID: 224207873}
   m_Father: {fileID: 4618562968773505112}
   m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -319,12 +350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cd7735caee4ab4d9e567804efdf0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseSensitivity: 500
-  _player: {fileID: 0}
-  _chair: {fileID: 0}
-  _toilet: {fileID: 0}
-  _cameraHolder: {fileID: 4618562968773505113}
+  _mouseSensitivity: 250
   MouseCanMoveScreen: 1
+  _cameraHolder: {fileID: 4618562968773505113}
+  _playerTransform: {fileID: 0}
 --- !u!114 &4618562969628820145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4618562969628820134}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a3d6923a48e0141b32e520bb398b47, type: 3}
   m_Name: 
@@ -352,13 +381,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30257177e946573458a6c3d94f633f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 8
+  _distance: 4
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
+  IsInteracting: 0
   _rayPoint: {fileID: 4618562967951360243}
   _tmp_action: {fileID: 0}
   _hudDialogueManager: {fileID: 0}
+  _crosshairIris: {fileID: 0}
+  _crosshairIrisEmpty: {fileID: 21300000, guid: d4ecc1c057f945c4b972114f60f6cdf1, type: 3}
+  _crosshairIrisFill: {fileID: 21300000, guid: 8fc55649f42084d41937cdf4fced782d, type: 3}
 --- !u!114 &5700682390223970241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2088bc9589094b740bfa7643236161f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 8.1
+  _distance: 4
   _layerMask:
     serializedVersion: 2
     m_Bits: 1
