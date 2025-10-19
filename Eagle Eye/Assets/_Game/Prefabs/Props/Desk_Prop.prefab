@@ -67,7 +67,7 @@ Transform:
   - {fileID: 6992535639917137033}
   - {fileID: 7076945643309261813}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2352986515539585557
 GameObject:
@@ -1013,7 +1013,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2304923213034443813, guid: 7c0a26ca940c4a945b9eeb0769095b5f, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4677256985767876424, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 7380157937410361752, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 9085610899547558037, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 2645415792245317126, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 9138234787870094425, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 1326672343122763897, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 6613112141844497455, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 1897002790986355889, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 2461197052731222802, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 3725705790247870641, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
+    - {fileID: 9020325068737129362, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 765598e7799d26940bb0318a2a4e4479, type: 3}
