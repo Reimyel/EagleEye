@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace FourZeroFourStudios
 {
@@ -21,6 +19,7 @@ namespace FourZeroFourStudios
         [SerializeField] CameraHeadBob _cameraHeadBob;
         [SerializeField] HeroPropLaptop _heroPropLaptop;
         [SerializeField] CameraZooming _cameraZooming;
+        [SerializeField] SpriteRenderer _spr_quitImage;
 
         public override void Interact()
         {
@@ -34,6 +33,8 @@ namespace FourZeroFourStudios
 
         void Sit()
         {
+            _spr_quitImage.enabled = false;
+
             _sfxController.Play("Sit");
             FadeManager.Instance.StartFade();
             _go_player.SetActive(false);
@@ -49,6 +50,7 @@ namespace FourZeroFourStudios
         public void GetUp()
         {
             _cameraHolder.IsSeating = false;
+            _spr_quitImage.enabled = true;
 
             FadeManager.Instance.StartFade();
             _go_player.SetActive(true);
